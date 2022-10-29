@@ -1,3 +1,4 @@
+	# N O R D
 	background-color: #2E3440;
 	text-color:       #e5e9f0;
 	selbg:            #d08770;
@@ -5,7 +6,8 @@
 	actbg:            #88c0d0;
 	urgbg:            #bf616a;
 	winbg:			         @text-color;
-
+	
+	# G R U V B O X
 	background-color: #282828;
 	text-color:       #ebdbb2;
 	selbg:            #458588;
@@ -13,3 +15,13 @@
 	actbg:            #a89984;
 	urgbg:            #cc241d;
 	winbg:			         @text-color;
+	
+	# D R A C U L A
+	background-color: #282a36;
+	text-color:       #ffffff;
+	selbg:            #bd93f9;
+	sel2bg:           #bd93f9;
+	actbg:            #ff79c6;
+	urgbg:            #ff5555;
+	winbg:			         @text-color;
+	
