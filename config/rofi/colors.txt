@@ -1,0 +1,15 @@
+	background-color: #2E3440;
+	text-color:       #e5e9f0;
+	selbg:            #d08770;
+	sel2bg:           #ebdb8b;
+	actbg:            #88c0d0;
+	urgbg:            #bf616a;
+	winbg:			         @text-color;
+
+	background-color: #282828;
+	text-color:       #ebdbb2;
+	selbg:            #458588;
+	sel2bg:           #d65d03;
+	actbg:            #a89984;
+	urgbg:            #cc241d;
+	winbg:			         @text-color;

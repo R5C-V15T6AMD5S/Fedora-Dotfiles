@@ -1,0 +1,469 @@
+[colors]
+background = #2E3440
+background-alt = #3c3836
+foreground = #d5c4a1
+foreground-alt = #bdae93
+text = #1d2021
+text-alt = #3c3836
+primary = #83a598
+secondary = #d65d0e
+alert = #fb4934
+
+red = #bf616a
+green = #8fbcbb
+yellow = #ebcb8b
+orange = #d08770
+blue1 = #88c0d0
+blue2 = #81a1c1
+purple = #b16286
+grey = #a89984
+
+[bar/i3bar2]
+width = 90%
+height = 26
+offset-x = 5%
+offset-y = 4
+radius = 0.0
+
+bottom = true
+wm-restack = i3
+enable-ipc = true
+fixed-center = false
+override-redirect = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+border-size = 2
+border-top-size = 2
+border-bottom-size = 2
+border-color = #eceff4
+
+padding = 0
+module-margin-left = 1
+
+font-0 = Iosevka Nerd Font:pixelsize=12;3
+font-1 = DejaVu Sans Mono wifi ramp:size=12
+font-2 = Font Awesome 5:size=12
+
+modules-left = i3-sec crypto
+modules-center =
+modules-right = spotify
+
+scroll-up = i3w.next
+scroll-down = i3.prev
+
+[bar/i3bar]
+width = 90%
+height = 26
+offset-x = 5%
+offset-y = 4
+radius = 0.0
+
+wm-restack = i3
+enable-ipc = true
+fixed-center = false
+override-redirect = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+border-size = 2
+border-top-size = 2
+border-bottom-size = 2
+border-color = #eceff4
+
+padding = 0
+module-margin-left = 0
+
+tray-detached = false
+tray-offset-x = 0
+tray-offset-y = 0
+tray-padding = 1
+tray-maxsize = 20
+tray-scale = 1.0
+tray-position = right
+
+
+font-0 = "JetBrainsMono Nerd Font:pixelsize=12;2"
+font-1 = "FontAwesome:size=11;3"
+font-2 = "JetBrainsMono Nerd Font:pixelsize=12;2"
+font-3 = "JetBrainsMono Nerd Font:pixelsize=12;2"
+font-4 = "DejaVuSansMono Nerd Font:size=12:2"
+font-5 = "DejaVu Sans Mono wifi ramp:size=12:2"
+
+modules-left = i3
+modules-center =
+modules-right = cpu memory keyboard battery wlan temperature backlight pulseaudio date
+
+scroll-up = i3w.next
+scroll-down = i3.prev
+
+[module/backlight]
+;type = internal/xbacklight
+type = internal/backlight
+
+; Use the following command to list available cards:
+; $ ls -1 /sys/class/backlight/
+;card = intel_backlight
+card = amdgpu_bl0
+
+; Available tags:
+;   <label> (default)
+;   <ramp>
+;   <bar>
+format =  <label>
+format-background = ${colors.purple}
+format-foreground = ${colors.text}
+format-padding = 1
+
+; Available tokens:
+;   %percentage% (default)
+label = %percentage%%
+
+; Only applies if <ramp> is used
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
+ramp-4 = 
+ramp-font = 2
+
+[module/spotify]
+type = custom/script
+tail = true
+interval = 1
+format-prefix = ""
+format-prefix-padding = 1
+format-prefix-background = #b8bb26
+format-prefix-foreground = ${colors.text}
+
+format = <label>
+format-background = #cdcf67
+format-foreground = ${colors.text}
+exec = ~/.config/polybar.old/scripts/scroll_spotify_status.sh
+
+[module/battery]
+type = internal/battery
+low-at = 20
+full-at = 100
+
+battery = BAT0
+adapter = ADP0
+
+poll-interval = 5
+
+format-charging = <animation-charging> <label-charging>
+format-charging-padding-left = 1
+format-charging-background = ${colors.orange}
+format-charging-foreground = ${colors.text}
+
+format-discharging = <animation-discharging> <label-discharging>
+format-discharging-padding-left = 1
+format-discharging-background = ${colors.orange}
+format-discharging-foreground = ${colors.text}
+
+format-full = <label-full>
+format-full-padding-left = 1
+format-full-background = ${colors.orange}
+format-full-foreground = ${colors.text}
+
+format-low = <label-low>
+format-low-padding-left = 1
+format-low-background = ${colors.orange}
+format-low-foreground = ${colors.text}
+
+
+label-charging = "Charging %percentage%% "
+label-charging-background = ${colors.orange}
+label-charging-foreground = ${colors.text}
+label-discharging = "%percentage%% "
+label-discharging-background = ${colors.orange}
+label-discharging-foreground = ${colors.text}
+label-full = "  FULL - %percentage%% "
+label-full-background = ${colors.orange}
+label-full-foreground = ${colors.text}
+label-low = "  LOW - %percentage%% "
+label-low-background = ${colors.orange}
+label-low-foreground = ${colors.text}
+
+animation-charging-4 = " "
+animation-charging-3 = " "
+animation-charging-2 = " "
+animation-charging-1 = " "
+animation-charging-0 = " "
+animation-charging-framerate = 750
+
+animation-discharging-0 = " "
+animation-discharging-1 = " "
+animation-discharging-2 = " "
+animation-discharging-3 = " "
+animation-discharging-4 = " "
+animation-discharging-framerate = 1500
+
+[module/xwindow]
+type = internal/xwindow
+label = ï„ˆ %title:0:60:...%
+label-padding-left = 3
+label-empty = "ï„ˆ Desktop"
+label-empty-padding-left = 3
+
+[module/filesystem]
+type = internal/fs
+interval = 25
+
+mount-0 = /
+
+label-mounted = ïŸ‰ %free%
+format-mounted-background = #fabd2f
+format-mounted-foreground = ${colors.text}
+format-mounted-padding = 1
+
+label-unmounted = %mountpoint% not mounted
+label-unmounted-foreground = ${colors.text-alt}
+
+[module/i3]
+type = internal/i3
+pin-workspaces = true
+index-sort = true
+enable-click = true
+enable-scroll = true
+fuzzy-match = false
+
+; ws-icon-[0-9]+ = label;icon
+; NOTE: The label needs to match the name of the i3 workspace
+ws-icon-0 = 1;1: 
+ws-icon-1 = 2;2: 
+ws-icon-2 = 3;3: 
+ws-icon-3 = 4;4: 
+ws-icon-4 = 5;5: 
+ws-icon-5 = 6;6: 
+ws-icon-6 = 7;7: 
+ws-icon-7 = 8;8: 
+
+format = <label-state> <label-mode>
+format-background = ${color.background}
+format-foreground = ${color.foreground}
+
+label-mode = %mode%
+label-mode-padding = 2
+label-mode-foreground = #ffffff
+label-mode-background = #81a1c1
+
+label-focused = %icon%
+label-focused-padding = 2
+label-focused-foreground = #ffffff
+label-focused-background = #81a1c1
+
+label-unfocused = %icon%
+label-unfocused-padding = 2
+label-unfocused-foreground = #ffffff
+
+label-visible = %icon%
+label-visible-padding = 2
+label-visible-foreground = #ffffff
+
+label-urgent = %icon%
+label-urgent-padding = 2
+label-urgent-foreground = #EBBFC5
+label-urgent-background = ${colors.red}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+[module/i3-sec]
+type = internal/i3
+pin-workspaces = true
+index-sort = true
+enable-click = true
+enable-scroll = true
+fuzzy-match = false
+
+; ws-icon-[0-9]+ = label;icon
+; NOTE: The label needs to match the name of the i3 workspace
+ws-icon-0 = 11;I: 
+ws-icon-1 = 22;II: 
+ws-icon-2 = 33;III: 
+ws-icon-3 = 44;IV: 
+ws-icon-4 = 55;V: 
+ws-icon-5 = 66;VI: 
+ws-icon-6 = 77;VII: 
+ws-icon-7 = 88;VIII: 
+
+format = <label-state> <label-mode>
+format-background = ${color.background}
+format-foreground = ${color.foreground}
+
+label-mode = %mode%
+label-mode-padding = 2
+label-mode-foreground = #ffffff
+label-mode-background = #458588
+
+label-focused = %icon%
+label-focused-padding = 2
+label-focused-foreground = #ffffff
+label-focused-background = #928374
+
+label-unfocused = %icon%
+label-unfocused-padding = 2
+label-unfocused-foreground = #ffffff
+
+label-visible = %icon%
+label-visible-padding = 2
+label-visible-foreground = #ffffff
+
+label-urgent = %icon%
+label-urgent-padding = 2
+label-urgent-foreground = #EBBFC5
+label-urgent-background = #BD2C40
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix = " "
+label = %percentage:2%%
+format-background = ${colors.red}
+format-foreground = ${colors.text}
+format-padding = 1
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = " "
+label = %gb_used%
+
+format-background = ${colors.green}
+format-foreground = ${colors.text}
+format-padding = 1
+
+[module/eth]
+type = internal/network
+interface = enp1s0
+interval = 5.0
+
+format-connected = "<label-connected>"
+format-connected-background = ${colors.blue1}
+format-connected-foreground = ${colors.text}
+label-connected = "  %ifname% "
+label-connected-background = ${colors.blue1}
+label-connected-foreground = ${colors.text}
+
+
+format-disconnected = "<label-disconnected>"
+format-disconnected-background = ${colors.blue1}
+format-disconnected-foreground = ${colors.text}
+label-disconnected = "  Empty "
+label-disconnected-background = ${colors.blue1}
+label-disconnected-foreground = ${colors.text}
+
+[module/wlan]
+type = internal/network
+interface = wlp2s0
+interval = 1.0
+accumulate-stats = true
+unknown-as-up = true
+
+format-connected = <ramp-signal> <label-connected>
+label-connected = %essid%
+format-connected-background = ${colors.blue2}
+format-connected-foreground = ${colors.text}
+format-connected-padding = 1
+
+format-disconnected = <label-disconnected>
+label-disconnected = ïª© Offline
+format-disconnected-background = ${colors.blue2}
+label-disconnected-foreground = ${colors.text-alt}
+format-disconnected-padding = 1
+
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
+ramp-signal-5 = 
+
+[module/date]
+type = internal/date
+interval = 5
+
+time = " %I:%M:%S %p"
+time-alt = " %A, %d %b %Y"
+
+label = %date% %time%
+label-background = ${colors.grey}
+label-foreground = ${colors.text}
+label-padding = 1
+label-padding-left = 0
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+format-volume = <label-volume>
+label-volume =  %percentage%%
+format-volume-foreground = ${colors.text}
+format-volume-background = ${colors.green}
+format-volume-padding = 1
+
+label-muted = X Just STFU!!!
+format-muted-foreground = ${colors.text-alt}
+format-muted-background = ${colors.green}
+format-muted-padding = 1
+
+[module/keyboard]
+type = internal/xkeyboard
+
+; List of indicators to ignore
+blacklist-0 = num lock
+blacklist-1 = scroll lock
+
+; Available tags:
+;   <label-layout> (default)
+;   <label-indicator> (default)
+format = <label-layout><label-indicator>
+format-prefix = ""
+format-prefix-background = ${colors.yellow}
+format-prefix-foreground = ${colors.text}
+format-prefix-padding = 1
+
+; Available tokens:
+;   %layout%
+;   %name%
+;   %number%
+; Default: %layout%
+label-layout = "%layout% "
+label-layout-background = ${colors.yellow}
+label-layout-foreground = ${colors.text}
+;label-layout-padding = 1
+
+; Available tokens:
+;   %name%
+; Default: %name%
+label-indicator-on = "%name% "
+label-indicator-on-background = ${colors.yellow}
+label-indicator-on-foreground = ${colors.text}
+
+[module/temperature]
+type = internal/temperature
+thermal-zone = 0
+interval = 1
+warn-temperature = 85
+
+format = <ramp> <label>
+format-background = ${colors.yellow}
+format-foreground = ${colors.text}
+format-padding = 1
+label = %temperature-c%
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
+ramp-4 = 
+hwmon-path = /sys/devices/pci0000:00/0000:00:08.1/0000:04:00.0/hwmon/hwmon3/temp1_input
+
+[settings]
+screenchange-reload = true
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
