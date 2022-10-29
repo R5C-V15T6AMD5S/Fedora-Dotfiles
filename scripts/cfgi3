@@ -1,0 +1,13 @@
+#!/usr/bin/zsh
+
+function i3cfg() {
+    vim ~/.config/i3/config
+}
+
+function gogh() {
+	bash -c  "$(wget -qO- https://git.io/vQgMr)"
+}
+
+function update-grub() {
+      sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
+}

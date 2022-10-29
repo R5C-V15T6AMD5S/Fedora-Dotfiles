@@ -1,0 +1,9 @@
+#!/usr/bin/zsh
+
+function epicban() {
+	figlet -f epic.flf "$1" | lolcat
+}
+
+function d3ban() {
+	figlet -f 3d.flf "$1" | lolcat
+}
