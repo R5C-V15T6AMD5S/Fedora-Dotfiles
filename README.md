@@ -1,5 +1,8 @@
 # Dotfile for Fedora Workstation 36
 
+## Dracula Colorscheme
+![Screenshot](./Screenshot/DraculaTheme.png)
+
 ## Gruvbox Colorscheme
 ![Screenshot](./Screenshot/GruvboxTheme.png)
 ![Screenshot](./Screenshot/GruvboxPalette.png)
