@@ -1,12 +1,12 @@
 # Dotfile for Fedora Workstation 36
 
 ## Gruvbox Colorscheme
-![Screenshot](./Screenshots/GruvboxTheme.png)
-![Screenshot](./Screenshots/GruvboxPalette.png)
+![Screenshot](./Screenshot/GruvboxTheme.png)
+![Screenshot](./Screenshot/GruvboxPalette.png)
 
 ## Nord Colorscheme
-![Screenshot](./Screenshots/NordTheme.png)
-![Screenshot](./Screenshots/NordPalette.png)
+![Screenshot](./Screenshot/NordTheme.png)
+![Screenshot](./Screenshot/NordPalette.png)
 
 ## Specifications
 
