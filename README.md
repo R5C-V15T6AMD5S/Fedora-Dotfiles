@@ -1,4 +1,4 @@
-# Dotfile for Fedora Workstation 36
+# Dotfile for Fedora Workstation 37
 
 ## Dracula Colorscheme
 ![Screenshot](./Screenshot/DraculaTheme.png)
