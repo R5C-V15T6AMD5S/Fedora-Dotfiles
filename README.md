@@ -13,7 +13,7 @@
 
 ## Specifications
 
-- Distro: `Fedora Workstation 36`
+- Distro: `Fedora Workstation 37`
 - WM: `i3-gaps`
 - Bar: `Polybar`
 - Terminal: `kitty`
