@@ -1,0 +1,36 @@
+########  Visit i3wm.org for more information about User's guide'  ########
+
+
+include rules.conf
+include workspaces.conf
+include keybindings.conf
+include ~/.config/i3/themes/gruvbox.conf
+exec_always ~/.config/i3/shells/autostart.sh
+
+exec ~/.config/i3/shells/info.sh
+exec feh --bg-scale ~/Pictures/WallPP/Colorschemes/gruvbox/fedora_center.png
+
+set $Primary	"eDP"
+set $Secondary  "HDMI-A-0"
+
+#bar {
+#    status_command i3status --config ~/.config/i3/status_bars/i3status1.conf
+#    font pango:Font Awesome 10
+#    position bottom
+#    separator_symbol " >-< "
+#}
+
+
+set $mod Mod4
+floating_modifier $mod
+focus_follows_mouse no
+font pango: DejaVu Sans Mono 10
+
+
+bindsym $mod+t layout tabbed
+bindsym $mod+s layout stacking
+bindsym $mod+f fullscreen toggle
+bindsym $mod+e layout toggle split
+bindsym $mod+c move position center
+bindsym $mod+Space focus mode_toggle
+bindsym $mod+Shift+space floating toggle
