@@ -4,7 +4,7 @@
 include rules.conf
 include workspaces.conf
 include keybindings.conf
-include ~/.config/i3/themes/gruvbox.conf
+include ~/.config/i3/themes/nord.conf
 exec_always ~/.config/i3/shells/autostart.sh
 
 exec ~/.config/i3/shells/info.sh
