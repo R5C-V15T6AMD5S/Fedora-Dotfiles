@@ -1,13 +1,13 @@
 # Dotfile for Fedora 38 
 
 ## XFCE + bspwm w/ Dracula colorscheme
-![Screenshot](./Screenshot/bspwm.png)
+![Screenshot](./Screenshots/bspwm.png)
 
 ## XFCE + i3 w/ Gruvbox colorscheme
-![Screenshot](./Screenshot/i3.png)
+![Screenshot](./Screenshots/i3.png)
 
 ## XFCE + herbstluftwm w/ Nord colorscheme
-![Screenshot](./Screenshot/herbstluftwm.png)
+![Screenshot](./Screenshots/herbstluftwm.png)
 
 ## Specifications
 
