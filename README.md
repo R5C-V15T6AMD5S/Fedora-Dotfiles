@@ -14,6 +14,7 @@
 - Distro: `Fedora XFCE 38`
 - Shell: `zsh`
 - Terminal: `kitty`
+- Browser: `firefox`
 - Text editor: `Nvim`
 - File manager: `Nemo`
 - WMs: `i3`, `bspwm` or `herbstluftwm`
