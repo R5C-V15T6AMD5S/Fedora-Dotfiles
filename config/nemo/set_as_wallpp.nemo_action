@@ -1,0 +1,10 @@
+[Nemo Action]
+#
+## This goes into $HOME/.local/share/nemo/actions/
+#
+Name=Set as Wallpaper
+Comment=Set the selected image as wallpaper
+Exec=feh --no-fehbg --bg-scale %U
+Icon-Name=feh
+Selection=s
+Mimetypes=image/*;

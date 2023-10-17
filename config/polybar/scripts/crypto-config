@@ -1,0 +1,16 @@
+[general]
+base_currency = EUR
+display = both
+
+[bitcoin]
+icon = 
+
+[ethereum]
+icon = 
+
+[ardor]
+icon = 󰣇
+
+[litecoin]
+icon = L
+

@@ -1,0 +1,10 @@
+[Nemo Action]
+#
+## This goes into $HOME/.local/share/nemo/actions/
+#
+Name=Open in Terminal
+Comment=Open the terminal in the selected folder
+Exec=exo-open --working-directory %F --launch TerminalEmulator
+Icon-Name=kitty
+Selection=any
+Extensions=dir;
