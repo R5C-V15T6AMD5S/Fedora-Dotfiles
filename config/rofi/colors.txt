@@ -1,0 +1,63 @@
+configuration{
+	 modi: "drun,run,window,combi,calc";
+	 fake-transparency: true;
+	 sidebar-mode: false;
+   show-icons: true;
+   cycle: true;
+   line-margin: 10;
+   icon-theme: "Dracula";
+
+  display-run: 					"Execute";
+  display-drun: 				"Apps";
+  display-window: 		"Windows";
+  display-combi:    "Mr. Mix";
+  display-calc:    "Calc";
+}
+theme "~/.config/rofi/default.rasi"
+
+// Nord
+	background-color: #2E3440;
+	text-color:       #e5e9f0;
+	selbg:            #d08770;
+	sel2bg:           #ebdb8b;
+	actbg:            #88c0d0;
+	urgbg:            #bf616a;
+	winbg:			         @text-color;
+
+
+// Gruvbox
+	background-color: #282828;
+	text-color:       #ebdbb2;
+	selbg:            #458588;
+	sel2bg:           #d65d03;
+	actbg:            #a89984;
+	urgbg:            #cc241d;
+	winbg:			         @text-color;
+
+
+// Dracula
+	background-color: #282a36;
+	text-color:       #F8F8F2;
+	selbg:            #bd93f9;
+	sel2bg:           #bd93f9;
+	actbg:            #ff79c6;
+	urgbg:            #ff5555;
+	winbg:			         @text-color;
+
+// Everforest
+	background-color: #2b3339;
+	text-color:       #d3c6aa;
+	selbg:            #a7c080;
+	sel2bg:           #a7c080;
+	actbg:            #d699b6;
+	urgbg:            #e67e80;
+	winbg:			         @text-color;
+
+// Kanagawa
+	background-color: #2D4F67;
+	text-color:       #DCD7BA;
+	selbg:            #E46876;
+	sel2bg:           #D27E99;
+	actbg:            #2D4F67;
+	urgbg:            #E82424;
+	winbg:			         @text-color;

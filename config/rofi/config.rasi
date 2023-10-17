@@ -1,0 +1,16 @@
+configuration{
+    modi: "drun,calc,run,window,ssh";
+    sidebar-mode: false;
+    show-icons: true;
+    cycle: true;
+    line-margin: 10;
+
+    display-drun: 	 "Apps";
+    display-calc:    "Calc";
+    display-run:     "Execute";
+    display-window:  "Containers";
+    display-ssh:     "SSH";
+    display-combi:   "Mr. Mix";
+}
+
+@theme "~/.config/rofi/themes/dracula_dark.rasi"
