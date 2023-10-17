@@ -1,0 +1,38 @@
+#!/usr/bin/bash
+
+hc() {
+    herbstclient "$@"
+}
+
+hc emit_hook reload
+hc set swap_monitors_to_get_tag 1
+hc set focus_crosses_monitor_boundaries 1
+
+# THEME #
+#-------#
+source $HOME/.config/herbstluftwm/confs.d/theme
+
+# RULES #
+#-------#
+source $HOME/.config/herbstluftwm/confs.d/winRules
+
+# KEYBINDINGS #
+#-------------#
+source $HOME/.config/herbstluftwm/confs.d/keybindings
+
+# MONITOR RECOGNITION #
+#---------------------#
+bash -c $HOME/.config/herbstluftwm/scripts/monitor_init.sh &
+
+# AUTOSTART #
+#-----------#
+nm-applet &
+clipmenud &
+xset b off &
+xfce4-panel &
+numlockx on &
+unclutter -idle 21 &
+killall -q dunst | wait; dunst -config ~/.config/dunst/dunstrc &
+killall -q picom | wait; picom --config ~/.config/picom/picom.conf &
+xinput set-prop "MSFT0001:00 04F3:31BE Touchpad" "libinput Tapping Enabled" 1 & 
+sleep 5; notify-send "Welcome to herbstluftwm :)))" "Have a [REDACTED] day *wink*" &

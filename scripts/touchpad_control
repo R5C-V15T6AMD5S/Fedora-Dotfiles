@@ -1,0 +1,17 @@
+#!/bin/bash
+#
+# Enable/disable touchpad
+
+declare -i ID
+ID=`xinput | sed '/Touchpad/s/.*id=\([0-9]*\).*/\1/;t;d'`
+declare -i STATE
+STATE=`xinput list-props $ID|grep 'Device Enabled'|awk '{print $4}'`
+if [ $STATE -eq 1 ]
+then
+    xinput disable $ID
+    notify-send "TOUCHPAD switched OFF"
+else
+    xinput enable $ID
+    notify-send "TOUCHPAD switched ON"
+fi
+

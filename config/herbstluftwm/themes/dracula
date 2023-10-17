@@ -1,0 +1,6 @@
+# Dracula #
+#---------#
+Active='#8BE9FD'
+Normal='#44475A'
+Urgent='#FF5555'
+Floating=$Active

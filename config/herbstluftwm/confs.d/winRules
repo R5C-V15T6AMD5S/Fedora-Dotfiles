@@ -1,0 +1,41 @@
+
+hc unrule -F
+
+# MENUS #
+#-------#
+hc rule class~'(Navigator|Firefox|Vivaldi-stable|Vivaldi-snapshot|Chromium|Google-chrome|Brave|Brave-browser)' tag=6 switchtag=on focus=on
+hc rule class~'(navigator|firefox|vivaldi-stable|vivaldi-snapshot|chromium|google-chrome|brave|brave-browser)' tag=6 switchtag=on focus=on
+hc rule class~'(Deluge-Gtk)' tag=4 switchtag=on focus=on
+hc rule class~'(Discord|ViberPC)' tag=3 focus=off
+hc rule class~'(discord|viberpc)' tag=3 focus=off
+hc rule class~'(Atom|Subl|Geany|Brackets|Code-oss|Code|Xed)' tag=5 switchtag=on focus=on
+hc rule class~'(atom|subl|geany|brackets|code-oss|code|xed)' tag=5 switchtag=on focus=on
+hc rule class~'(Vlc|Mpv)' tag=4 switchtag=on focus=on
+hc rule class~'(vlc|mpv)' tag=4 switchtag=on focus=on
+hc rule class~'(Protonvpn|Tor Browser)' tag=7 switchtag=on focus=on
+hc rule class~'(Evolution|Geary|Mail|Thunderbird)' tag=8 switchtag=on focus=on
+hc rule class~'(evolution|geary|mail|thunderbird)' tag=8 switchtag=on focus=on
+hc rule class~'(Spotify|Pragha|Clementine|Deadbeef|Audacious)' tag=2 switchtag=on focus=on
+hc rule class~'(spotify|pragha|clementine|deadbeef|audacious)' tag=2 switchtag=on focus=on
+
+# SCRATCHPADS #
+#-------------#
+hc rule class~scpad floating=on floatplacement=center floating_geometry=1350x850
+hc rule class~KeePassXC floating=on floatplacement=center floating_geometry=1350x850
+hc rule class~Pavucontrol floating=on floatplacement=center floating_geometry=1350x850
+
+# BASIC RULES #
+#-------------#
+hc rule focus=on
+hc rule floatplacement=center
+
+hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' floating=on floatplacement=smart
+hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on floatplacement=center
+hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK|DESKTOP)' manage=off
+hc set tree_style '╾│ ├└╼─┐'
+
+# UNLOCK #
+#--------#
+hc unlock
+
+

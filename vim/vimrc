@@ -1,0 +1,46 @@
+" Calling PLUG
+"
+call plug#begin()
+
+Plug 'preservim/nerdtree'
+Plug 'ryanoasis/vim-devicons'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#formatter='unique_tail_improved'
+let g:airline_powerline_fonts=1
+let NERDTreeShowHidden=1
+
+call plug#end()
+
+" General settings
+"
+set background=dark
+colorscheme dracula
+
+set guifont=DroidSansMono\ Nerd\ Font\ 11
+set viminfo+=n~/.vim/viminfo
+set number relativenumber
+set encoding=UTF-8
+set noerrorbells
+set shiftwidth=2
+set smartindent
+set autoindent
+set noswapfile
+set smartcase
+set incsearch
+set expandtab
+set tabstop=2
+set smarttab
+filetype on
+set nowrap
+syntax on
+set ruler
+set nu
+
+" Custom Keybindings
+"
+nnoremap <Leader>n :NERDTreeFocus<Cr>
+nnoremap <C-n> :NERDTreeToggle<Cr>
+nnoremap <C-f> :NERDTreeFind<Cr>

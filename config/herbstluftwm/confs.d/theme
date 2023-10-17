@@ -1,0 +1,72 @@
+# Its in the functions name #
+#---------------------------#
+set_wallpaper() {
+    #feh --no-fehbg --bg-scale ~/Pictures/WallPP/Colorschemes/gruvbox/PixelArt/gruvbox_image46.png &
+    #feh --no-fehbg --bg-scale ~/Pictures/WallPP/Colorschemes/nord/IRL/nord1.jpg &
+    feh --no-fehbg --bg-scale ~/Pictures/WallPP/Colorschemes/dracula/ouroboros.png &
+    #feh --no-fehbg --bg-scale ~/Pictures/WallPP/Colorschemes/everforest/other/japanese_pedestrian_street_everforest.png &
+}
+set_wallpaper
+
+# Reset theme #
+#-------------#
+hc attr theme.reset 1
+hc attr theme.tiling.reset 1
+hc attr theme.floating.reset 1
+
+# Dracula #
+#---------#
+Active='#8BE9FD'
+Normal='#44475A'
+Urgent='#FF5555'
+Floating=$Active
+
+# Frames #
+#--------#
+hc set frame_gap 0
+hc set frame_padding 0
+hc set frame_border_width 0
+hc set frame_bg_transparent 1
+hc set frame_transparent_width 0
+hc set frame_border_active_color $Active
+hc set frame_bg_active_color $Active
+hc set frame_border_normal_color $Normal
+hc set frame_bg_normal_color $Normal
+hc set always_show_frame 0
+
+# Containers #
+#------------#
+hc attr theme.title_color $Active
+hc attr theme.title_height 20
+hc attr theme.padding_top 0
+hc attr theme.padding_bottom 0
+hc attr theme.padding_left 0
+hc attr theme.padding_right 0
+hc attr theme.inner_width 0
+
+hc attr theme.active.color $Active
+hc attr theme.active.outer_color $Active
+hc attr theme.active.title_color $Active
+hc attr theme.active.border_width 2
+
+hc attr theme.normal.color $Normal
+hc attr theme.normal.outer_color $Normal
+hc attr theme.normal.title_color $Normal
+hc attr theme.normal.border_width 2
+
+hc attr theme.urgent.color $Urgent
+hc attr theme.urgent.outer_color $Urgent
+hc attr theme.urgent.title_color $Urgent
+hc attr theme.urgent.border_width 4
+
+hc attr theme.floating.color $Floating
+hc attr theme.floating.outer_color $Floating
+hc attr theme.floating.title_color $Floating
+hc attr theme.floating.title_height 30
+hc attr theme.floating.border_width 6
+
+hc set window_gap 2
+hc set smart_window_surroundings 0
+hc set smart_frame_surroundings 1
+hc set mouse_recenter_gap 0
+

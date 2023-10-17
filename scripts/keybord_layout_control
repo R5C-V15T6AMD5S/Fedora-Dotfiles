@@ -1,0 +1,14 @@
+#!/bin/bash
+#
+# Change between keyboard layouts
+ 
+declare -l KL
+KL=`setxkbmap -query | tail -n 1 | awk '/layout:/{print $NF}'`
+if [ $KL = "hr" ]
+then
+    setxkbmap us
+    notify-send "KEYBOARD LAYOUT set to US"
+else
+    setxkbmap hr
+    notify-send "KEYBOARD LAYOUT set to HR"
+fi

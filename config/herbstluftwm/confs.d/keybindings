@@ -1,0 +1,153 @@
+
+Alt=Mod1 
+Super=Mod4
+
+# REMOVE ALL EXISTING KEYBINDINGS #
+#---------------------------------#
+hc keyunbind --all
+
+# Mouse #
+#-------#
+hc mouseunbind --all
+hc mousebind $Super-Button1 move
+hc mousebind $Super-Button2 zoom
+hc mousebind $Super-Button3 resize
+
+# Config commands #
+#-----------------#
+hc keybind $Super-Shift-q close
+hc keybind $Super-Shift-r reload
+hc keybind $Super-F4 spawn xkill
+
+# Tags #
+#------#
+tag_names=( {1..10} )
+tag_keys=( {1..10} 0 )
+
+hc keybind $Super-w use_previous
+hc keybind $Super-comma  use_index -1 --skip-visible
+hc keybind $Super-period use_index +1 --skip-visible
+
+hc rename default "${tag_names[0]}" || true
+for i in "${!tag_names[@]}" ; do
+    hc add "${tag_names[$i]}"
+    hc set_layout horizontal
+    hc set default_frame_layout 1
+    key="${tag_keys[$i]}"
+    if ! [ -z "$key" ] ; then
+        hc keybind "$Super-$key" use_index "$i"
+        hc keybind "$Super-Shift-$key" chain , move_index "$i" , use_index "$i"
+    fi
+done
+
+# Multimedia #
+#------------#
+statussig=SIGUSR1
+statuscmd=i3status
+volumepath=/usr/local/bin/
+
+hc keybind XF86AudioMicMute     spawn ~/.config/herbstluftwm/scripts/mic.sh
+hc keybind XF86AudioLowerVolume spawn $volumepath/volume -n -t $statuscmd -u $statussig down 5
+hc keybind XF86AudioRaiseVolume spawn $volumepath/volume -n -t $statuscmd -u $statussig up 5
+hc keybind XF86AudioMute        spawn $volumepath/volume -n -t $statuscmd -u $statussig mute
+
+hc keybind XF86MonBrightnessUp spawn light -A 5
+hc keybind XF86MonBrightnessDown spawn light -U 5
+
+# Essential programs #
+#--------------------#
+hc keybind $Super-Return spawn kitty
+hc keybind $Super-Shift-t spawn xed
+hc keybind $Super-Shift-f spawn nemo
+hc keybind Print spawn flameshot gui
+
+# Resizing frames and floating clients #
+#--------------------------------------#
+resizestep=0.02
+hc keybind $Super-Control-Left    resize left +$resizestep
+hc keybind $Super-Control-Down    resize down +$resizestep
+hc keybind $Super-Control-Up      resize up +$resizestep
+hc keybind $Super-Control-Right   resize right +$resizestep
+
+# Rofi things #
+#-------------#
+hc keybind $Super-d spawn rofi -show
+hc keybind $Super-Control-c spawn clipmenu
+hc keybind $Super-b spawn ~/.scripts/search_engines.sh
+hc keybind $Super-n spawn ~/.scripts/rofi-network-manager.sh 
+
+# Change focus #
+#--------------#
+hc keybind $Super-BackSpace   cycle_monitor
+hc keybind $Super-Tab         cycle_all +1
+hc keybind $Super-Shift-Tab   cycle_all -1
+hc keybind $Super-i jumpto urgent
+
+# Focusing client #
+#-----------------#
+hc keybind $Super-Left  focus left
+hc keybind $Super-Down  focus down
+hc keybind $Super-Up    focus up
+hc keybind $Super-Right focus right
+
+# Moving clients to ... on Single Monitor #
+#-----------------------------------------#
+hc keybind $Super-Shift-Left  shift left
+hc keybind $Super-Shift-Down  shift down
+hc keybind $Super-Shift-Up    shift up
+hc keybind $Super-Shift-Right shift right
+
+# Moving clients to ... on Dual monitor #
+#---------------------------------------#
+#hc keybind $Super-Shift-h chain , lock , shift_to_monitor -l , focus_monitor -l , unlock
+#hc keybind $Super-Shift-Left chain , lock , shift_to_monitor -l , focus_monitor -l , unlock
+#hc keybind $Super-Shift-j chain , lock , shift_to_monitor -l , focus_monitor -l , unlock
+#hc keybind $Super-Shift-Down <chain , lock , shift_to_monitor -l , focus_monitor -l , unlock
+#hc keybind $Super-Shift-k chain , lock , shift_to_monitor -r , focus_monitor -r , unlock
+#hc keybind $Super-Shift-Up chain , lock , shift_to_monitor -r , focus_monitor -r , unlock
+#hc keybind $Super-Shift-l chain , lock , shift_to_monitor -r , focus_monitor -r , unlock
+#hc keybind $Super-Shift-Right chain , lock , shift_to_monitor -r , focus_monitor -r , unlock
+
+# Splitting frames #
+#------------------#
+hc keybind $Super-Control-space split explode
+hc keybind $Super-h chain , split bottom 0.5 , focus -e down 
+hc keybind $Super-v chain , split right 0.5 , focus -e right
+hc keybind $Super-Control-h chain , split top 0.5 , focus -e up
+hc keybind $Super-Control-v chain , split left 0.5 , focus -e left
+
+# Layouting #
+#-----------# 
+hc keybind $Super-r remove
+hc keybind $Super-c spawn wincen
+hc keybind $Super-s floating toggle
+hc keybind $Super-f fullscreen toggle
+hc keybind $Super-p pseudotile toggle
+hc keybind $Super-Shift-space  set_attr clients.focus.floating toggle
+hc keybind $Super-Control-d set_attr clients.focus.decorated toggle
+hc keybind $Super-Control-m set_attr clients.focus.minimized true
+hc keybind $Super-Shift-m jumpto last-minimized
+# The following cycles through the available layouts within a frame, but skips
+# layouts, if the layout change wouldn't affect the actual wxndow positions.
+# I.e. if there are two windows within a frame, the grid layout is skipped.
+hc keybind $Super-space                                                           \
+            or , and . compare tags.focus.curframe_wcount = 2                   \
+                     . cycle_layout +1 vertical horizontal max vertical grid    \
+               , cycle_layout +1
+
+# Custom scripts #
+#----------------#
+hc keybind $Super-F7 spawn ~/.scripts/monitors.sh
+hc keybind $Super-Shift-a spawn ~/.scripts/powermenu.sh
+hc keybind $Super-Control-s spawn ~/.scripts/rofi_scp.sh
+hc keybind $Super-Control-t spawn ~/.scripts/touchpad_control
+hc keybind $Super-Control-k spawn ~/.scripts/keybord_layout_control
+hc keybind $Super-Control-Shift-m spawn ~/.config/herbstluftwm/scripts/monitor_init.sh
+
+# Scratchpads #
+#-------------#
+hc keybind $Super+x spawn scratch scratchpad
+hc keybind $Super-Shift-Control-h spawn scratch FakeTM
+hc keybind $Super-Shift-Control-r spawn scratch RangerFM
+hc keybind $Super-Shift-Control-k spawn scratch keepassxc
+hc keybind $Super-Shift-Control-p spawn scratch pavucontrol
