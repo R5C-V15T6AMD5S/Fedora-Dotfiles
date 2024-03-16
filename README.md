@@ -1,4 +1,4 @@
-# Dotfile for Fedora 38 
+# Dotfile for Fedora 39
 
 ## XFCE + bspwm w/ Dracula colorscheme
 ![Screenshot](./Screenshots/bspwm.png)
@@ -11,7 +11,7 @@
 
 ## Specifications
 
-- Distro: `Fedora XFCE 38`
+- Distro: `Fedora XFCE 39`
 - Shell: `zsh`
 - Terminal: `kitty`
 - Browser: `firefox`
