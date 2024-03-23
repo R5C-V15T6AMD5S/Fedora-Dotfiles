@@ -155,6 +155,7 @@ require('lazy').setup({
     -- 'rebelot/kanagawa.nvim',
     -- 'ellisonleao/gruvbox.nvim',
     'Mofiqul/dracula.nvim',
+    -- 'navarasu/onedark.nvim',
     -- 'shaunsingh/nord.nvim',
     -- 'neanias/everforest-nvim',
     -- 'navarasu/onedark.nvim',
