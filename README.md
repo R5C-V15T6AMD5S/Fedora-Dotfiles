@@ -1,12 +1,13 @@
 # Dotfile for Fedora 39
 
 <!-- ## XFCE + bspwm w/ Dracula colorscheme
-![Screenshot](./Screenshots/bspwm.png) -->
+![Screenshot](./Screenshots/bspwm.png) 
+!!!! DEPRICATED !!!!-->
 
-## XFCE + i3 w/ Gruvbox colorscheme
+## XFCE + i3 w/ Gruvbox
 ![Screenshot](./Screenshots/i3.png)
 
-## XFCE + herbstluftwm w/ Nord colorscheme
+## XFCE + herbstluftwm w/ Nord
 ![Screenshot](./Screenshots/herbstluftwm.png)
 
 ## Specifications
@@ -15,6 +16,7 @@
 - Shell: `zsh`
 - Terminal: `kitty`
 - Browser: `firefox`
+- Compositor: `picom`
 - Text editor: `Nvim`
 - File manager: `Nemo`
-- WMs: `i3` or `herbstluftwm`
+- WMs: `i3`, `herbstluftwm`
