@@ -1,0 +1,80 @@
+#     _    _ _
+#    / \  | (_) __ _ ___  ___  ___
+#   / _ \ | | |/ _` / __|/ _ \/ __|
+#  / ___ \| | | (_| \__ \  __/\__ \
+# /_/   \_\_|_|\__,_|___/\___||___/
+
+alias v="vim"
+alias q="exit"
+alias nv="nvim"
+alias r="ranger"
+alias cp="cp -r"
+alias rm="rm -r"
+alias nf="neofetch"
+alias cf="cpufetch"
+alias cpl="copypath"
+alias cpf="copyfile"
+alias urar="unrar x"
+alias ka="killall -q"
+alias clcf="clear; cf"
+alias utar="tar -zxvf"
+alias tdl="todo sort; todo"
+alias pd="curl parrot.live"
+alias tclock="tty-clock -sctx"
+alias nfc="neofetch --config none"
+alias xdgf="clear; ./xdg-ninja.sh"
+alias feh="feh --no-fehbg --bg-scale"
+alias clnf="clear; colorscript -r; nf"
+alias rd="ranger --cmd='set viewmode=multipane' ~/ ~/"
+alias ct="curl https://raw.githubusercontent.com/sergiolepore/ChristBASHTree/master/tree-EN.sh | bash"
+
+# Git opertions
+alias gl="git log"
+alias ga="git add ."
+alias gp="git push"
+alias gcl="git clone"
+alias gst="git status"
+alias gco="git checkout"
+alias gcm="git commit -m"
+
+# Different Spicetify themes
+alias sndt="spicetify config color_scheme Dark current_theme Nord && spicetify apply"
+alias sgbt="spicetify config color_scheme Dark current_theme Gruvbox && spicetify apply"
+alias sdct="spicetify config color_scheme Dark current_theme Dracula && spicetify apply"
+alias sodt="spicetify config color_scheme Dark current_theme OneDark && spicetify apply"
+alias seft="spicetify config color_scheme Dark current_theme Everforest && spicetify apply"
+
+# Dnf short and to the point
+alias rpmi="sudo rpm -i"
+alias rpme="sudo rpm -e"
+alias rpmr="sudo rpm --reinstall"
+alias sysctl="sudo systemctl"
+alias searchp="sudo dnf search"
+alias removep="sudo dnf -y remove"
+alias installp="sudo dnf -y install"
+alias autorem="sudo dnf -y autoremove"
+alias reinstallp="sudo dnf -y reinstall"
+alias disablerp="sudo dnf config-manager --set-disabled"
+alias upday="sudo dnf update -y; sudo dnf upgrade -y; sudo flatpak update"
+
+# Mostly used apps or shortcuts
+alias cls="clear; ls"
+alias cltr="gio trash --empty"
+alias probe="xprop | grep WM_CLASS"
+alias sww="setsid -f $1 > /dev/null 2>&1"
+alias wget="wget --hsts-file='$XDG_DATA_HOME/wget-hsts'"
+alias la="eza -a --color=always --icons --group-directories-first"
+alias ls="eza -aG --color=always --icons --group-directories-first"
+
+alias edit-todo="v ~/.todo"
+alias edit-grub="sudo v /etc/default/grub"
+alias clear-calc="rm ~/.local/share/rofi/rofi_calc_history" 
+alias update-grub="sudo grub2-mkconfig -o /boot/grub2/grub.cfg"
+alias btrdisinst="betterdiscordctl --d-install flatpak install"
+alias py-uuui="cd ~/Desktop/RiTeh\ UNIRI/3.6/UUUI/Vježbe; source env/bin/activate; sww jupyter notebook"
+
+# Operations with Docker & Docker Containers
+alias dock="sudo docker"
+alias kill-docker="docker stop $1 && docker rm $1"
+alias stop-docker="systemctl stop docker && systemctl --user stop docker-desktop"
+alias start-docker="systemctl start docker && systemctl --user start docker-desktop"
