@@ -8,11 +8,10 @@
 
 ## Specifications
 
-- Distro: `Fedora XFCE 39`
 - Shell: `zsh`
 - Terminal: `kitty`
+- Text editor: `Nvim`
 - Browser: `firefox`
 - Compositor: `picom`
-- Text editor: `Nvim`
 - File manager: `Nemo`
 - WMs: `i3`, `herbstluftwm`
