@@ -1,24 +1,21 @@
-########  Visit i3wm.org for more information about User's guide'  ########
+##  Visit i3wm.org for more information about User's guide'  ##
+#-------------------------------------------------------------#
 
-
-## i3 confs and monitor init ##
-#-----------------------------#
 include $HOME/.config/i3/confs.d/*
-exec --no-startup-id ~/.config/i3/scripts/monitor_init.sh
 
 ## Variables ##
 #-------------#
-set $Primary	  "eDP"
-set $Secondary    "HDMI-A-0"
-
-set $alt Mod1
-set $super Mod4
+set $Primary	 "eDP"
+set $Secondary   "HDMI-A-0"
+set $Alt         Mod1
+set $Super       Mod4
 
 ## Basic config ##
 #----------------#
 focus_wrapping no
 focus_follows_mouse no
-floating_modifier $super
+floating_modifier $Super
+default_orientation horizontal
 font pango: DejaVu Sans Mono 10
 
 ## Pulseaudio-utils Settings [Volume Control] ##
