@@ -1,9 +1,5 @@
 # Dotfile for Fedora 39
 
-<!-- ## XFCE + bspwm w/ Dracula colorscheme
-![Screenshot](./Screenshots/bspwm.png) 
-!!!! DEPRICATED !!!!-->
-
 ## XFCE + i3 w/ Gruvbox
 ![Screenshot](./Screenshots/i3.png)
 
