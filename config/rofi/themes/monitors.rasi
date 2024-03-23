@@ -12,20 +12,19 @@ configuration {
   spacing: 0;
   background: #282a36;
   line: #F8F8F2; 
-  foreground: #d08770;   
+  foreground: #F8F8F2;   
   Comment: #6272a4; 
   selected: #bd93f9;
   background-color: @background;
   text-color: @selected;
 }
 
-
 window {
     background-color:               @background;
     border:                         2px;
     border-color:                   @line;
     border-radius:                  50px;
-    width:                          1040px;   
+    width:                          1000px;   
     height:                         130px;          
     x-offset:                       -4;
     y-offset:                       0;

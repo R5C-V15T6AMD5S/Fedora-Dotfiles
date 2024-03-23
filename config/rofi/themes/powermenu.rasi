@@ -12,13 +12,12 @@ configuration {
   spacing: 0;
   background: #282a36;
   line: #F8F8F2; 
-  foreground: #d08770;   
+  foreground: #F8F8F2;   
   Comment: #6272a4; 
   selected: #bd93f9;
   background-color: @background;
   text-color: @selected;
 }
-
 
 
 window {

@@ -1,35 +1,35 @@
 /*Dracula Dark theme based on the Purple official rofi theme*/
 
 * {
-    drac-bgd: #282a36;
-    drac-cur: #44475a;
-    drac-fgd: #f8f8f2;
-    drac-cmt: #6272a4;
-    drac-cya: #8be9fd;
-    drac-grn: #50fa7b;
-    drac-ora: #ffb86c;
-    drac-pnk: #ff79c6;
-    drac-pur: #bd93f9;
-    drac-red: #ff5555;
-    drac-yel: #f1fa8c;
+    kan-bgd: #223249;
+    kan-cur: #44475a;
+    kan-fgd: #C8C093;
+    kan-cmt: #6272a4;
+    kan-cya: #7E9CD8;
+    kan-grn: #98BB6C;
+    kan-ora: #FFA066;
+    kan-pnk: #54546D;
+    kan-pur: #957FB8;
+    kan-red: #E82424;
+    kan-yel: #FF9E3B;
 
-    foreground: @drac-fgd;
-    background-color: @drac-bgd;
-    active-background: @drac-pnk;
-    urgent-background: @drac-red;
-    urgent-foreground: @drac-bgd;
+    foreground: @kan-fgd;
+    background-color: @kan-bgd;
+    active-background: @kan-pnk;
+    urgent-background: @kan-red;
+    urgent-foreground: @kan-bgd;
 
     selected-background: @active-background;
     selected-urgent-background: @urgent-background;
     selected-active-background: @active-background;
     separatorcolor: @active-background;
-    bordercolor: #6272a4;
+    bordercolor: @kan-fgd;
 }
 
 #window {
     background-color: @background-color;
     border:           3;
-    border-radius: 6;
+    border-radius: 4;
     border-color: @bordercolor;
     padding:          5;
 	  width:		 40%;
@@ -53,7 +53,7 @@
     border-color: @bordercolor;
     spacing: 0.5em ;
     scrollbar:    false;
-    padding:      4px 0px 0px ;
+    padding:      2px 0px 0px ;
 }
 #element {
     border:  0px;
@@ -119,12 +119,12 @@
     text-color: @foreground;
 }
 #entry {
-    text-color: @drac-cya;
+    text-color: @kan-cya;
     placeholder:      " Search . . .";
 }
 #prompt {
     spacing:    0;
-    text-color: @drac-grn;
+    text-color: @kan-grn;
 }
 #inputbar {
     children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
@@ -133,7 +133,7 @@
     expand:     false;
     str:        ":";
     margin:     0px 0.3em 0em 0em ;
-    text-color: @drac-grn;
+    text-color: @kan-grn;
 }
 element-text, element-icon {
     background-color: inherit;
