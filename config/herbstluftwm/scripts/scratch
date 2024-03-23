@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+case "$1" in
+
+    scratchpad) 		
+        entry="kitty --class scpad -T scratchpad" 		
+        ;;
+    keepassxc)
+        entry="keepassxc"
+        ;;
+    pavucontrol)
+        entry="pavucontrol"
+        ;;
+    HTop)
+        entry="kitty --class scpad -T HTop -e htop"
+        ;;
+    RangerFM)
+        entry="kitty --class scpad -T RangerFM -e ranger"
+        ;;
+    simplenote)
+        entry="flatpak run com.simplenote.Simplenote"
+        ;;
+esac
+
+xdotool search --onlyvisible --name "$1" windowunmap \
+    || xdotool search --name "$1" windowmap \
+    || $entry &

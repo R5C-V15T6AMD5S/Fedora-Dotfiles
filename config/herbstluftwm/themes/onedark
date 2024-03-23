@@ -1,0 +1,9 @@
+# OneDark #
+#---------#
+Active='#e06c75'
+Normal='#333333'
+Urgent='#cc241d'
+Floating='#abb2bf'
+#Floating=$Active
+
+

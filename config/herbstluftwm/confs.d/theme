@@ -1,9 +1,9 @@
-# Its in the functions name #
-#---------------------------#
+
 set_wallpaper() {
     #feh --no-fehbg --bg-scale ~/Pictures/WallPP/Colorschemes/gruvbox/PixelArt/gruvbox_image46.png &
     #feh --no-fehbg --bg-scale ~/Pictures/WallPP/Colorschemes/nord/IRL/nord1.jpg &
-    feh --no-fehbg --bg-scale ~/Pictures/WallPP/Colorschemes/dracula/ouroboros.png &
+    #feh --no-fehbg --bg-scale ~/Pictures/WallPP/Colorschemes/onedark/misc/od_road.png
+    feh --no-fehbg --bg-scale ~/Pictures/WallPP/Colorschemes/dracula/Misc/ouroboros.png &
     #feh --no-fehbg --bg-scale ~/Pictures/WallPP/Colorschemes/everforest/other/japanese_pedestrian_street_everforest.png &
 }
 set_wallpaper
@@ -16,10 +16,10 @@ hc attr theme.floating.reset 1
 
 # Dracula #
 #---------#
-Active='#8BE9FD'
+Active='#6272A4'
 Normal='#44475A'
 Urgent='#FF5555'
-Floating=$Active
+Floating='#8BE9FD'
 
 # Frames #
 #--------#
@@ -37,7 +37,7 @@ hc set always_show_frame 0
 # Containers #
 #------------#
 hc attr theme.title_color $Active
-hc attr theme.title_height 20
+hc attr theme.title_height 15
 hc attr theme.padding_top 0
 hc attr theme.padding_bottom 0
 hc attr theme.padding_left 0
@@ -62,10 +62,13 @@ hc attr theme.urgent.border_width 4
 hc attr theme.floating.color $Floating
 hc attr theme.floating.outer_color $Floating
 hc attr theme.floating.title_color $Floating
+hc attr theme.floating.normal.color $Normal
+hc attr theme.floating.normal.outer_color $Normal
+hc attr theme.floating.normal.title_color $Normal
 hc attr theme.floating.title_height 30
 hc attr theme.floating.border_width 6
 
-hc set window_gap 2
+hc set window_gap 4
 hc set smart_window_surroundings 0
 hc set smart_frame_surroundings 1
 hc set mouse_recenter_gap 0
