@@ -1,13 +1,14 @@
 /* Default theme by dunno who, me or someone else */
 
 * {
-	background-color: #2D4F67;
-	text-color:       #DCD7BA;
-	selbg:            #E46876;
-	sel2bg:           #D27E99;
-	actbg:            #2D4F67;
-	urgbg:            #E82424;
-	winbg:			         @text-color;
+	background-color: #2b3339;
+	text-color:       #d3c6aa;
+    bordercol:        #a7c080;
+	selbg:            #e67e80;
+	sel2bg:           @bordercol;
+	actbg:            @background-color;
+	urgbg:            #e67e80;
+	winbg:			  @text-color;
 
 	selected-normal-foreground: @sel2bg;
 	normal-foreground:          @text-color;
@@ -19,10 +20,10 @@
 	selected-urgent-background: @urgbg;
 	urgent-background:          @background-color;
 
-	selected-active-foreground: @winbg;
-	active-foreground:          @text-color;
+	selected-active-foreground: @sel2bg;
+	active-foreground:          @urgbg;
 	selected-active-background: @actbg;
-	active-background:          @selbg;
+	active-background:          @background-color;
 
 	line-margin:     0;
 	line-padding:    0;
