@@ -10,7 +10,7 @@
 
 - Shell: `zsh`
 - Terminal: `kitty`
-- Text editor: `Nvim`
+- Text editor: `nvim`
 - Browser: `firefox`
 - Compositor: `picom`
 - File manager: `Nemo`
