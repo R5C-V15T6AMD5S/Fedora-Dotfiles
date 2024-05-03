@@ -1,9 +1,9 @@
 # Dotfile for Fedora 39
 
-## XFCE + i3 w/ Gruvbox
+## XFCE + i3
 ![Screenshot](./Screenshots/i3.png)
 
-## XFCE + herbstluftwm w/ Nord
+## XFCE + herbstluftwm
 ![Screenshot](./Screenshots/herbstluftwm.png)
 
 ## Specifications
