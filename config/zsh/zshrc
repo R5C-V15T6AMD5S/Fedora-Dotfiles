@@ -40,10 +40,12 @@ source ~/.config/zsh/.aliases
 source ~/.config/zsh/.functions
 
 setopt globdots
-setopt appendhistory
+setopt share_history
+#setopt append_history
+setopt inc_append_history
 
 # Startup apps
-#todo sort && todo
+todo sort && todo
 colorscript random
 
 export LESS_TERMCAP_mb=$'\E[1;31m'
