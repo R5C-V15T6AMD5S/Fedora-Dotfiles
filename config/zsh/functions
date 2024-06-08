@@ -9,30 +9,52 @@
 
 # Access GOGH COLORS
 function gogh() {
-	bash -c  "$(wget -qO- https://git.io/vQgMr)"
+	   bash -c  "$(wget -qO- https://git.io/vQgMr)"
 }
 
 # Create a new directory and enter it
 function mkd() {
-	mkdir -p "$@" && cd "$_";
+   	mkdir -p "$@" && cd "$_";
 }
 
-# Update grub config
+function run-tos() {
+    cd ~/VirtualBox/TempleOS; ./run.sh ./TOS.img 
+}
+
+function christmas-tree() {
+    curl https://raw.githubusercontent.com/sergiolepore/ChristBASHTree/master/tree-EN.sh | bash
+}
+
+function py-uuui() {
+    cd ~/Desktop/RiTeh\ UNIRI/3.6/UUUI/Vježbe; source env/bin/activate; sww jupyter notebook
+}
+
 function update-grub() {
+      sudo rm /boot/efi/EFI/fedora/grub.cfg
+# UEFI
       sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
+# BIOS
+      #sudo grub2-mkconfig -o /boot/grub2/grub.cfg
 }
 
 # Lolcat with EPIC font for figlet
 function epicban() {
-	clear; figlet -f epic.flf "$1" | lolcat
+	     clear; figlet -f epic.flf "$1" | lolcat
 }
 
 # Lolcat with 3D font for figlet
 function 3dban() {
-	clear; figlet -f 3d.flf "$1" | lolcat
+	     clear; figlet -f 3d.flf "$1" | lolcat
 }
 
-# Alias like for unzip _filename_ -x
+function rsl-status() {
+    bash -c "~/.scripts/home_server_status.sh"
+}
+
+function rsl-smb() {
+    sudo mount -t cifs //rsl-server.duckdns.org/Share-o5-13 /media/SummaModusOperandi -o rw,_netdev,credentials=/home/o5-13/.smbcreds,uid=1000,gid=1000,port=4455
+}
+
 function uzip() {
     if [[ $# != 1 ]]; then echo Error: Argument IS the zip file; return 1; fi
     target="${1%.zip}"
@@ -45,14 +67,3 @@ function update-spicetify(){
     sudo chmod a+wr -R /var/lib/flatpak/app/com.spotify.Client/x86_64/stable/active/files/extra/share/spotify/Apps
     spicetify backup apply
 }
-                                        
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-
-
