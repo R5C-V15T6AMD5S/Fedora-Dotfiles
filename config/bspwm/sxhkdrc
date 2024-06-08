@@ -1,0 +1,145 @@
+#### Non-bspwm ####
+#-----------------#
+super + Escape
+    pkill -USR1 -x sxhkd && notify-send "SXHKD reloaded"
+
+
+#### THE bspwm things ####
+#------------------------#
+super + shift + {x, r}
+	   bspc {quit, wm -r}
+
+super + {shift + q, q}
+	   bspc node -{c, k}
+
+
+#### Media Controls ####
+#----------------------#
+XF86AudioPlay 
+    playerctl play-pause
+
+XF86AudioStop 
+    playerctl stop
+
+XF86AudioNext 
+    playerctl next
+
+XF86AudioPrev   
+    playerctl previous
+
+XF86MonBrightnessUp    
+    light -A 5
+
+XF86MonBrightnessDown 
+    light -U 5
+
+XF86AudioLowerVolume
+    pactl -- set-sink-volume @DEFAULT_SINK@ -5%
+
+XF86AudioRaiseVolume
+    pactl -- set-sink-volume @DEFAULT_SINK@ +5%
+
+XF86AudioMute
+    pactl -- set-sink-mute @DEFAULT_SINK@ toggle
+
+XF86AudioMicMute      
+    amixer set Capture toggle && amixer get Capture | grep '\[off\]' && notify-send "MIC switched OFF" || notify-send "MIC switched ON"
+
+
+#### Layouts ####
+#---------------#
+alt + {t, f, shift + space}
+	   bspc node -t {tiled, fullscreen, floating}
+
+alt + {1, 2, 3, 4, 5, 6, 7, 8, 9}
+    bsp-layout set {tall, rtall, wide, rwide, grid, rgrid, even, tiled, monocle}
+
+super + {comma, period}
+    bsp-layout {previous, next}
+
+
+#### Most used apps ####
+#----------------------#
+super + {F4, Return}
+    {xkill, kitty}
+
+super + shift + {t, f, b, v, Escape}
+    {xed, nemo, firefox, ~/.scripts/rofi_virtualbox.sh, xfce4-taskmanager}
+
+
+#### Screenshots ####
+#-------------------#
+Print
+    ~/.scripts/screenshot_tool --now
+alt + Print
+    ~/.scripts/screenshot_tool --in5
+super + Print
+    ~/.scripts/screenshot_tool --in10
+shift + Print
+    ~/.scripts/screenshot_tool --area
+ctrl + Print
+    ~/.scripts/screenshot_tool --win
+
+
+#### Scratchpads ####
+#-------------------#
+super + x
+    scratch FlyingKitty 
+
+super + shift + ctrl + {h, r, k, p, s}
+    scratch {FakeTM, RangerFM, keepassxc, pavucontrol, simplenote}
+
+
+#### Containers Control ####
+#--------------------------#
+#super + alt + {l, j, k, h}
+super + alt + {Right, Up, Down, Left}
+    {bspc node -z right -20 0; \
+    bspc node -z left +20 0, \
+    bspc node -z top 0 -20; \
+    bspc node -z bottom 0 +20, \
+    bspc node -z top 0 +20; \
+    bspc node -z bottom 0 -20, \
+    bspc node -z right +20 0; \
+    bspc node -z left -20 0} 
+
+super + {_,shift + }{Left,Down,Up,Right}
+   bspc node --{focus,swap} {west,south,north,east} 
+
+
+#### ROFI & friends ####
+#----------------------#
+super + {b, n, d, ctrl + c}
+    {~/.scripts/search_engines.sh, ~/.scripts/rofi-network-manager.sh, rofi -show,  clipmenu}
+
+
+#### Custom scripts ####
+#----------------------#
+alt + {F7, shift + a}
+    {~/.scripts/monitors.sh,~/.scripts/powermenu.sh}
+
+alt + ctrl + {t, s, m, k} 
+    {~/.scripts/touchpad_control, ~/.scripts/rofi_scp.sh, ~/.config/bspwm/scripts/bspwinmask.sh,  ~/.scripts/keybord_layout_control}
+
+
+#### Workspaces ####
+#------------------#
+super + {_,shift + } {1-9,0}
+   	bspc {desktop -f, node -d} '^{1-9, 10}' --follow
+
+super + {w, c, r}
+	   {bspc desktop -f last, bash -c ~/.scripts/center_window.sh, bspc node @/ -R 90}
+
+
+#### Preselection ####
+#--------------------#
+super + ctrl + {h, k, j, l}
+	   bspc node -o 0.5 -p {west, north, south, east}
+
+super + ctrl + {1-9}
+	   bspc node -o 0.{1-9}
+
+super + ctrl + shift + space
+	   bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+
+
