@@ -5,7 +5,8 @@ hc() {
 }
 
 hc emit_hook reload
-hc set swap_monitors_to_get_tag 0
+hc set swap_monitors_to_get_tag 1
+hc set default_frame_layout horizontal
 hc set focus_crosses_monitor_boundaries 1
 
 # THEME #
@@ -28,12 +29,15 @@ bash -c $HOME/.config/herbstluftwm/scripts/monitor_init.sh &
 #-----------#
 xkbset q &
 nm-applet &
+xfdesktop &
 clipmenud &
 xset b off &
 numlockx on &
 xfce4-panel &
-unclutter -idle 21 &
+unclutter -idle 20 &
+killall -q xfce4-notifyd &
 killall -q dunst | wait; dunst -config ~/.config/dunst/dunstrc &
 killall -q picom | wait; picom --config ~/.config/picom/picom.conf &
 i3-battery-popup -n -v 100 -L 20 -l 10 -s ~/.config/i3/audio/warning.wav &
 xinput set-prop "MSFT0001:00 04F3:31BE Touchpad" "libinput Tapping Enabled" 1 & 
+#killall -q xfce4-panel | wait; bash -c ~/.config/herbstluftwm/scripts/polybar.sh &

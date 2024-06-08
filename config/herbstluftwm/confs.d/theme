@@ -1,25 +1,16 @@
 
-set_wallpaper() {
-    #feh --no-fehbg --bg-scale ~/Pictures/WallPP/Colorschemes/gruvbox/PixelArt/gruvbox_image46.png &
-    #feh --no-fehbg --bg-scale ~/Pictures/WallPP/Colorschemes/nord/IRL/nord1.jpg &
-    #feh --no-fehbg --bg-scale ~/Pictures/WallPP/Colorschemes/onedark/misc/od_road.png
-    feh --no-fehbg --bg-scale ~/Pictures/WallPP/Colorschemes/dracula/Misc/ouroboros.png &
-    #feh --no-fehbg --bg-scale ~/Pictures/WallPP/Colorschemes/everforest/other/japanese_pedestrian_street_everforest.png &
-}
-set_wallpaper
-
 # Reset theme #
 #-------------#
 hc attr theme.reset 1
 hc attr theme.tiling.reset 1
 hc attr theme.floating.reset 1
 
-# Dracula #
-#---------#
-Active='#6272A4'
-Normal='#44475A'
-Urgent='#FF5555'
-Floating='#8BE9FD'
+# Everforest #
+#------------#
+Active='#a7c080'
+Normal='#272e33'
+Urgent='#e67e80'
+Floating='#4f5b58'
 
 # Frames #
 #--------#

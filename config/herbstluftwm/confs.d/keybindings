@@ -1,6 +1,17 @@
 
+# VARIABLES #
+#-----------#
 Alt=Mod1 
 Super=Mod4
+Primary=eDP
+Secondary=HDMI-A-0
+Terminal=kitty
+Text_Editor=xed
+File_Manager=nemo
+Web_Browser=firefox
+ProcManager=xfce4-taskmanager
+ScreenShooter=~/.scripts/screenshot_tool
+VirtualWorld=~/.scripts/rofi_virtualbox.sh
 
 # REMOVE ALL EXISTING KEYBINDINGS #
 #---------------------------------#
@@ -25,8 +36,8 @@ hc keybind $Super-w use_previous
 hc keybind $Super-comma  use_index -1 --skip-visible
 hc keybind $Super-period use_index +1 --skip-visible
 
-tag_names=( {1..10} )
-tag_keys=( {1..10} 0 )
+tag_names=( {1..9} )
+tag_keys=( {1..9} 0 )
 
 hc rename default "${tag_names[0]}" || true
 for i in "${!tag_names[@]}" ; do
@@ -43,29 +54,30 @@ done
 
 # Multimedia #
 #------------#
-statussig=SIGUSR1
-statuscmd=i3status
-volumepath=/usr/local/bin/5
-
 hc keybind XF86AudioMicMute     spawn ~/.config/herbstluftwm/scripts/mic.sh
-hc keybind XF86AudioLowerVolume spawn $volumepath/volume -n -t $statuscmd -u $statussig down 5
-hc keybind XF86AudioRaiseVolume spawn $volumepath/volume -n -t $statuscmd -u $statussig up 5
-hc keybind XF86AudioMute        spawn $volumepath/volume -n -t $statuscmd -u $statussig mute
+hc keybind XF86AudioLowerVolume spawn pactl -- set-sink-volume @DEFAULT_SINK@ -5%
+hc keybind XF86AudioRaiseVolume spawn pactl -- set-sink-volume @DEFAULT_SINK@ +5%
+hc keybind XF86AudioMute        spawn pactl -- set-sink-mute @DEFAULT_SINK@ toggle 
 
 hc keybind XF86AudioPlay spawn playerctl play-pause
 hc keybind XF86AudioStop spawn playerctl stop
 hc keybind XF86AudioNext spawn playerctl next
 hc keybind XF86AudioPrev spawm playerctl previous
 
-hc keybind XF86MonBrightnessUp chain , spawn light -A 5 , spawn notify-send "int Brightness += 5"
-hc keybind XF86MonBrightnessDown chain , spawn light -U 5 , spawn notify-send "int Brightness -= 5"
+hc keybind XF86MonBrightnessUp chain , spawn light -A 5 , spawn notify-send "Brightness: $(light)"
+hc keybind XF86MonBrightnessDown chain , spawn light -U 5 , spawn notify-send "Brightness: $(light)"
 
 # Essential programs #
 #--------------------#
-hc keybind $Super-Return spawn kitty
-hc keybind $Super-Shift-t spawn xed
-hc keybind $Super-Shift-f spawn nemo
-hc keybind Print spawn flameshot gui
+hc keybind $Super-Return spawn "$Terminal"
+hc keybind $Super-$Alt-Return spawn "$Terminal" --class floating
+hc keybind $Super-Shift-Return spawn "$Terminal" --start-as=fullscreen 
+
+hc keybind $Super-Shift-b spawn "$Web_Browser"
+hc keybind $Super-Shift-t spawn "$Text_Editor"
+hc keybind $Super-Shift-f spawn "$File_Manager"
+hc keybind $Super-Shift-v spawn "$VirtualWorld"
+hc keybind $Super+Shift+Escape spawn "$ProcManager"
 
 # Resizing frames and floating clients #
 #--------------------------------------#
@@ -125,7 +137,7 @@ hc keybind $Alt-c spawn wincen
 hc keybind $Alt-s floating toggle
 hc keybind $Alt-f fullscreen toggle
 hc keybind $Alt-p pseudotile toggle
-hc keybind $Alt-Shift-space  set_attr clients.focus.floating toggle
+hc keybind $Alt-Shift-space set_attr clients.focus.floating toggle
 hc keybind $Alt-Control-d set_attr clients.focus.decorated toggle
 hc keybind $Alt-Control-m set_attr clients.focus.minimized true
 hc keybind $Alt-Shift-m jumpto last-minimized
@@ -146,10 +158,21 @@ hc keybind $Alt-Control-t spawn ~/.scripts/touchpad_control
 hc keybind $Alt-Control-k spawn ~/.scripts/keybord_layout_control
 hc keybind $Alt-Control-Shift-m spawn ~/.config/herbstluftwm/scripts/monitor_init.sh
 
+# Screenshots #
+#-------------#
+hc keybind Print         spawn "$ScreenShooter" "--now"
+hc keybind $Alt-Print    spawn "$ScreenShooter" "--in5"
+hc keybind $Super-Print  spawn "$ScreenShooter" "--in10"
+hc keybind Shift-Print   spawn "$ScreenShooter" "--area"
+hc keybind Control-Print spawn "$ScreenShooter" "--win"
+
 # Scratchpads #
 #-------------#
 hc keybind $Super+x spawn scratch FlyingKitty
 hc keybind $Super-Shift-Control-h spawn scratch FakeTM
 hc keybind $Super-Shift-Control-r spawn scratch RangerFM
 hc keybind $Super-Shift-Control-k spawn scratch keepassxc
+hc keybind $Super-Shift-Control-s spawn scratch simplenote
 hc keybind $Super-Shift-Control-p spawn scratch pavucontrol
+
+
