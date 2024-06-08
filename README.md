@@ -6,6 +6,10 @@
 ## XFCE + herbstluftwm
 ![Screenshot](./Screenshots/herbstluftwm.png)
 
+
+## XFCE + bspwm
+![Screenshot](./Screenshots/bspwm.png)
+
 ## Specifications
 
 - Shell: `zsh`
@@ -14,4 +18,4 @@
 - Browser: `firefox`
 - Compositor: `picom`
 - File manager: `Nemo`
-- WMs: `i3`, `herbstluftwm`
+- WMs: `i3`, `herbstluftwm`, `bspwm`
