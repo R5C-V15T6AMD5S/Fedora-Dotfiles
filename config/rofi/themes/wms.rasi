@@ -19,7 +19,7 @@ window {
     border:                         2px;
     border-color:                   @line;
     border-radius:                  50px;
-    width:                          450px;   
+    width:                          680px;   
     height:                         130px;          
     x-offset:                       -4;
     y-offset:                       0;

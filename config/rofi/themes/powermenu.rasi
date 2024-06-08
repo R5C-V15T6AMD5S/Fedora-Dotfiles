@@ -6,15 +6,15 @@ configuration {
  
 
 * {
-  border: 0;
+   border: 0;
   margin: 0;
   padding: 0;
   spacing: 0;
-  background: #282a36;
-  line: #F8F8F2; 
-  foreground: #F8F8F2;   
+  background: #2b3339;
+  line: #d3c6aa; 
+  foreground: #d3c6aa;   
   Comment: #6272a4; 
-  selected: #bd93f9;
+  selected: #e67e80;
   background-color: @background;
   text-color: @selected;
 }

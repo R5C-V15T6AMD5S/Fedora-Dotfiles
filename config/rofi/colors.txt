@@ -1,17 +1,17 @@
 configuration{
-	 modi: "drun,run,window,combi,calc";
-	 fake-transparency: true;
-	 sidebar-mode: false;
-   show-icons: true;
-   cycle: true;
-   line-margin: 10;
-   icon-theme: "Dracula";
+    modi: "drun,calc,run,window";
+    cycle: true;
+    line-margin: 10;
+    show-icons: true;
+    sidebar-mode: false;
+    icon-theme: "Gruvbox-Material-Dark";
 
-  display-run: 					"Execute";
-  display-drun: 				"Apps";
-  display-window: 		"Windows";
-  display-combi:    "Mr. Mix";
-  display-calc:    "Calc";
+    display-drun: 	 "Apps";
+    display-calc:    "Calc";
+    display-run:     "Execute";
+    display-window:  "Containers";
+    display-ssh:     "SSH";
+    display-combi:   "Mr. Mix";
 }
 theme "~/.config/rofi/default.rasi"
 
@@ -47,17 +47,18 @@ theme "~/.config/rofi/default.rasi"
 // Everforest
 	background-color: #2b3339;
 	text-color:       #d3c6aa;
-	selbg:            #a7c080;
-	sel2bg:           #a7c080;
-	actbg:            #d699b6;
-	urgbg:            #e67e80;
-	winbg:			         @text-color;
+    bordercol:        #a7c080;
+	selbg:            #e67e80;
+	sel2bg:           @bordercol;
+	actbg:            @background-color;
+	urgbg:            @selbg;
+	winbg:			  @text-color;
 
 // Kanagawa
-	background-color: #2D4F67;
-	text-color:       #DCD7BA;
-	selbg:            #E46876;
+	background-color: #223249;
+	text-color:       #C8C093;
+	selbg:            #C34043;
 	sel2bg:           #D27E99;
 	actbg:            #2D4F67;
-	urgbg:            #E82424;
+	urgbg:            #C34043;
 	winbg:			         @text-color;

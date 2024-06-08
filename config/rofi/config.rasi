@@ -1,11 +1,12 @@
 configuration{
-    modi: "drun,calc,run,window,ssh";
-    sidebar-mode: false;
-    show-icons: true;
+    modi: "drun,run,window,calc,ssh";
     cycle: true;
     line-margin: 10;
+    show-icons: true;
+    sidebar-mode: false;
+    icon-theme: "Gruvbox-Material-Dark";
 
-    display-drun: 	 "Apps";
+    display-drun: 	  "Apps";
     display-calc:    "Calc";
     display-run:     "Execute";
     display-window:  "Containers";
@@ -13,4 +14,4 @@ configuration{
     display-combi:   "Mr. Mix";
 }
 
-@theme "~/.config/rofi/themes/dracula_dark.rasi"
+@theme "~/.config/rofi/themes/default.rasi"

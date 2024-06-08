@@ -7,7 +7,7 @@
 	selbg:            #e67e80;
 	sel2bg:           @bordercol;
 	actbg:            @background-color;
-	urgbg:            #e67e80;
+	urgbg:            @selbg;
 	winbg:			  @text-color;
 
 	selected-normal-foreground: @sel2bg;
@@ -25,17 +25,19 @@
 	selected-active-background: @actbg;
 	active-background:          @background-color;
 
-	line-margin:     0;
-	line-padding:    0;
+	line-margin:     1;
+	line-padding:    1;
 	separator-style: "dash";
 	hide-scrollbar:  "true";
-	margin:          0;
-	padding:         0;
+	margin:          1;
+	padding:         1;
 }
 
 window {
-	width:		 40%;
-	orientation: horizontal;
+	width:		   40%;
+	orientation:   horizontal;
+    border-radius: 0px;
+	padding: 	   5;
 }
 
 textbox {
@@ -53,8 +55,8 @@ button selected {
 
 inputbar {
 	padding: 5px;
-	spacing: 5px;
-  text-color: @text-color;
+	spacing: 10px;
+    text-color: @text-color;
 }
 
 case-indicator {
@@ -78,17 +80,18 @@ textbox-prompt-colon {
 
 entry {
   expand:           false;
-	text-color:       @text-color;
+  text-color:       @selbg;
   placeholder:      "[DATA REDACTED]";
-	horizontal-align: 0.5;
+  horizontal-align: 0.5;
   vertical-align:   0.5;
-	padding:          5px;
+  padding:          5px;
 }
 
 prompt {
     spacing:    0;
     text-color: @text-color;
 }
+
 mainbox {
   border : 5px;
   border-color: @bordercol;
@@ -150,3 +153,4 @@ element alternate.active {
 	background-color: @active-background;
 	text-color:       @active-foreground;
 }
+
