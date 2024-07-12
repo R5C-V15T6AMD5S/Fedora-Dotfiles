@@ -5,11 +5,11 @@
   margin: 0;
   padding: 0;
   spacing: 0;
-  background: #2b3339;
-  line: #d3c6aa; 
-  foreground: #d3c6aa;   
+  background: #223249;
+  line: #DCD7BA; 
+  foreground: #C34043;   
   Comment: #6272a4; 
-  selected: #e67e80;
+  selected: #C34043;
   background-color: @background;
   text-color: @selected;
 }

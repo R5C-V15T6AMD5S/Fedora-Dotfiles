@@ -1,21 +1,19 @@
-/*Dracula Dark theme based on the Purple official rofi theme*/
-
 * {
-    kan-bgd: #223249;
-    kan-cur: #44475a;
-    kan-fgd: #C8C093;
-    kan-cmt: #6272a4;
-    kan-cya: #7E9CD8;
-    kan-grn: #98BB6C;
-    kan-ora: #FFA066;
-    kan-pnk: #54546D;
-    kan-pur: #957FB8;
-    kan-red: #E82424;
-    kan-yel: #FF9E3B;
+    kan-bgd: #1F1F28;  /* Background Color */
+    kan-cur: #2A2A37;  /* Cursor Color */
+    kan-fgd: #DCD7BA;  /* Foreground Color */
+    kan-cmt: #6272A4;  /* Comment Color */
+    kan-cya: #7FB4CA;  /* Cyan */
+    kan-grn: #98BB6C;  /* Green */
+    kan-ora: #FFA066;  /* Orange */
+    kan-pnk: #957FB8;  /* Pink */
+    kan-pur: #957FB8;  /* Purple */
+    kan-red: #E82424;  /* Red */
+    kan-yel: #E6C384;  /* Yellow */
 
     foreground: @kan-fgd;
     background-color: @kan-bgd;
-    active-background: @kan-pnk;
+    active-background: @kan-cur;
     urgent-background: @kan-red;
     urgent-foreground: @kan-bgd;
 
@@ -32,8 +30,8 @@
     border-radius: 4;
     border-color: @bordercolor;
     padding:          5;
-	  width:		 40%;
-	  orientation: horizontal;
+    width:            40%;
+    orientation: horizontal;
 }
 #mainbox {
     border:  0;
@@ -139,3 +137,4 @@ element-text, element-icon {
     background-color: inherit;
     text-color: inherit;
 }
+
