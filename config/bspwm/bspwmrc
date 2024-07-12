@@ -26,19 +26,22 @@ bash -c ~/.config/bspwm/scripts/monitors.sh &
 
 bspc config border_width	   2
 bspc config window_gap		    4
-bspc config top_padding     25
+bspc config top_padding     30
  
-bspc config split_ratio		           0.5
-bspc config borderless_monocle      true
-bspc config gapless_monocle         true
-bspc config presel_feedback         true
-bspc config focus_follows_pointer	  false
+bspc config split_ratio		          0.5
+bspc config paddingless_monocle    true
+bspc config borderless_monocle     true
+bspc config gapless_monocle        true
+bspc config presel_feedback        true
+bspc config single_monocle         false
+bspc config focus_follows_pointer	 false
 
-#### EVERFOREST ####
-#------------------#
-bspc config presel_feedback_color "#e67e80"
-bspc config focused_border_color "#a7c080"
-bspc config normal_border_color "#272e33"
+#### KANAGAWA ####
+#----------------#
+bspc config presel_feedback_color "#7E9CD8"
+bspc config focused_border_color "#DCD7BA"
+bspc config urgent_border_color "#E82424"
+bspc config normal_border_color "#223249"
 
 #### Windows ####
 #---------------#

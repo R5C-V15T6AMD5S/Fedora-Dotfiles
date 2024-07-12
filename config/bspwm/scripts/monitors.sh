@@ -3,8 +3,8 @@
 extr=$(xrandr --query | grep '^HDMI-A-0')
 
 if [[ $extr = *\ connected* ]]; then
-        bspc monitor eDP -d 1 2 3 4 5
-        bspc monitor HDMI-A-0 -d 6 7 8 9
+        bspc monitor eDP -d 1 3 5 6 9
+        bspc monitor HDMI-A-0 -d 2 4 7 8
         # Dynamically create desktops for HDMI-A-0 if they don't exist
         for desktop in {6..9}; do
             bspc desktop HDMI-A-0:$desktop -n HDMI-$desktop

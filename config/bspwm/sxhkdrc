@@ -61,7 +61,7 @@ super + {comma, period}
 #### Most used apps ####
 #----------------------#
 super + {F4, Return}
-    {xkill, kitty}
+    {xkill, kitty} 
 
 super + shift + {t, f, b, v, Escape}
     {xed, nemo, firefox, ~/.scripts/rofi_virtualbox.sh, xfce4-taskmanager}
@@ -71,12 +71,16 @@ super + shift + {t, f, b, v, Escape}
 #-------------------#
 Print
     ~/.scripts/screenshot_tool --now
+
 alt + Print
     ~/.scripts/screenshot_tool --in5
+
 super + Print
     ~/.scripts/screenshot_tool --in10
+
 shift + Print
     ~/.scripts/screenshot_tool --area
+
 ctrl + Print
     ~/.scripts/screenshot_tool --win
 
@@ -110,16 +114,16 @@ super + {_,shift + }{Left,Down,Up,Right}
 #### ROFI & friends ####
 #----------------------#
 super + {b, n, d, ctrl + c}
-    {~/.scripts/search_engines.sh, ~/.scripts/rofi-network-manager.sh, rofi -show,  clipmenu}
+    {~/.scripts/search_engines.sh, ~/.scripts/rofi-network-manager.sh, rofi -show, clipmenu}
 
 
 #### Custom scripts ####
 #----------------------#
-alt + {F7, shift + a}
-    {~/.scripts/monitors.sh,~/.scripts/powermenu.sh}
+alt + {F7, shift + a, super + p, super + shift + m}
+    {~/.scripts/monitors.sh,~/.scripts/powermenu.sh, ~/.config/bspwm/scripts/bar_toggler.sh, ~/.config/bspwm/scripts/monitors.sh}
 
-alt + ctrl + {t, s, m, k} 
-    {~/.scripts/touchpad_control, ~/.scripts/rofi_scp.sh, ~/.config/bspwm/scripts/bspwinmask.sh,  ~/.scripts/keybord_layout_control}
+alt + ctrl + {t, s, m, k}
+    {~/.scripts/touchpad_control, ~/.scripts/rofi_scp.sh, ~/.config/bspwm/scripts/bspwinmask.sh, ~/.scripts/keybord_layout_control}
 
 
 #### Workspaces ####
@@ -127,19 +131,19 @@ alt + ctrl + {t, s, m, k}
 super + {_,shift + } {1-9,0}
    	bspc {desktop -f, node -d} '^{1-9, 10}' --follow
 
-super + {w, c, r}
-	   {bspc desktop -f last, bash -c ~/.scripts/center_window.sh, bspc node @/ -R 90}
+super + {w, c, r, BackSpace}
+	   {bspc desktop -f last, bash -c ~/.scripts/center_window.sh, bspc node @/ -R 90, bspc monitor --focus next}
 
 
 #### Preselection ####
 #--------------------#
-super + ctrl + {h, k, j, l}
+super + {h, k, j, l}
 	   bspc node -o 0.5 -p {west, north, south, east}
 
 super + ctrl + {1-9}
 	   bspc node -o 0.{1-9}
 
-super + ctrl + shift + space
+super + space
 	   bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
 
