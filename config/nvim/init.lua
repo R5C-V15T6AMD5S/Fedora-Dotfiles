@@ -152,16 +152,16 @@ require('lazy').setup({
 
   {
     -- THEMES ARE HERE LISTED
-    -- 'rebelot/kanagawa.nvim',
+    'rebelot/kanagawa.nvim',
     -- 'ellisonleao/gruvbox.nvim',
-    'Mofiqul/dracula.nvim',
+    -- 'Mofiqul/dracula.nvim',
     -- 'navarasu/onedark.nvim',
     -- 'shaunsingh/nord.nvim',
     -- 'neanias/everforest-nvim',
     -- 'navarasu/onedark.nvim',
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme 'dracula'
+      vim.cmd.colorscheme 'kanagawa'
     end,
   },
 
@@ -172,7 +172,7 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = false,
-        theme = 'dracula',
+        theme = 'kanagawa',
         component_separators = '|',
         section_separators = '',
       },
