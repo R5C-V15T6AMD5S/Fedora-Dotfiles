@@ -5,10 +5,20 @@ include $HOME/.config/i3/confs.d/*
 
 ## Variables ##
 #-------------#
-set $Primary	 "eDP"
-set $Secondary   "HDMI-A-0"
 set $Alt         Mod1
 set $Super       Mod4
+
+set $Primary	    eDP
+set $Secondary   HDMI-A-0
+
+set $Text_Editor   xed
+set $File_Manager  nemo
+set $Terminal      kitty
+set $Web_Browser   firefox
+set $ProcManager   xfce4-taskmanager
+set $ScreenShooter ~/.scripts/screenshot_tool
+set $VirtualWorld  ~/.scripts/rofi_virtualbox.sh
+
 
 ## Basic config ##
 #----------------#
@@ -16,7 +26,7 @@ focus_wrapping no
 focus_follows_mouse no
 floating_modifier $Super
 default_orientation horizontal
-font pango: DejaVu Sans Mono 10
+font pango:DejaVu Sans Mono, Terminus Semi-Condensed 10
 
 ## Pulseaudio-utils Settings [Volume Control] ##
 #----------------------------------------------#

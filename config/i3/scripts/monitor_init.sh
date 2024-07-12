@@ -9,3 +9,5 @@ else
         notify-send "HDMI-A-0 DISCONNECTED" "Running the Laptop setup . . ." & 
         bash -c ~/.config/i3/monitors/SingleMon.sh &
 fi
+
+sleep 5; notify-send "Welcome to i3 :)))" "Have a [REDACTED] day *wink*"
