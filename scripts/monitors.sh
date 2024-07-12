@@ -3,9 +3,9 @@
 # Options for powermenu
 laptop=""
 monRight=""
-monLeft=" "
-tvRight=" "
-tvLeft=" "
+monLeft=""
+tvRight=""
+tvLeft=""
 tvLivingRoom=""
 
 # Get answer from user via rofi

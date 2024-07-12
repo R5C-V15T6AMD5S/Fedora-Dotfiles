@@ -28,9 +28,9 @@ texts[hibernate]=" Laptop + Monitor [Right]"
 declare -A icons
 icons[lockscreen]="  "
 icons[switchuser]=" "
-icons[logout]=" "
-icons[suspend]=" "
-icons[hibernate]=" "
+icons[logout]=""
+icons[suspend]=""
+icons[hibernate]=""
 icons[cancel]="\u00d7"
 
 declare -A actions

@@ -37,9 +37,3 @@ then
 else
     echo "No match"
 fi
-
-
-
-
-
-

@@ -10,6 +10,9 @@
 # search engines. The format must be: "engine_name - url".
 # The url format must allow for the search keywords at the end of the url.
 # For example: https://www.amazon.com/s?k=XXXX searches Amazon for 'XXXX'.
+
+BROWSER="firefox"
+
 declare -a options=(
 "ArtStation - https://www.artstation.com/search?sort_by=relevance&query="
 "Amazon - https://www.amazon.com/s?k="
@@ -53,12 +56,6 @@ declare -a options=(
 "YouTube - https://www.youtube.com/results?search_query="
 )
 
-declare -a browsers=(
-"firefox --new-window"
-"firefox --new-window --private-window"
-#"Tor Browser - bash -c ~/Tools/Tor-Browser/start-tor-browser.desktop"
-)
-
 # Picking a search engine.
 while [ -z "$engine" ]; do
     enginelist=$(printf '%s\n' "${options[@]}" | rofi -dmenu -i 20 -p 'Choose search engine :') || exit
@@ -68,14 +65,10 @@ done
 
 # Searching the chosen engine.
 while [ -z "$query" ]; do
-    query=$(rofi -dmenu -i 20 -p "Searching $engine :") || exit
+    query=$(rofi -dmenu -p "Searching $engine :") || exit
 done
 
 # Picking a web browser.
-while [ -z "$selected_browser" ]; do
-  browserlist=$(printf '%s\n' "${browsers[@]}" | rofi -dmenu -i 20 -p 'Choose a web browser :') || exit
-  selected_browser=$(echo "$browserlist" | cut -d'-' -f2- | sed 's/^[[:space:]]*//')
-  eval "$selected_browser" "$engineurl""$query"
-done
+"$BROWSER" "$engineurl""$query"
 
 

@@ -5,14 +5,15 @@ DMBROWSER="firefox --private-window"
 
 # Defines SCP Series
 declare -a series=(
-    "Series I - The original                  [001-999]"
-    "Series II - Folktales and urban legends  [1000-1999]"
-    "Series III - Concept of Sci-Fi           [2000-2999]"
-    "Series IV - Horror                       [3000-3999]"
+    "Series I - The Original                  [001-999]"
+    "Series II - Folktales and Urban Legends  [1000-1999]"
+    "Series III - Science Fiction             [2000-2999]"
+    "Series IV - Unspeakable Horrors          [3000-3999]"
     "Series V - History                       [4000-4999]"
-    "Series VI - Mysterious mystery           [5000-5999]"
+    "Series VI - Mystery                      [5000-5999]"
     "Series VII - Nature                      [6000-6999]"
     "Series VIII - Luck                       [7000-7999]"
+    "Series IX - Fantasy                      [8000-8999]"
 )
 
 # Defines Links for SCP Series
@@ -25,6 +26,7 @@ declare -a series_links=(
     "Series VI - https://scp-wiki.wikidot.com/scp-series-6"
     "Series VII - https://scp-wiki.wikidot.com/scp-series-7"
     "Series VIII - https://scp-wiki.wikidot.com/scp-series-8"
+    "Series IX - https://scp-wiki.wikidot.com/scp-series-9"
 )
 
 while true; do

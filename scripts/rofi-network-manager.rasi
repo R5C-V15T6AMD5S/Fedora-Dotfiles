@@ -7,11 +7,11 @@ configuration {
 }
 
 *{
-	foreground:#F8F8F2; 				//Text
-	background:#282a36; 				//Background
-	accent:#bd93f9; 					//Highlight
+	foreground:#C8C093; 				//Text
+	background:#223249; 				//Background
+	accent:#C34043; 					//Highlight
 	foreground-selection:@foreground; 	//Selection_fg
-	background-selection:#ff79c6; 		//Selection_bg
+	background-selection:#2D4F67; 		//Selection_bg
 
 	transparent:					#ffffff00;
 	background-color:				@transparent;
