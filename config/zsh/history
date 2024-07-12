@@ -1,1 +1,1029 @@
+: 1716490616:0;cd VirtualBox/TempleOS
+: 1716491002:0;./sync.sh temple TOS.img
+: 1716491003:0;./run.sh TOS.img
+: 1716538664:0;git branch SG_GameHub-Emlt
+: 1716538683:0;git checkout SG_GameHub-Emlt
+: 1716541966:0;git commit -m "Dodan novi projekt za GameHub. Closes #106"
+: 1716618902:0;ccava
+: 1716669103:0;nvim
+: 1716669121:0;v .
+: 1716669174:0;curl parrt.live
+: 1716669177:0;curl parrot.live
+: 1716715675:0;git commit -m "Dodana skripta GameLauncher verzija za Linux."
+: 1716715681:0;git push origin SG_GameHub-Emlt
+: 1716729641:0;i3-msg "focus up"
+: 1716729756:0;chmod +x termlay.sh
+: 1716730061:0;locate zsh
+: 1716730189:0;./termlay.sh
+: 1716730351:0;cd .config/i3
+: 1716730354:0;mkd layouts
+: 1716730466:0;i3-msg "workspace 1; append_layout ~/.config/i3/layouts/WS-1.json"
+: 1716730549:0;i3-save-tree --workspace 1 > ~/.config/i3/layouts/WS-1.json
+: 1716730798:0;jq . ~/.config/i3/layouts/WS-1.json\
 
+: 1716730874:0;i3-save-tree --workspace $ws1 > ~/.config/i3/layouts/WS-1.json
+: 1716730914:0;i3-save-tree --workspace 1:1 > ~/.config/i3/layouts/WS-1.json
+: 1716730965:0;i3-msg "workspace $ws1; append_layout ~/.config/i3/layouts/WS-1.json"
+: 1716730972:0;i3-msg "workspace 1:1; append_layout ~/.config/i3/layouts/WS-1.json"
+: 1716747528:0;clnmf
+: 1716751932:0;cd /usr/local/bi
+: 1716752441:0;4;9u
+: 1716752893:0;herbstclient spawn kitty
+: 1716752899:0;herbstclient spawn kitty --float
+: 1716752902:0;herbstclient spawn kitty --full
+: 1716752912:0;herbstclient spawn xfce4-terminal --full
+: 1716753015:0;herbstclient spawn kitty floating=on
+: 1716753027:0;herbstclient spawn kitty rule once floating=on
+: 1716753058:0;herbstclient spawn herbstclient rule once class=kitty floating=on
+: 1716753063:0;herbstclient spawn herbstclient rule once class=Kitty floating=on
+: 1716753070:0;herbstclient rule once class=Kitty floating=on
+: 1716753108:0;herbstclient rule once class=Kitty floating=on; herbstclient spawn kitty
+: 1716753144:0;kitty man
+: 1716753149:0;kitty --help
+: 1716753181:0;herbstclient spawn kitty --start-as=full
+: 1716753263:0;herbstclient spawn kitty --start-as=fullscreen
+: 1716753284:0;man kitty
+: 1716753301:0;herbstclient spawn kitty --start-as=minimized
+: 1716753307:0;herbstclient spawn kitty --start-as=maximized
+: 1716753312:0;herbstclient spawn kitty --start-as=floating
+: 1716753315:0;herbstclient spawn kitty --start-as=
+: 1716753518:0;xfdesktop
+: 1716753547:0;sww xfdesktop
+: 1716753927:0;xev | grep -i "keycode"
+: 1716753938:0;pulsemixer --change-volume +5 
+: 1716820331:0;run-ros
+: 1716915344:0;dsnklghsa.glhdsvl
+: 1716915344:0;dfND,FMNDKA
+: 1716922667:0;class
+: 1716924255:0;killall -q polybar | wait; bash -c ~/.config/polybar/scripts/info-hlwm-workspaces.sh
+: 1716924268:0;killall -q polybar | wait; polybar -c ~/.config/polybar/scripts/info-hlwm-workspaces.sh
+: 1716924276:0;killall -q polybar | wait; polybar --config=~/.config/polybar/scripts/info-hlwm-workspaces.sh
+: 1716924293:0;killall -q polybar | wait; polybar --config=~/.config/polybar/config_hlwm.ini
+: 1716924303:0;killall -q polybar | wait; polybar --config=~/.config/polybar/config_hlwm.ini bar-main
+: 1716976280:0;git pull 
+: 1716976290:0;git branch -D SG_GameHub-Emlt
+: 1716976294:0;gitbranch
+: 1716976382:0;git branch SG_GH-Actions
+: 1716976403:0;git checkoutn SG_GH-Actions
+: 1716976408:0;git checkout SG_GH-Actions
+: 1716976480:0;cd .git
+: 1716976487:0;mkdir workflows
+: 1716976493:0;rm workflows
+: 1716976500:0;mkd workflows
+: 1716977189:0;cd ../..
+: 1716977195:0;nvim README.md
+: 1716977623:0;git commit -m "Dodana README.md datoteka. Closes #109"
+: 1716977666:0;cd .git/workflows
+: 1716978590:0;rrm workflows
+: 1716978593:0;cd 
+: 1716978614:0;mkdir -p .github/workflows
+: 1716978620:0;cd .github/workflows
+: 1716979008:0;cat updates_readme.yml
+: 1716979351:0;nvim updates_readme.yml
+: 1716979624:0;nv README.md
+: 1716979668:0;git commit -m "Dodan GH Action za workflow. Closes #110"
+: 1716981559:0;git commit -m "Manje promejene u updates_readme.yml"
+: 1716981563:0;git push origin SG_GH-Actions
+: 1716982789:0;git branch -D SG_GH-Actions
+: 1717051753:0;git branch SG_GH-Actions-v2
+: 1717051758:0;git checkout SG_GH-Actions-v2
+: 1717052087:0;git commit -m "Manja promjena zbog problema."
+: 1717052260:0;git aad .
+: 1717052266:0;git commit
+: 1717052277:0;git commit -m ""
+: 1717052292:0;git commit -m "Test za trenutnu granu."
+: 1717052377:0;git add .; git commit -m "Promjena grane na trenutnu granu."
+: 1717052390:0;git add .; git commit -m "Promjena grane na trenutnu granu."; git push origin SG_GH-Actions-v2
+: 1717052759:0;todo add "RM - 12.06. -- "
+: 1717054205:0;echo "" > .github/workflows/updates_readme.yml
+: 1717054297:0;git add .; git commit -m "Bolje formatirana poruka za README."; git push origin SG_GH-Actions-v2
+: 1717054310:0;git add .; git commit -m "Bolje formatirana poruka za README."
+: 1717054358:0;git push origin SG_GH-Actions-v2
+: 1717054512:0;git pull origin SG_GH-Actions-v2
+: 1717054564:0;git branch -D SG_GH-Actions-v2
+: 1717054973:0;git commit -m "Bolje formulirana poruka i koriŃ�tenje varijabli."
+: 1717055015:0;cd .git/branches
+: 1717055028:0;git branches
+: 1717055226:0;rm .github/workflows/updates_readme.yml
+: 1717055244:0;git commit -m "Popravak grane."
+: 1717055272:0;git branch GH_Action-UpdateREADME
+: 1717055278:0;git checkout GH_Action-UpdateREADME
+: 1717055564:0;git commit -m "Bolje poruka i popravak errora."
+: 1717055577:0;git push origin GH_Action-UpdateREADME
+: 1717058753:0;git branch -D GH_Action-UpdateREADME
+: 1717061795:0;flatpak install flathub io.github.mimbrero.WhatsAppDesktop
+: 1717061901:0;probe
+: 1717065161:0;git commit -m "Maknut GameHub - pobrisan."
+: 1717065279:0;git commit -m "Master grana stavljena u workflow-u."
+: 1717065284:0;git push origin Sketch-n-Guess
+: 1717068591:0;git branch SG_Transfer
+: 1717068680:0;git commit -m "Optimizacijske promjene."
+: 1717068897:0;git checkout SG_Transfer
+: 1717068944:0;git commit -m "Dodan README.md i workflow za automatsko pisanje promjena u README."
+: 1717068953:0;git push origin SG_Transfer
+: 1717070611:0;git branch -D SG_Transfer
+: 1717070727:0;ls -ial
+: 1717070755:0;ls -ialh
+: 1717070759:0;ls -alh
+: 1717070791:0;ls -lh
+: 1717070817:0;cler
+: 1717070821:0;c; ll
+: 1717070827:0;ls -al
+: 1717071120:0;git checkout Sketch-n-Guess
+: 1717071136:0;gc
+: 1717071140:0;gc master
+: 1717072955:0;git branch
+: 1717147756:0;git fetch
+: 1717147761:0;git pull
+: 1717148400:0;git branch GH_Action-v3
+: 1717148410:0;git checkout GH_Action-v3
+: 1717148484:0;git commit -m "Promjenjen delay zbog optimizacije."
+: 1717153697:0;nv .github/workflows/updates_readme.yml
+: 1717153778:0;cat .github/workflows/updates_readme.yml
+: 1717153801:0;git commit -m "Commit nije opcija, stavljen pull_request."
+: 1717153811:0;git push origin GH_Action-v3
+: 1717156624:0;git checkout master
+: 1717170888:0;updady
+: 1717173885:0;light -U 5
+: 1717173920:0;light man
+: 1717173923:0;man light
+: 1717173969:0;light -A 5; light
+: 1717174016:0;light
+: 1717174023:0;light -U 5; light
+: 1717174026:0;light -U 20; light
+: 1717174029:0;light -A 20; light
+: 1717174101:0;xbacklight
+: 1717174106:0;xbacklight = 0
+: 1717174111:0;xbacklight -1
+: 1717174128:0;xbacklight -inc 0%
+: 1717174245:0;sudo chmod +x /usr/bin/light
+: 1717174330:0;xfce4-power-manager
+: 1717174335:0;killall -q xfce4-power-manager
+: 1717174393:0;xfce4-power-manager --dialog
+: 1717174401:0;xfce4-power-manager --customize
+: 1717180656:0;caav
+: 1717185653:0;light -A 10; light
+: 1717185658:0;light -U 10; light
+: 1717185688:0;light | notify-send "$1"
+: 1717185693:0;light | notify-send "light"
+: 1717185702:0;light > notify-send "$1"
+: 1717185705:0;light > notify-send ""
+: 1717185791:0;notify-send -u critical -t 2000 "$(light)"
+: 1717185894:0;light -U 5; notify-send "Brightness: $(light)"
+: 1717186111:0;man xfce4-power-manager
+: 1717248413:0;cd /media/SummaModusOperandi
+: 1717248417:0;cd Linux\ Config
+: 1717256920:0;sudo firewall-cmd --list-all
+: 1717257615:0;smbclient -L //rsl-server.duckdns.org -U o5-13\
+
+: 1717257749:0;sudo cat .smbcreds
+: 1717258342:0;ncat rsl-server.duckdns.org 4812
+: 1717258353:0;ncat rsl-server.duckdns.org 9090
+: 1717258369:0;ncat 88.207.121.231 9090
+: 1717258704:0;ncat -vz 88.207.121.231 9090
+: 1717258711:0;ncat -vz 88.207.121.231 4812
+: 1717258722:0;ncat -vzw 88.207.121.231 4812
+: 1717258731:0;ncat -vzw 15 88.207.121.231 4812
+: 1717258756:0;nc -vzw 15 rsl-server.duckdns.org 4812
+: 1717258769:0;nc -vzw 15 rsl-server.duckdns.org 9090
+: 1717258772:0;nc -vzw 15 rsl-server.duckdns.org 6667
+: 1717258775:0;nc -vzw 15 rsl-server.duckdns.org 445
+: 1717258814:0;clear; nc -vzw 15 rsl-server.duckdns.org 9090
+: 1717258816:0;clear; nc -vzw 15 rsl-server.duckdns.org 4812
+: 1717258819:0;clear; nc -vzw 15 rsl-server.duckdns.org 6667
+: 1717259618:0;clear; nc -vzw 15 rsl-server.duckdns.org 445
+: 1717266481:0;smbclient //rsl-server.duckdns.org/Share-o5-13 -U o5-13
+: 1717266577:0;ping rsl-server.duckdns.org
+: 1717266589:0;sudo mount -t cifs //rsl-server.duckdns.org/Share-o5-13 /media/SummaModusOperandi -o rw,_netdev,credentials=/home/o5-13/.smbcreds
+: 1717266718:0;sudo mount -t cifs //rsl-server.duckdns.org/Share-o5-13 /media/SummaModusOperandi -o rw,_netdev,credentials=/home/o5-13/.smbcreds,uid=1000,gid=1000
+: 1717312436:0;locate .ulf
+: 1717312441:0;find7 .ulf
+: 1717312443:0;find .ulf
+: 1717312781:0;find --help
+: 1717321101:0;git branch -D SG_Workflow
+: 1717321105:0;git branch SG_Workflow
+: 1717321110:0;git checkout SG_Workflow
+: 1717321213:0;gb -D SG_Workflow
+: 1717321265:0;gb SG_Workflow
+: 1717321279:0;cd .github
+: 1717321312:0;nv failure.md
+: 1717321452:0;cd workflows
+: 1717321474:0;nv sketch-n-guess_tests.yml
+: 1717321567:0;cat .github/failure.md
+: 1717321660:0;git ad .
+: 1717321692:0;gcm "Dodan workflow za testiranje merge-a."
+: 1717322023:0;cla
+: 1717322185:0;gco SG_Workflow
+: 1717322213:0;echo "TEST" > SG_WorkflowTest.txt
+: 1717322232:0;gcm "Test za SG workflow."
+: 1717322240:0;git push origin SG_Workflow
+: 1717322358:0;gco Sketch-n-Guess
+: 1717323613:0;searchp BeanCounter
+: 1717323622:0;searchp beancounter
+: 1717323630:0;searchp smtm
+: 1717324559:0;curl -Ls https://api.github.com/repos/achannarasappa/ticker/releases/latest \\
+| grep -wo "https.*linux-amd64*.tar.gz" \\
+| wget -qi - \\
+
+: 1717324593:0;curl -Ls https://api.github.com/repos/achannarasappa/ticker/releases/latest \\
+| grep -wo "https.*linux-amd64*.tar.gz" \\
+| wget -qi - \\
+&& tar -xvf ticker*.tar.gz ticker \\
+&& chmod +x ./ticker \\
+&& sudo mv ticker /usr/local/bin/
+: 1717324605:0;ticker
+: 1717324666:0;rrm ticker-4.6.2-linux-amd64.tar.gz
+: 1717324667:0;clsa
+: 1717324770:0;ticker -w NET,AAPL,TSLA
+: 1717324918:0;ticker -w NET,AAPL,TSLA -i 1
+: 1717324977:0;sudo rm ticker
+: 1717336225:0;installp qbittorrent
+: 1717336296:0;removep qbittorrent
+: 1717352188:0;gco master
+: 1717362565:0;sudo mount -t cifs //rsl-server.duckdns.org/Share-o5-13 /media/SummaModusOperandi -o rw,_netdev,credentials=/home/o5-13/.smbcreds,uid=1000,gid=1000\ 
+: 1717362633:0;sudo mount -t cifs //rsl-server.duckdns.org:4455/Share-o5-13 /media/SummaModusOperandi -o rw,_netdev,credentials=/home/o5-13/.smbcreds,uid=1000,gid=1000\ 
+: 1717362637:0;sudo mount -t cifs //rsl-server.duckdns.org:4455/Share-o5-13 /media/SummaModusOperandi -o rw,_netdev,credentials=/home/o5-13/.smbcreds,uid=1000,gid=1000
+: 1717362708:0;ping rsl-server.duckdns.org\
+
+: 1717362740:0;telnet rsl-server.duckdns.org 4455
+: 1717363040:0;sudo vi /etc/fstab
+: 1717363070:0;ss -ltun
+: 1717364142:0;sudo mount -t cifs //rsl-server.duckdns.org/Share-o5-13 /media/SummaModusOperandi -o rw,_netdev,credentials=/home/o5-13/.smbcreds,uid=1000,gid=1000\
+
+: 1717364571:0;smbclient //rsl-server.duckdns.org/Share-o5-13 -p 4455 -A /home/o5-13/.smbcreds -c 'ls'\
+
+: 1717364592:0;smbclient //rsl-server.duckdns.org/Share-o5-13 -W SAMBA -p 4455 -A /home/o5-13/.smbcreds -c 'ls'\
+
+: 1717364598:0;sudo smbclient //rsl-server.duckdns.org/Share-o5-13 -W SAMBA -p 4455 -A /home/o5-13/.smbcreds -c 'ls'\
+
+: 1717364621:0;sudo smbclient //rsl-server.duckdns.org/Share-o5-13 -W SAMBA -p 4455 -A /home/o5-13/.smbcreds\
+
+: 1717364665:0;sudo cat /etc/fstab
+: 1717364704:0;sudo vim /etc/fstab
+: 1717414867:0;todo add "PI - 10.06. -- "
+: 1717420168:0;todo add "UUUI - 11.06. -- 10h (I5)"
+: 1717425661:0;cat README.md
+: 1717426560:0;todo add "OPS - 20.06. -- 8:15 (I1//I3)"
+: 1717443776:0;cd Tools/Unity/Projects/Unity-GameHub
+: 1717443778:0;git fetch; git pull
+: 1717477458:0;todo -h
+: 1717477464:0;todo rm 7
+: 1717477466:0;todo
+: 1717491777:0;sudo mount -t cifs //rsl-server.duckdns.org:4455/Share-o5-13 /media/SummaModusOperandi -o rw,_netdev,credentials=/home/o5-13/.smbcreds,uid=1000,gid=1000,port=4455\
+
+: 1717492481:0;pg rsl-server.duckdns.org4
+: 1717511271:0;todo sort; todo
+: 1717511278:0;todo done 1
+: 1717511339:0;todo add "RM - 12.06. -- (I8)"
+: 1717511441:0;zsh -e "clear"
+: 1717511445:0;zsh -h
+: 1717511448:0;zsh --help
+: 1717511581:0;cd .config/zsh/.oh-my-zsh/plugins/zsh_reload
+: 1717511605:0;git merge
+: 1717511622:0;git add .
+: 1717511696:0;srcc
+: 1717511727:0;zr
+: 1717517992:0;gcl https://github.com/R5C-V15T6AMD5S/Fedora-Dotfiles.git
+: 1717532515:0;sudo wine UnityModManager.exe
+: 1717532528:0;su
+: 1717575539:0;caava
+: 1717576914:0;sudo mount -t cifs //rsl-server.duckdns.org/Share-o5-13 /media/SummaModusOperandi -o rw,_netdev,credentials=/home/o5-13/.smbcreds,uid=1000,gid=1000,port=4455\
+
+: 1717576935:0;ssh-rsl
+: 1717578113:0;echo url="https://www.duckdns.org/update?domains=rsl-server&token=2f1b8cb7-9ed9-44d0-afc7-4ff2ed6bfded&ip=" | curl -k -o ~/duckdns/duck.log -K -
+: 1717579563:0;./home_server_status.sh
+: 1717591759:0;vim index.html
+: 1717592848:0;cat index.html
+: 1717593049:0;rrm index.html
+: 1717593051:0;nv index.html
+: 1717663792:0;ka polybar
+: 1717664138:0;ka VIber
+: 1717664141:0;ka viber
+: 1717667234:0;sww python3 ~/.config/i3/scripts/i3-swallow.py
+: 1717667236:0;lxa
+: 1717667237:0;lxappearance
+: 1717702150:0;sudo cava[6;5;8u5;8u;8uF5~
+: 1717702165:0;clcfclnf
+: 1717745050:0;dea
+: 1717750413:0;pg https://cogretfund.zapto.org
+: 1717750418:0;pg cogretfund.zapto.org
+: 1717750676:0;polybar-msg cmd toggle
+: 1717750686:0;polybar-msg cmd 
+: 1717750690:0;polybar-msg cmd -help
+: 1717750697:0;man polybar-msg
+: 1717750910:0;ka polybar; sww i3bar
+: 1717762799:0;ka polybar; ka i3bar; sww i3bar
+: 1717774269:0;killall -q i3bar | wait; bash -c ~/.config/i3/scripts/polybar.sh
+: 1717774483:0;i3-msg "light -A 5"
+: 1717774488:0;i3-msg "exec light -A 5"
+: 1717774509:0;ka polybar; killall -q i3bar | wait; bash -c ~/.config/i3/scripts/polybar.sh
+: 1717774669:0;ls /sys/class/backlight/
+: 1717774682:0;ls /sys/class/backlight/amdgpu_bl1
+: 1717774730:0;echo 5 > /sys/class/backlight/amdgpu_bl1/brightness
+: 1717774734:0;sudo echo 5 > /sys/class/backlight/amdgpu_bl1/brightness
+: 1717774779:0;sudo nvim /etc/udev/rules.d/backlight.rules
+: 1717781399:0;installp bspwn
+: 1717781409:0;installp bspwm
+: 1717783025:0;searchp bsp-layout
+: 1717783043:0;gcl https://github.com/phenax/bsp-layout.git
+: 1717783046:0;cd bsp-layout
+: 1717783056:0;sudo make install
+: 1717783062:0;rrm bsp-layout
+: 1717784507:0;sudo nvim scratch
+: 1717784664:0;bsp-layout
+: 1717784668:0;bsp-layout 1
+: 1717784677:0;man bsp-layout
+: 1717784755:0;bash -c ~/.config/bspwm/scripts/polybar.sh
+: 1717784821:0;bspwm
+: 1717785099:0;killall -q sxhkd | wait; sxhkd -c ~/.config/sxhkd/sxhkdrc_bspwm &
+: 1717785951:0;chmod +x ~/.config/bspwm/bspwmrc
+: 1717785998:0;cd .scripts./wm
+: 1717786012:0;./wm_hopper.sh
+: 1717786338:0;ka polybar; killall -q i3bar | wait; bash -c ~/.config/bspwm/scripts/polybar.sh
+: 1717786518:0;clcff
+: 1717787586:0;amixer
+: 1717787602:0;awk -F"[][]" '/dB/ { print $2 }' <(amixer sget Master)
+: 1717866451:0;ka bspwm
+: 1717866458:0;killall -q bspwm
+: 1717866463:0;killall -q polybar
+: 1717868416:0;htop]
+: 1717868418:0;htop
+: 1717869821:0;nf
+: 1717869823:0;neofetch
+: 1717928323:0;ping -c 5 rsl-server.duckdns.org
+: 1717942015:0;q7
+: 1718026956:0;cd .scripts
+: 1718026961:0;nv home_server_status.sh
+: 1718038532:0;cd .local/share/applications/Games
+: 1718038575:0;chmod +x .
+: 1718038960:0;hello
+: 1718038991:0;sww xfce4-power-manager
+: 1718039009:0;light -A 5; notify-send "Brightness: $(light)"
+: 1718085365:0;cd Documents
+: 1718085371:0;python3 Eeduroam-Setup-V2.py
+: 1718099132:0;todo done 2
+: 1718116096:0;chrome
+: 1718122765:0;sww xed
+: 1718122855:0;cat ~/.config/bspwm/sxhkdrc
+: 1718122910:0;cd .sc
+: 1718123119:0;ka polybar | wait; ./polybar.sh
+: 1718124254:0;bspc config top_padding 0
+: 1718124746:0;chmod +x .config/bspwm/scripts/polybar.sh
+: 1718124777:0;chmod +x .config/bspwm/scripts/bar_toggler.sh
+: 1718124784:0;rrm .config/polybar/scripts/bar_toggler.sh
+: 1718125181:0;bspc config top_padding 25
+: 1718125189:0;bspc config top_padding 28
+: 1718125192:0;bspc config top_padding 26
+: 1718125196:0;bspc config top_padding 30
+: 1718125721:0;cd .config/bspwm/scripts
+: 1718125727:0;./bar_toggler.sh
+: 1718208907:0;todo done 3
+: 1718208926:0;todo add "Provjeri dal je dosao mail or SERVISA"
+: 1718208943:0;todo add "PODIGNI UGOVOR kad je odobreno"
+: 1718209071:0;todo rm 5 6 7 8
+: 1718215707:0;bspc monitor --focus next
+: 1718216251:0;./.config/bspwm/scripts/polybar.sh
+: 1718216263:0;sww ./.config/bspwm/scripts/polybar.sh
+: 1718287812:0;rm 3
+: 1718303385:0;searchp kdeconnect
+: 1718303405:0;installp kdeconnectd
+: 1718303617:0;kdeconnect-cli
+: 1718303621:0;kdeconnect-cli -l
+: 1718303695:0;removep kdeconnectd-23.08.5-2.fc39.x86_64
+: 1718305431:0;ka kdeconnectd-indicator
+: 1718305449:0;ka i3bar
+: 1718348899:0;sudo systemd-resolve --flush-caches
+: 1718348912:0;nslookup rsl-server.duckdns.org 8.8.8.8
+: 1718348928:0;dig @1.1.1.1 rsl-server.duckdns.org
+: 1718348946:0;nslookup rsl-server.duckdns.org 1.1.1.1
+: 1718444085:0;sudo ranger
+: 1718463390:0;rdž
+: 1718522214:0;sudo umount /media/SummaModusOperandi
+: 1718530663:0;xrandr
+: 1718530718:0;installp arandr
+: 1718531438:0;ls -lAh
+: 1718531443:0;ls -la
+: 1718531463:0;ls --color=auto --group-directories-first
+: 1718542912:0;searchp cc
+: 1718542974:0;searchp xorg-xinit
+: 1718542980:0;searchp xorg-init
+: 1718542983:0;searchp xorg-
+: 1718542991:0;searchp xorg-X11-init
+: 1718543052:0;sudo dnf install xorg-x11-server-Xorg\
+sudo dnf install xorg-x11-xinit\
+sudo dnf install xorg-x11-utils\
+sudo dnf install xorg-x11-fonts-*\
+
+: 1718543065:0;searchp xorg-x11-util
+: 1718543083:0;gcl https://github.com/cococry/ragnar.git
+: 1718543090:0;git clone https://github.com/cococry/ragnar.git
+: 1718543097:0;cd ragnar
+: 1718543145:0;sudo make ragnar install
+: 1718543199:0;ll
+: 1718543241:0;cd ~
+: 1718543258:0;nv .config/zsh/.zshrc
+: 1718543384:0;locate .xinit
+: 1718543386:0;locate xinit
+: 1718543389:0;locate xinitrc
+: 1718543401:0;nv /home/o5-13/.config/X11/xinitrc
+: 1718543538:0;startx
+: 1718543605:0;cd Tools/ragnar
+: 1718543611:0;sudo make ragnar uninstall
+: 1718543625:0;rrm ragnar
+: 1718547122:0;removep unityhub
+: 1718547159:0;unityhub
+: 1718547631:0;removep codee
+: 1718547636:0;removep code
+: 1718548119:0;removep jupyter
+: 1718548133:0;jupyter notebook
+: 1718548229:0;python3 -m pip uninstall --user virtualenv
+: 1718565443:0;sudo mount -t cifs //rsl-server.duckdns.org/Share-o5-13 /media/SummaModusOperandi -o rw,_netdev,credentials=/home/o5-13/.smbcreds,port=4455
+: 1718565515:0;sudo mount -t cifs //rsl-server.duckdns.org/Share-o5-13 /media/SummaModusOperandi -ocredentials=/home/o5-13/.smbcreds,uid=1000,gid=1000,port=4455
+: 1718565522:0;sudo mount -t cifs //rsl-server.duckdns.org/Share-o5-13 /media/SummaModusOperandi -o credentials=/home/o5-13/.smbcreds,uid=1000,gid=1000,port=4455
+: 1718565655:0;sudo mount -t cifs //rsl-server.duckdns.org/Share-o5-13 /media/SummaModusOperandi -o rw,_netdev,credentials=/home/o5-13/.smbcreds,uid=1000,gid=1000,port=4455
+: 1718565832:0;scp o5-13@rsl-server.duckdns.org:/home/o5-13/GiftFromAFriend.jpg ~/Downloads
+: 1718565840:0;scp -p 4812 o5-13@rsl-server.duckdns.org:/home/o5-13/GiftFromAFriend.jpg ~/Downloads
+: 1718565865:0;scp -P 4812 o5-13@rsl-server.duckdns.org:/home/o5-13/GiftFromAFriend.jpg ~/Downloads
+: 1718565882:0;feh GiftFromAFriend.jpg
+: 1718565996:0;cd ~/.config/zsh
+: 1718566178:0;rsl-scp /home/o5-13/GiftFromAFriend.jpg ~/Downloads/pc.jpg
+: 1718566183:0;rsl-scp /home/o5-13/GiftFromAFriend.jpg ~/Downloads/
+: 1718566352:0;rsl-scp/home/o5-13/GiftFromAFriend.jpg ~/Downloads
+: 1718566408:0;nv .aliases
+: 1718566415:0;rsl-scp /home/o5-13/GiftFromAFriend.jpg ~/Downloads
+: 1718566611:0;cd Downloads; c
+: 1718566697:0;rsl-scp o5-13 GiftFromAFriend.jpg ~/Downloads
+: 1718566732:0;rsl-scp o5-13 o5-13 GiftFromAFriend.jpg ~/Downloads
+: 1718566766:0;rrm GiftFromAFriend.jpg
+: 1718566768:0;nv .functions
+: 1718567872:0;sudo cat .smbcreds 
+: 1718568889:0;ip a
+: 1718570070:0;hostname
+: 1718570340:0;nslookup rsl-server.duckdns.org
+: 1718613373:0;bspc nodee -t
+: 1718613375:0;bspc node -t
+: 1718613378:0;bspc node -h
+: 1718613381:0;bspc -h
+: 1718613385:0;man bspc
+: 1718613411:0;run-tos
+: 1718614363:0;calc
+: 1718614365:0;cal 
+: 1718614371:0;cal july
+: 1718614575:0;src
+: 1718696023:0;cd Tools/xdg-ninja
+: 1718696025:0;xdgf
+: 1718704249:0;rsl-scp o5-13 o5-13/GiftFromAFriend.jpg ~/Downloads
+: 1718704256:0;cd Doq
+: 1718704266:0;rm GiftFromAFriend.jpg
+: 1718704271:0;clear
+: 1718704376:0;reinstallp nitrogen
+: 1718704449:0;searchp gtk-
+: 1718704505:0;reinstall gtk3
+: 1718704509:0;reinstallp gtk3
+: 1718704558:0;reboot
+: 1718704631:0;searchp clearlook
+: 1718704673:0;installp clearlooks-compact-gnome-theme-1.5-26.fc39.noarch
+: 1718707535:0;tcloc
+: 1718778772:0;clmnf
+: 1718778790:0;btr
+: 1718781889:0;sww flatpak run com.discordapp.Discord
+: 1718786767:0;removep clearlooks-compact-gnome-theme-1.5-26.fc39.noarch
+: 1718786780:0;sudo dnf remove clearlooks-compact-gnome-theme-1.5-26.fc39.noarch
+: 1718786829:0;btrdisinst
+: 1718798245:0;nitrogen --restore
+: 1718801598:0;flatpak reinstall com.discordapp.Discord
+: 1718801602:0;flatpak install com.discordapp.Discord
+: 1718801617:0;flatpak run com.discordapp.Discord
+: 1718801630:0;searchp xapp-gtk3
+: 1718801648:0;searchp xapp-
+: 1718801664:0;installp gtk3-engines
+: 1718801673:0;searchp gtk2-engines
+: 1718801683:0;searchp gtk3-engines
+: 1718801695:0;installp gtk2-engines
+: 1718801777:0;chmod +x BetterDiscord-Linux.AppImage
+: 1718801781:0;sww ./BetterDiscord-Linux.AppImage
+: 1718801861:0;betterdiscordctl
+: 1718801864:0;betterdiscordctl --help
+: 1718801870:0;betterdiscordctl reinstall
+: 1718801913:0;cd /usr/local/bin
+: 1718801917:0;rm betterdiscordctl
+: 1718801919:0;sudo rm betterdiscordctl
+: 1718801931:0;flatpak uninstall com.discordapp.Discord
+: 1718801974:0;cd ~/Tools
+: 1718802025:0;sudo ./BetterDiscord-Linux.AppImage
+: 1718802031:0;./bert
+: 1718802112:0;sudo chmod +x BetterDiscord-Linux.AppImage
+: 1718802161:0;cava
+: 1718802168:0;cd Tools/
+: 1718802171:0;./BetterDiscord-Linux.AppImage
+: 1718802259:0;cd Dic
+: 1718802262:0;cd Discord
+: 1718802263:0;cls
+: 1718802267:0;./Discord
+: 1718802331:0;cd ..
+: 1718802334:0;./BetterDiscord-Linux.AppImage
+: 1718802424:0;cd Dic
+: 1718802523:0;sudo cp Discord /usr/local/bin/
+: 1718802568:0;sudo rm /usr/local/bin/Discord
+: 1718802608:0;cd .local/share/applications/Tools
+: 1718802609:0;cls
+: 1718802616:0;chmod +x discord.desktop
+: 1718802908:0;cd Pictures/WallPP/Colorschemes
+: 1718802909:0;cls
+: 1718803443:0;curl -fsSL https://raw.githubusercontent.com/spicetify/cli/main/install.sh | sh
+: 1718803465:0;sudo chmod a+wr /opt/spotify\
+sudo chmod a+wr /opt/spotify/Apps -R
+: 1718803497:0;r
+: 1718803523:0;q
+: 1718803528:0;update-spicetify
+: 1718803547:0;spicetify restore backup
+: 1718803557:0;update-spicetify
+: 1718803569:0;spicetify backup
+: 1718803606:0;flatpak --installation
+: 1718803608:0;flatpak --installations
+: 1718803639:0;cd /var/lib/flatpak/app/com.spotify.Client/x86_64/stable/active/files/extra/share/spotify
+: 1718803641:0;cls
+: 1718803779:0;sudo chmod a+wr /var/lib/flatpak/app/com.spotify.Client/x86_64/stable/active/files/extra/share/spotify\
+sudo chmod a+wr -R /var/lib/flatpak/app/com.spotify.Client/x86_64/stable/active/files/extra/share/spotify/Apps
+: 1718803789:0;curl -fsSL https://raw.githubusercontent.com/spicetify/cli/main/install.sh -o /tmp/install.sh\
+sh /tmp/install.sh 1.2.1
+: 1718803799:0;update-spicetify
+: 1718803827:0;cls
+: 1718803863:0;update-spicetify
+: 1718803868:0;seft
+: 1718803955:0;update-spicetify
+: 1718803966:0;spicetify restore backup
+: 1718803973:0;update-spicetify
+: 1718804066:0;sudo chmod a+wr /var/lib/flatpak/app/com.spotify.Client/x86_64/stable/active/files/extra/share/spotify\
+sudo chmod a+wr -R /var/lib/flatpak/app/com.spotify.Client/x86_64/stable/active/files/extra/share/spotify/Apps
+: 1718804069:0;seft
+: 1718804080:0;cd DDD/var/lib/flatpak/app/com.spotify.Client/x86_64/stable/active/files/extra/share/spotify/Apps/zlink/css
+: 1718804083:0;ls
+: 1718804095:0;cd Apps/zlink/
+: 1718804096:0;cls
+: 1718804146:0;spicetify config prefs_path ~/.var/app/com.spotify.Client/config/spotify/prefs
+: 1718804169:0;spicetify apply
+: 1718804184:0;flatpak run com.spotify.Client
+: 1718804231:0;flatpak install flathub com.spotify.Client
+: 1718804270:0;curl -fsSL https://raw.githubusercontent.com/spicetify/cli/main/install.sh | sh
+: 1718804292:0;cd /var/lib/flatpak/app/com.spotify.Client/x86_64/stable/active/files/extra/share/spotify/
+: 1718804294:0;ls
+: 1718804298:0;cd ~/.local/share/flatpak/app/com.spotify.Client/x86_64/stable/active/files/extra/share/spotify/
+: 1718804316:0;cls
+: 1718804359:0;spicetify config prefs_path ~/.var/app/com.spotify.Client/config/spotify/prefs
+: 1718804379:0;cpl
+: 1718804405:0;sudo chmod a+wr /var/lib/flatpak/app/com.spotify.Client/x86_64/stable/active/files/extra/share/spotify
+: 1718804418:0;sudo chmod a+wr -R /var/lib/flatpak/app/com.spotify.Client/x86_64/stable/active/files/extra/share/spotify/Apps
+: 1718804453:0;spicetify apply
+: 1718804464:0;spicetify backup apply
+: 1718804477:0;curl -fsSL https://raw.githubusercontent.com/spicetify/cli/main/install.sh -o /tmp/install.sh\
+sh /tmp/install.sh 1.2.1
+: 1718804483:0;spicetify backup apply
+: 1718804505:0;curl -fsSL https://raw.githubusercontent.com/spicetify/cli/main/install.sh -o /tmp/install.sh\
+sh /tmp/install.sh 1.2.1
+: 1718804508:0;spicetify backup apply
+: 1718804514:0;spicetify apply
+: 1718804584:0;flatpak uninstall flathub com.spotify.Client
+: 1718804623:0;flatpak install flathub com.spotify.Client
+: 1718804767:0;curl -fsSL https://raw.githubusercontent.com/spicetify/cli/main/install.sh | sh
+: 1718804833:0;spicetify apply
+: 1718804871:0;spicetify
+: 1718804874:0;spicetify update
+: 1718804877:0;spicetify apply
+: 1718804884:0;spicetify backup apply
+: 1718804907:0;update-spicetify
+: 1718805006:0;seft
+: 1718805733:0;betterdiscordctl --flatpak-bin flatpak install
+: 1718805743:0;cd .config/zsh
+: 1718805748:0;nvim .functions
+: 1718805768:0;nvim .aliases
+: 1718805803:0;q
+: 1718805808:0;history
+: 1718805810:0;q
+: 1718809819:0;searchp fvwn
+: 1718809824:0;searchp fvwm
+: 1718825914:0;searchp emacs
+: 1718825922:0;installp emacs
+: 1718826163:0;emacs
+: 1718828939:0;removep emacs
+: 1718868501:0;todo rm 2
+: 1718868503:0;upday
+: 1718868533:0;clcf
+: 1718868534:0;clnf
+: 1718868536:0;cava
+: 1718869562:0;rsl-status
+: 1718880951:0;tclock
+: 1718916756:0;cava
+: 1718916757:0;clcf
+: 1718916759:0;clnf
+: 1718917107:0;ka xfce4-power
+: 1718917110:0;ka xfce4-power-ma
+: 1718917112:0;ka xfce4-power-manager
+: 1718917157:0;q
+: 1718917255:0;xbacklight -dec 5
+: 1718917259:0;q
+: 1718917382:0;sudo nvim /etc/X11/xinit/xinitrc
+: 1718917411:0;r
+: 1718917558:0;sudo nvim /etc/X11/xorg.conf.d/00-keyboard.conf
+: 1718917578:0;xbacklight -dec 5
+: 1718917633:0;clcf
+: 1718917634:0;clnf
+: 1718917636:0;cava
+: 1718946206:0;clcf
+: 1718946208:0;clnf
+: 1718946212:0;upday
+: 1718946784:0;clcf
+: 1718946786:0;clnf
+: 1718951726:0;ka Discord
+: 1718959570:0;todo rm 1
+: 1718959576:0;todo rm 3
+: 1718959598:0;nv .todo
+: 1718959666:0;q
+: 1718959675:0;cacva
+: 1718959676:0;cava
+: 1718959677:0;clcf
+: 1718959679:0;clnf
+: 1718960243:0;nv .todo
+: 1718960256:0;q
+: 1718960263:0;r
+: 1718960427:0;q
+: 1719006543:0;cd .config/polybar
+: 1719006616:0;nv .
+: 1719006619:0;e .
+: 1719006652:0;ka polybar | wait; 
+: 1719006659:0;cd .config/bspwm
+: 1719006663:0;cd scripts
+: 1719006664:0;cls
+: 1719006669:0;./polybar.sh
+: 1719006799:0;vim
+: 1719007306:0;cava
+: 1719007308:0;clcf
+: 1719007309:0;clnf
+: 1719007580:0;skgt
+: 1719008564:0;r
+: 1719008607:0;q
+: 1719008641:0;sudo nvim /etc/default/grub
+: 1719008712:0;cd /usr/share/grub/themes/argon
+: 1719008714:0;cls
+: 1719008732:0;sudo cp theme_everforest.txt theme_kanagawa.txt
+: 1719008802:0;sudo nvim theme_kanagawa.txt
+: 1719008947:0;cd Pictures/WallPP/Colorschemes/kanagawa
+: 1719008948:0;cls
+: 1719008950:0;r
+: 1719008967:0;cd bg
+: 1719008968:0;cls
+: 1719008977:0;cpl
+: 1719008987:0;sudo cp 135184-waves-digital-art-artwork-minimalism-The-Great-Wave-off-Kanagawa.png /usr/share/grub/themes/argon/bg/kanagawa.png
+: 1719008989:0;cls
+: 1719008991:0;cd ..
+: 1719008994:0;cd bg
+: 1719009004:0;sudo cp kanagawa.png ../background.png
+: 1719009010:0;update-grub
+: 1719009073:0;cd Pictures/WallPP/Colorschemes/kanagawa
+: 1719009079:0;r
+: 1719009101:0;sudo cp 135184-waves-digital-art-artwork-minimalism-The-Great-Wave-off-Kanagawa.png /usr/share/backgrounds/kanagawa.png
+: 1719009147:0;r
+: 1719009263:0;cd Pictures/WallPP/Colorschemes/kanagawa
+: 1719009264:0;cls
+: 1719009265:0;r
+: 1719009319:0;sudo cp chaos.jpg /usr/share/backgrounds/chaos.jpg
+: 1719009337:0;r
+: 1719009360:0;q
+: 1719009378:0;cava
+: 1719009380:0;clcf
+: 1719009381:0;clnf
+: 1719009911:0;e
+: 1719009951:0;e .
+: 1719010028:0;cd Downloads
+: 1719010034:0;e test.cpp
+: 1719010160:0;cls
+: 1719010164:0;gcc test.cpp
+: 1719010186:0;e test.cpp
+: 1719010198:0;gcc test.cpp
+: 1719010202:0;r
+: 1719010255:0;cls
+: 1719010256:0;q
+: 1719011185:0;cd Tools/Github-Stuff/Fedora-Dotfiles
+: 1719011186:0;cd ..
+: 1719011187:0;cls
+: 1719011189:0;cd Startpage-Custom
+: 1719011191:0;cls
+: 1719011193:0;cd themes
+: 1719011193:0;cls
+: 1719011200:0;cp dracula.css kanagawa.css
+: 1719011202:0;cd ..
+: 1719011203:0;cls
+: 1719011206:0;e .
+: 1719011686:0;flameshot gui
+: 1719012268:0;q
+: 1719012286:0;cava
+: 1719012288:0;clcf
+: 1719012290:0;clnf
+: 1719012486:0;e .
+: 1719012491:0;q
+: 1719012495:0;c
+: 1719012505:0;rd
+: 1719012525:0;rsl-
+: 1719012530:0;rsl-status
+: 1719035147:0;killall -q dunst | wait; dunst -config ~/.config/dunst/dunstrc &
+: 1719036437:0;cava
+: 1719036439:0;clcf
+: 1719036440:0;clnf
+: 1719063108:0;r
+: 1719063153:0;q
+: 1719063339:0;r
+: 1719063369:0;q
+: 1719124021:0;upday
+: 1719124313:0;update-grub
+: 1719124370:0;cava
+: 1719124371:0;clcf
+: 1719124373:0;clnf
+: 1719126814:0;discord
+: 1719126819:0;Discord
+: 1719126823:0;cd Tools/Discord
+: 1719126824:0;cls
+: 1719126840:0;./Discord
+: 1719126871:0;./discord.desktop
+: 1719126964:0;cava
+: 1719126966:0;clcf
+: 1719126969:0;upday
+: 1719126990:0;clnf
+: 1719127244:0;cava
+: 1719127245:0;clcf
+: 1719127247:0;clnf
+: 1719129272:0;cava
+: 1719129274:0;clcf
+: 1719129275:0;clnf
+: 1719265372:0;upday
+: 1719265454:0;cvac
+: 1719265455:0;cava
+: 1719265456:0;clcf
+: 1719265458:0;clnf
+: 1719266356:0;r
+: 1719266422:0;clnf
+: 1719266467:0;q
+: 1719293696:0;upday
+: 1719293764:0;dnf clean packages
+: 1719293766:0;sudo dnf clean packages
+: 1719293768:0;upday
+: 1719293774:0;cava
+: 1719293776:0;clcf
+: 1719293779:0;clnf
+: 1719297895:0;nv .
+: 1719297897:0;e .
+: 1719297917:0;q
+: 1719302222:0;rsl-status
+: 1719304137:0;nmcli
+: 1719304152:0;r
+: 1719304167:0;nm-applet
+: 1719304172:0;sww nm-applet
+: 1719305532:0;cava
+: 1719305533:0;clcf
+: 1719305535:0;clnbf
+: 1719305536:0;clnf
+: 1719306370:0;rsl-ssh
+: 1719307017:0;cal septermber
+: 1719307022:0;cal september
+: 1719310375:0;q
+: 1719310446:0;rsl-ssh
+: 1719310502:0;rsl-smb
+: 1719310523:0;rsl-status
+: 1719313384:0;q
+: 1719313549:0;tclock
+: 1719348220:0;upday
+: 1719348263:0;update-grub
+: 1719349799:0;cd Tools
+: 1719349801:0;./BetterDiscord-Linux.AppImage
+: 1719350233:0;2cava
+: 1719350234:0;cava
+: 1719350235:0;clcf
+: 1719350237:0;clnf
+: 1719380552:0;upday
+: 1719386395:0;cava
+: 1719386396:0;clcf
+: 1719386398:0;clnf
+: 1719389447:0;cd Tools
+: 1719392135:0;tclock
+: 1719459987:0;upday
+: 1719460131:0;cava
+: 1719460133:0;clcf
+: 1719460136:0;clnf
+: 1719481287:0;tclock
+: 1719577288:0;upday
+: 1719577612:0;update-grub
+: 1719577636:0;cava
+: 1719577637:0;clcf
+: 1719577638:0;clnf
+: 1719584070:0;r
+: 1719584179:0;q
+: 1719584971:0;zathura
+: 1719585104:0;r
+: 1719585116:0;q
+: 1719589774:0;clnf
+: 1719589777:0;nfc
+: 1719590464:0;r
+: 1719590477:0;vim .
+: 1719590532:0;q
+: 1719642100:0;upday
+: 1719642296:0;cava
+: 1719642299:0;clcf
+: 1719642300:0;clnf
+: 1719655646:0;cava
+: 1719655647:0;clcf
+: 1719655649:0;clnf
+: 1719672832:0;cava
+: 1719672834:0;clcf
+: 1719672835:0;clnf
+: 1719673620:0;e .todo
+: 1719673628:0;q
+: 1719673634:0;r
+: 1719673636:0;q
+: 1719673639:0;e .todo
+: 1719673650:0;q
+: 1719673654:0;nfc
+: 1719684911:0;installp pulseaudio xorg-x11-server-Xorg libXcomposite.i686 gtk3 nss php bash gtk2 libXt 
+: 1719684945:0;cd Downloads
+: 1719685128:0;cls
+: 1719685132:0;./start-flashpoint.sh
+: 1719685275:0;cava
+: 1719685277:0;clcf
+: 1719685280:0;clnf
+: 1719685303:0;cd Games/fp13_linux_20240425m
+: 1719685309:0;sww ./start-flashpoint.sh
+: 1719685573:0;installp pulseaudio xorg-x11-server-Xorg libXcomposite.i686 gtk3 nss php bash gtk2 libXt 
+: 1719685621:0;installp pulseaudio xorg-x11-server-Xorg libXcomposite.i686 gtk3 nss php bash gtk2 libXt --alllowerasing
+: 1719688149:0;r
+: 1719688157:0;q
+: 1719689846:0;r
+: 1719689866:0;q
+: 1719689914:0;r
+: 1719689928:0;cls
+: 1719689929:0;c
+: 1719689931:0;v
+: 1719689932:0;e .
+: 1719689954:0;uzip
+: 1719689957:0;cd Downloads
+: 1719689964:0;uzip WinDev2404Eval.VirtualBox.zip
+: 1719689979:0;r
+: 1719727670:0;upday
+: 1719727731:0;cava
+: 1719727733:0;clcf
+: 1719727734:0;clnf
+: 1719728558:0;tclock
+: 1719728571:0;clnf
+: 1719734149:0;r
+: 1719734169:0;q
+: 1719734175:0;cava
+: 1719734178:0;clcf
+: 1719734179:0;clnf
+: 1719745824:0;tclock
+: 1719813981:0;upday
+: 1719814196:0;cava
+: 1719814198:0;clcf
+: 1719814199:0;clnf
+: 1719827846:0;r
+: 1719832915:0;tclock
+: 1719906126:0;cava
+: 1719906128:0;clcf
+: 1719906130:0;clnf
+: 1719909469:0;upday
+: 1719909485:0;removep emacs
+: 1719909490:0;removep emacs-filesystem-1:29.3-1.fc39.noarch
+: 1719909509:0;installp emacs-filesystem-1:29.
+: 1719909513:0;installp emacs-filesystem
+: 1719909700:0;installp automake catfish cmake cscope ibus-anthy  ibus-hangul ibus-libpinyin inus-m17m intltool libtool meson nemo nemo-fileroller nemo-image-converter nemo-preview pinfo qt5-qtbase-ddevel rmpdevtools setroubleshoot simplenote system-config-printer winehq-staging xdg-utils xed xfce4-dict-plugin 
+: 1719909739:0;installp automake catfish cmake cscope ibus-anthy  ibus-hangul ibus-libpinyin ibus-m17m intltool libtool meson nemo nemo-fileroller nemo-image-converter nemo-preview pinfo qt5-qtbase-devel rpmdevtools setroubleshoot system-config-printer winehq-staging xdg-utils xed xfce4-dict-plugin 
+: 1719909752:0;installp automake catfish cmake cscope ibus-anthy  ibus-hangul ibus-libpinyin ibus-m17n intltool libtool meson nemo nemo-fileroller nemo-image-converter nemo-preview pinfo qt5-qtbase-devel rpmdevtools setroubleshoot system-config-printer winehq-staging xdg-utils xed xfce4-dict-plugin 
+: 1719909890:0;upday
+: 1719910138:0;tclock
+: 1719912242:0;r
+: 1719912256:0;q
+: 1719913077:0;r
+: 1719913093:0;q
+: 1719974300:0;cd Pictures/WallPP/Colorschemes/kanagawa
+: 1719974301:0;cls
+: 1719974321:0;r
+: 1719974344:0;q
+: 1719974354:0;r
+: 1719974363:0;swp 135184-waves-digital-art-artwork-minimalism-The-Great-Wave-off-Kanagawa.png
+: 1719974370:0;r
+: 1719974383:0;cls
+: 1719974409:0;cava
+: 1719974411:0;clcf
+: 1719974412:0;clnf
+: 1719974419:0;cd ~; clnf
+: 1719974545:0;cd Pictures/WallPP/Colorschemes/kanagawa
+: 1719974548:0;feh --no-fehbg --bg-scale 135184-waves-digital-art-artwork-minimalism-The-Great-Wave-off-Kanagawa.png
+: 1719974559:0;nitrogen
+: 1719980673:0;5;9u5;9u
+: 1719980720:0;py-uuui
+: 1719980742:0;deactivate
+: 1719980750:0;py-uuui
+: 1719984036:0;clcf
+: 1719984037:0;clnf
+: 1719984045:0;cava
+: 1719990066:0;r
+: 1720010476:0;tclock
+: 1720012644:0;clcf
+: 1720019459:0;cava
+: 1720019460:0;clcf
+: 1720019464:0;clnf
+: 1720027998:0;rsl-ssh 
+: 1720068646:0;upday
+: 1720068805:0;cava
+: 1720068806:0;clcf
+: 1720068845:0;update-grub
+: 1720068868:0;clnf
+: 1720075010:0;tclock
+: 1720084406:0;upday
+: 1720084428:0;cava
+: 1720084431:0;clcf
+: 1720084432:0;clnf
+: 1720084502:0;sww autotiling
+: 1720084503:0;q
+: 1720105932:0;cls
+: 1720105934:0;r
+: 1720168485:0;upday
+: 1720168496:0;todo rm 3
+: 1720168859:0;cava
+: 1720168860:0;clcf
+: 1720173087:0;clnf
+: 1720176876:0;tclock
+: 1720284095:0;upay
+: 1720284097:0;upday<
+: 1720284099:0;upday
+: 1720284172:0;cava
+: 1720284173:0;clcf
+: 1720284174:0;clnf
+: 1720289283:0;searchp vimb
+: 1720289297:0;installp vimb
+: 1720289465:0;removep vimb
+: 1720290866:0;clnf
+: 1720332119:0;upday
+: 1720335004:0;cava
+: 1720335007:0;clcf
+: 1720335008:0;clnf
+: 1720360418:0;tclock
+: 1720444524:0;cava
+: 1720444525:0;clcf
+: 1720444529:0;clnf
+: 1720456680:0;cltr
+: 1720456680:0;q
+: 1720456687:0;cltr
+: 1720456688:0;q
+: 1720465187:0;cltr
+: 1720465188:0;q
+: 1720530632:0;upday
+: 1720533225:0;cava
+: 1720533230:0;tclock
+: 1720533232:0;clcf
+: 1720533234:0;clnf
+: 1720533239:0;tclock
+: 1720548144:0;clnf
+: 1720548146:0;clcf
+: 1720588633:0;upday
+: 1720588738:0;cava
+: 1720588740:0;clcf
+: 1720588741:0;clnf
+: 1720605709:0;cava
+: 1720605710:0;clcf
+: 1720605711:0;clnf
+: 1720706243:0;upday
+: 1720706481:0;cava
+: 1720706482:0;clcf
+: 1720706484:0;clnf
+: 1720711862:0;todo rm 1
+: 1720711863:0;q
+: 1720712772:0;cava
+: 1720712774:0;clcf
+: 1720712775:0;clnf
+: 1720717822:0;q
+: 1720718667:0;rsl-smb
+: 1720718682:0;rsl-ssh
+: 1720719367:0;pg rsl-server.duckdns.org
+: 1720719454:0;rsl-smb
+: 1720719520:0;cava
+: 1720719522:0;clcf
+: 1720719523:0;clnf
+: 1720719599:0;q
+: 1720719720:0;cltr
+: 1720719721:0;q
+: 1720719729:0;r
+: 1720719760:0;q
+: 1720719802:0;swp 4004.png
+: 1720719807:0;r
+: 1720719849:0;e
+: 1720719853:0;e .
+: 1720719859:0;q
+: 1720721325:0;ka xfdesktop
+: 1720761151:0;upday
+: 1720761877:0;cava
+: 1720761878:0;clcf
+: 1720761881:0;clnf
+: 1720793061:0;installp akmod-VirtualBOx kernel-devel-$(uname -r)
+: 1720793075:0;installp akmod-VirtualBox kernel-devel-$(uname -r)
+: 1720793148:0;upday
+: 1720794124:0;clnf
+: 1720794180:0;update-grub
+: 1720794341:0;q
+: 1720794985:0;removep hexchat

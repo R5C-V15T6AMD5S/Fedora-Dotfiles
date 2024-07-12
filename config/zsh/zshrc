@@ -10,8 +10,8 @@ export PATH="$HOME/bin:/usr/local/bin:$HOME/.config/.cargo/bin:$PATH:/home/o5-13
 export ZSH="$HOME/.config/zsh/.oh-my-zsh"
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes-xiong-chiamiov-plus
-# darkblood duellj half-life nicoulaj xiong-chiamiov-plus gallois
-ZSH_THEME="half-life"
+# darkblood duellj eastwood half-life nicoulaj xiong-chiamiov-plus gallois
+ZSH_THEME="eastwood"
 
 # CASE_SENSITIVE="true"
 # HYPHEN_INSENSITIVE="true"

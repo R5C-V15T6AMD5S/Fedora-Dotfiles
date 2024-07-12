@@ -17,6 +17,19 @@ function mkd() {
    	mkdir -p "$@" && cd "$_";
 }
 
+function rsl-status() {
+    bash -c "~/.scripts/home_server_status.sh"
+}
+
+function rsl-scp() {
+    scp -P 4812 "$1@rsl-server.duckdns.org:/home/$2" "$3"
+    # rsl-scp o5-13 o5-13/Documents/image.jpg ~/Downloads
+}
+
+function rsl-smb() {
+    sudo mount -t cifs //rsl-server.duckdns.org/Share-o5-13 /media/SummaModusOperandi -o rw,_netdev,credentials=/home/o5-13/.smbcreds,uid=1000,gid=1000,port=4455
+}
+
 function run-tos() {
     cd ~/VirtualBox/TempleOS; ./run.sh ./TOS.img 
 }
@@ -45,14 +58,6 @@ function epicban() {
 # Lolcat with 3D font for figlet
 function 3dban() {
 	     clear; figlet -f 3d.flf "$1" | lolcat
-}
-
-function rsl-status() {
-    bash -c "~/.scripts/home_server_status.sh"
-}
-
-function rsl-smb() {
-    sudo mount -t cifs //rsl-server.duckdns.org/Share-o5-13 /media/SummaModusOperandi -o rw,_netdev,credentials=/home/o5-13/.smbcreds,uid=1000,gid=1000,port=4455
 }
 
 function uzip() {

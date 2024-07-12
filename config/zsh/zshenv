@@ -21,7 +21,7 @@ export BROWSER="firefox"
 export WINEARCH="win64"
 export WINEPREFIX="$HOME/.wine"
 export QT_QPA_PLATFORMTHEME="qt5ct"
-export GTK_THEME="Everforest-Dark-BL-LB"
+export GTK_THEME="Kanagawa-BL-LB"
 
 export CM_DEBUG=0
 export CM_MAX_CLIPS=15
