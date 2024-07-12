@@ -9,6 +9,7 @@ Plug 'vim-airline/vim-airline-themes'
 
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#formatter='unique_tail_improved'
+let g:airline#extensions#disable_rtp_load=1
 let g:airline_powerline_fonts=1
 let NERDTreeShowHidden=1
 
@@ -17,17 +18,18 @@ call plug#end()
 " General settings
 "
 set background=dark
-colorscheme dracula
+colorscheme nord
 
 set guifont=DroidSansMono\ Nerd\ Font\ 11
-set viminfo+=n~/.vim/viminfo
 set number relativenumber
+set viminfofile=NONE
 set encoding=UTF-8
 set noerrorbells
 set shiftwidth=2
 set smartindent
 set autoindent
 set noswapfile
+set viminfo=""
 set smartcase
 set incsearch
 set expandtab
