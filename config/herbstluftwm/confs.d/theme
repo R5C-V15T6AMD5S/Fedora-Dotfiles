@@ -5,12 +5,12 @@ hc attr theme.reset 1
 hc attr theme.tiling.reset 1
 hc attr theme.floating.reset 1
 
-# Everforest #
-#------------#
-Active='#a7c080'
-Normal='#272e33'
-Urgent='#e67e80'
-Floating='#4f5b58'
+# Kanagawa #
+#----------#
+Active='#DCD7BA'
+Normal='#223249'
+Urgent='#E82424'
+Floating=$Active
 
 # Frames #
 #--------#

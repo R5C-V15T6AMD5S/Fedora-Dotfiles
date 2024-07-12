@@ -29,7 +29,7 @@ bash -c $HOME/.config/herbstluftwm/scripts/monitor_init.sh &
 #-----------#
 xkbset q &
 nm-applet &
-xfdesktop &
+#xfdesktop &
 clipmenud &
 xset b off &
 numlockx on &
