@@ -1,4 +1,4 @@
-# Dotfile for Fedora 39
+# Dotfile for Fedora 40
 
 ## XFCE + i3
 ![Screenshot](./Screenshots/i3.png)
@@ -17,5 +17,5 @@
 - Text editor: `nvim`
 - Browser: `firefox`
 - Compositor: `picom`
-- File manager: `Nemo`
+- File manager: `thunar`
 - WMs: `i3`, `herbstluftwm`, `bspwm`
