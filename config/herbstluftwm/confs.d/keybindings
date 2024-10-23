@@ -7,11 +7,12 @@ Primary=eDP
 Secondary=HDMI-A-0
 Terminal=kitty
 Text_Editor=xed
-File_Manager=nemo
+File_Manager=thunar
+Alt_File_Man=nemo
 Web_Browser=firefox
+Alt_Web_Browser=brave-browser
 ProcManager=xfce4-taskmanager
 ScreenShooter=~/.scripts/screenshot_tool
-VirtualWorld=~/.scripts/rofi_virtualbox.sh
 
 # REMOVE ALL EXISTING KEYBINDINGS #
 #---------------------------------#
@@ -64,8 +65,8 @@ hc keybind XF86AudioStop spawn playerctl stop
 hc keybind XF86AudioNext spawn playerctl next
 hc keybind XF86AudioPrev spawm playerctl previous
 
-hc keybind XF86MonBrightnessUp chain , spawn light -A 5 , spawn notify-send "Brightness: $(light)"
-hc keybind XF86MonBrightnessDown chain , spawn light -U 5 , spawn notify-send "Brightness: $(light)"
+hc keybind XF86MonBrightnessUp spawn brightnessctl s +5%
+hc keybind XF86MonBrightnessDown spawn brightnessctl s 5%- 
 
 # Essential programs #
 #--------------------#
@@ -73,10 +74,11 @@ hc keybind $Super-Return spawn "$Terminal"
 hc keybind $Super-$Alt-Return spawn "$Terminal" --class floating
 hc keybind $Super-Shift-Return spawn "$Terminal" --start-as=fullscreen 
 
-hc keybind $Super-Shift-b spawn "$Web_Browser"
+hc keybind $Super-b spawn "$Web_Browser"
+hc keybind $Super-Shift-b spawn "$Alt_Web_Browser" --incognito
 hc keybind $Super-Shift-t spawn "$Text_Editor"
 hc keybind $Super-Shift-f spawn "$File_Manager"
-hc keybind $Super-Shift-v spawn "$VirtualWorld"
+hc keybind $Super-Shift-n spawn "$Alt_File_Man"
 hc keybind $Super+Shift+Escape spawn "$ProcManager"
 
 # Resizing frames and floating clients #
@@ -91,8 +93,8 @@ hc keybind $Super-Control-Right   resize right +$resizestep
 #-------------#
 hc keybind $Super-d spawn rofi -show
 hc keybind $Super-Control-c spawn clipmenu
-hc keybind $Super-b spawn ~/.scripts/search_engines.sh
-hc keybind $Super-n spawn ~/.scripts/rofi-network-manager.sh
+hc keybind $Super-Control-b spawn ~/.scripts/search_engines.sh
+hc keybind $Super-Control-n spawn ~/.scripts/rofi-network-manager.sh
 
 # Change focus #
 #--------------#

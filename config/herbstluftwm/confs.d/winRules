@@ -8,13 +8,13 @@ hc rule class~'(spotify|pragha|clementine|deadbeef|audacious)' tag=2 switchtag=o
 hc rule class~'(Vlc|Mpv)' tag=4 switchtag=on focus=on
 hc rule class~'(vlc|mpv)' tag=4 switchtag=on focus=on
 hc rule class~'(Deluge-Gtk)' tag=4 switchtag=on focus=on
-hc rule class~'(Discord|ViberPC|Hexchat)' tag=3 focus=off
+hc rule class~'(Discord|ViberPC|Hexchat|ZapZap)' tag=3 focus=off
 hc rule class~'(discord|viberpc|hexchat|whatsapp-desktop-linux)' tag=3 focus=off
 hc rule class~'(wizardlauncher.exe)' tag=8 switchtag=on focus=on floating=on
 hc rule class~'(Atom|Subl|Geany|Brackets|Code-oss|Code|Xed|Steam)' tag=5 switchtag=on focus=on
 hc rule class~'(atom|subl|geany|brackets|code-oss|code|xed)|steam' tag=5 switchtag=on focus=on
 hc rule class~'(Navigator|Firefox|Vivaldi-stable|Vivaldi-snapshot|Chromium|Google-chrome|Brave|Brave-browser)' tag=6 switchtag=on focus=on
-hc rule class~'(navigator|firefox|vivaldi-stable|vivaldi-snapshot|chromium|google-chrome|brave|brave-browser)' tag=6 switchtag=on focus=on
+hc rule class~'(navigator|org.mozilla.firefox|vivaldi-stable|vivaldi-snapshot|chromium|google-chrome|brave|brave-browser)' tag=6 switchtag=on focus=on
 hc rule class~'(Protonvpn|Tor Browser)' tag=9 switchtag=on focus=on
 hc rule class~'(Evolution|Geary|Mail|Thunderbird)' tag=8 switchtag=on focus=on
 hc rule class~'(evolution|geary|mail|thunderbird)' tag=8 switchtag=on focus=on

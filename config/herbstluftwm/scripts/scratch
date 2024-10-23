@@ -2,8 +2,8 @@
 
 case "$1" in
 
-    scratchpad) 		
-        entry="kitty --class scpad -T scratchpad" 		
+    FlyingKitty) 		
+        entry="kitty --class scpad -T FlyingKitty" 		
         ;;
     keepassxc)
         entry="keepassxc"

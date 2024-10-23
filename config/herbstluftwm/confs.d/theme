@@ -5,12 +5,9 @@ hc attr theme.reset 1
 hc attr theme.tiling.reset 1
 hc attr theme.floating.reset 1
 
-# Kanagawa #
-#----------#
-Active='#DCD7BA'
-Normal='#223249'
-Urgent='#E82424'
-Floating=$Active
+# Import colorsscheme #
+#---------------------#
+source $HOME/.config/herbstluftwm/themes/nord
 
 # Frames #
 #--------#
