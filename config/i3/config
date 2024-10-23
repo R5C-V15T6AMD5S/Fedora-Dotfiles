@@ -1,4 +1,4 @@
-##  Visit i3wm.org for more information about User's guide'  ##
+##  Visit org.i3wm for more information about User's guide'  ##
 #-------------------------------------------------------------#
 
 include $HOME/.config/i3/confs.d/*
@@ -8,16 +8,17 @@ include $HOME/.config/i3/confs.d/*
 set $Alt         Mod1
 set $Super       Mod4
 
-set $Primary	    eDP
+set $Primary	 eDP
 set $Secondary   HDMI-A-0
 
-set $Text_Editor   xed
-set $File_Manager  nemo
-set $Terminal      kitty
-set $Web_Browser   firefox
-set $ProcManager   xfce4-taskmanager
-set $ScreenShooter ~/.scripts/screenshot_tool
-set $VirtualWorld  ~/.scripts/rofi_virtualbox.sh
+set $Text_Editor      xed
+set $File_Manager     thunar
+set $Alt-File_Man     nemo
+set $Terminal         kitty
+set $Web_Browser      firefox
+set $ProcManager      xfce4-taskmanager
+set $Alt_Web_Browser  brave-browser --incognito
+set $ScreenShooter    ~/.scripts/screenshot_tool
 
 
 ## Basic config ##
