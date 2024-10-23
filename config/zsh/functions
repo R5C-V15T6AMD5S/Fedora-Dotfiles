@@ -17,58 +17,136 @@ function mkd() {
    	mkdir -p "$@" && cd "$_";
 }
 
-function rsl-status() {
-    bash -c "~/.scripts/home_server_status.sh"
+function extr() {
+  if [[ $# != 2 ]]; then
+    echo "Usage: extr <FILE_NAME> <FILE_TYPE>"
+    return 1
+  fi
+
+  local file_name=$1
+  local file_type=$2
+
+  case "$file_type" in
+    "zip")
+      target="${file_name%.zip}"
+      unzip "$file_name" -d "${target##*/}"
+      ;;
+    "tar")
+      tar -xvf "$file_name"
+      ;;
+    "tar.gz")
+      tar -xzvf "$file_name"
+      ;;
+    "tar.bz2")
+      tar -xjvf "$file_name"
+      ;;
+    "gz")
+      gunzip "$file_name"
+      ;;
+    "bz2")
+      bunzip2 "$file_name"
+      ;;
+    "rar")
+      unrar x "$file_name"
+      ;;
+    "7z")
+      7z x "$file_name"
+      ;;
+    "iso")
+      mount_dir="${file_name%.iso}_mount"
+      mkdir -p "$mount_dir"
+      sudo mount -o loop "$file_name" "$mount_dir"
+      ;;
+    "riso")
+      mount_dir="${file_name%.iso}_mount"
+      if mountpoint -q "$mount_dir"; then
+          sudo umount "$mount_dir"
+          rmdir "$mount_dir"
+          echo "ISO unmounted and $mount_dir removed"
+      else
+          echo "$mount_dir is not mounted"
+      fi
+      ;;
+    *)
+      echo "ERROR: Unknown file type $file_type"
+      return 1
+      ;;
+  esac
 }
 
-function rsl-scp() {
-    scp -P 4812 "$1@rsl-server.duckdns.org:/home/$2" "$3"
-    # rsl-scp o5-13 o5-13/Documents/image.jpg ~/Downloads
+
+
+function rsl() {
+    case "$1" in
+        status)
+            bash -c "~/.scripts/home_server_status.sh"
+            ;;
+        scp-get)
+            if [ -z "$2" ] || [ -z "$3" ]; then
+                echo "Usage: rsl scp <user> <remote_path>"
+                return 1
+            fi
+            scp -P 4812 "$2@rsl-server.duckdns.org:$3" ~/Public/
+            ;;
+        scp-send)
+            if [ -z "$2" ] || [ -z "$3" ]; then
+                echo "Usage: rsl scp-send <local_file> <remote_user>:<remote_path>"
+                return 1
+            fi
+            scp -P 4812 "$2" "$3@rsl-server.duckdns.org:$3"
+            ;;
+        smb)
+            sudo mount -t cifs //rsl-server.duckdns.org/Share-o5-13 /mnt/SummaModusOperandi -o rw,_netdev,credentials=/home/o5-14/.smbcreds,x-systemd.automount,port=4455
+            ;;
+        ssh)
+            if [ -z "$2" ]; then
+                echo "Usage: rsl ssh <remote_user>"
+                return 1
+            fi
+            ssh -p 4812 "$2"@rsl-server.duckdns.org
+            ;;
+        irc)
+            irs -c rsl-server.duckdns.org -p 6667
+            ;;
+        *)
+            echo "Usage: rsl {status|scp-get|scp-send|smb|ssh|irc}"
+            return 1
+            ;;
+    esac
 }
 
-function rsl-smb() {
-    sudo mount -t cifs //rsl-server.duckdns.org/Share-o5-13 /media/SummaModusOperandi -o rw,_netdev,credentials=/home/o5-13/.smbcreds,uid=1000,gid=1000,port=4455
-}
-
-function run-tos() {
-    cd ~/VirtualBox/TempleOS; ./run.sh ./TOS.img 
+function qemu-run() {
+    case "$1" in
+        tos)
+            cd ~/VirtualBox/TempleOS; ./run.sh ./TOS.img 
+            ;;
+        wxp)
+            cd ~/VirtualBox/WXPP; ./run.sh ./WXPP.img
+            ;;
+        *)
+            echo "Usage: qemu-run {tos|wxp}"
+            return 1
+            ;;
+    esac
 }
 
 function christmas-tree() {
     curl https://raw.githubusercontent.com/sergiolepore/ChristBASHTree/master/tree-EN.sh | bash
 }
 
-function py-uuui() {
-    cd ~/Desktop/RiTeh\ UNIRI/3.6/UUUI/Vježbe; source env/bin/activate; sww jupyter notebook
-}
-
-function update-grub() {
-      sudo rm /boot/efi/EFI/fedora/grub.cfg
+#function update-grub() {
+#      sudo rm /boot/efi/EFI/fedora/grub.cfg
 # UEFI
-      sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
+#      sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
 # BIOS
       #sudo grub2-mkconfig -o /boot/grub2/grub.cfg
-}
-
-# Lolcat with EPIC font for figlet
-function epicban() {
-	     clear; figlet -f epic.flf "$1" | lolcat
-}
-
-# Lolcat with 3D font for figlet
-function 3dban() {
-	     clear; figlet -f 3d.flf "$1" | lolcat
-}
-
-function uzip() {
-    if [[ $# != 1 ]]; then echo Error: Argument IS the zip file; return 1; fi
-    target="${1%.zip}"
-    unzip "$1" -x -d "${target##*/}"
-}
+#}
 
 # Updates the spicetify 
 function update-spicetify(){
     sudo chmod a+wr /var/lib/flatpak/app/com.spotify.Client/x86_64/stable/active/files/extra/share/spotify
     sudo chmod a+wr -R /var/lib/flatpak/app/com.spotify.Client/x86_64/stable/active/files/extra/share/spotify/Apps
+    spicetify
+    spicetify update
     spicetify backup apply
 }

@@ -6,12 +6,12 @@
 #  (_)_____/\____/\_| |_/\_| \_| \____/
 
 # If you come from bash you might have to change your $PATH.
-export PATH="$HOME/bin:/usr/local/bin:$HOME/.config/.cargo/bin:$PATH:/home/o5-13/.spicetify"
+export PATH="$HOME/bin:/usr/local/bin:$HOME/.config/.cargo/bin:$PATH:/home/o5-14/.spicetify"
 export ZSH="$HOME/.config/zsh/.oh-my-zsh"
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes-xiong-chiamiov-plus
-# darkblood duellj eastwood half-life nicoulaj xiong-chiamiov-plus gallois
-ZSH_THEME="eastwood"
+# duellj arrow eastwood half-life nicoulaj xiong-chiamiov-plus
+ZSH_THEME="half-life"
 
 # CASE_SENSITIVE="true"
 # HYPHEN_INSENSITIVE="true"
@@ -27,9 +27,7 @@ plugins=(
     copypath
     copyfile
     jsontools
-    zsh_reload
     colored-man-pages
-    zsh-autosuggestions
     zsh-syntax-highlighting
 )
 
