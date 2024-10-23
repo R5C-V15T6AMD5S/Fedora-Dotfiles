@@ -7,11 +7,14 @@ configuration {
 }
 
 *{
-	foreground:#C8C093; 				//Text
-	background:#223249; 				//Background
-	accent:#C34043; 					//Highlight
-	foreground-selection:@foreground; 	//Selection_fg
-	background-selection:#2D4F67; 		//Selection_bg
+// Nord
+	background-color: #2E3440;
+	text-color:       #e5e9f0;
+	selbg:            #d08770;
+	sel2bg:           #ebdb8b;
+	actbg:            #88c0d0;
+	urgbg:            #bf616a;
+	winbg:			         @text-color;
 
 	transparent:					#ffffff00;
 	background-color:				@transparent;
