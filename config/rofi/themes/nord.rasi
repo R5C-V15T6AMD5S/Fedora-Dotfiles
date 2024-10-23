@@ -91,7 +91,7 @@ listview {
     background-color: rgba(46,52,64,0.9);
     dynamic: false;
     columns: 2;
-    lines: 8;
+    lines: 10;
 }
 
 element {

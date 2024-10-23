@@ -10,11 +10,11 @@ configuration {
   margin: 0;
   padding: 0;
   spacing: 0;
-  background: #223249;
-  line: #DCD7BA; 
-  foreground: #C34043;   
+  background: #2e3440;
+  line: #e5e9f0; 
+  foreground: #e5e9f0;   
   Comment: #6272a4; 
-  selected: #C34043;
+  selected: #d08770;
   background-color: @background;
   text-color: @selected;
 }

@@ -4,7 +4,6 @@ configuration{
     line-margin: 10;
     show-icons: true;
     sidebar-mode: false;
-    icon-theme: "oomox-Kanagawa";
 
     display-drun: 	  "Apps";
     display-calc:    "Calc";
@@ -14,4 +13,4 @@ configuration{
     display-combi:   "Mr. Mix";
 }
 
-@theme "~/.config/rofi/themes/kanagawa.rasi"
+@theme "~/.config/rofi/themes/nord.rasi"
