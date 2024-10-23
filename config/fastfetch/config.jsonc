@@ -1,0 +1,56 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        "source": "/home/o5-14/.config/fastfetch/small_fedora.txt",
+        "padding": {
+            "right": 4
+        }
+    },
+    "display": {
+        "separator": "  ~  "
+    },
+    "modules": [
+        {
+            "key": " OS ",
+            "keyColor": "38;5;131",   // Nordic red
+            "type": "os"
+        },
+        {
+            "key": " VER",
+            "keyColor": "38;5;114",   // Nordic green
+            "type": "kernel"
+        },
+        {
+            "key": " PKG",
+            "keyColor": "38;5;109",   // Nordic yellow
+            "type": "packages"
+        },
+        {
+            "key": " DE ",
+            "keyColor": "38;5;75",   // Nordic blue
+            "type": "de"
+        },
+        {
+            "key": " WM ",
+            "keyColor": "38;5;81",    // Nordic blue (a lighter shade)
+            "type": "wm"
+        },
+        {
+            "key": " CPU",
+            "keyColor": "38;5;105",   // Nordic purple
+            "type": "cpu"
+        },
+        {
+            "key": " GPU",
+            "keyColor": "38;5;141",   // Nordic purple (a lighter shade)
+            "type": "gpu"
+        },
+        {
+            "key": " MEM",
+            "keyColor": "38;5;74",    // Nordic cyan
+            "type": "memory"
+        },
+        "break"
+    ]
+}
+
