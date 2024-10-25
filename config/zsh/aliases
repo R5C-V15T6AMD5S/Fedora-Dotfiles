@@ -4,7 +4,11 @@
 #  / ___ \| | | (_| \__ \  __/\__ \
 # /_/   \_\_|_|\__,_|___/\___||___/
 
-alias q="exit"
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias {q,qq,:q,Q}="exit"
+
 alias e="nvim"
 alias c="clear"
 alias r="ranger"
@@ -32,17 +36,18 @@ alias ls="eza -aG --color=always --icons --group-directories-first"
 alias irs="irssi --config='$XDG_CONFIG_HOME'/irssi/config --home='$XDG_DATA_HOME'/irssi"
 
 # Git opertions
-alias gl="git log"
-alias gd="git diff"
-alias gp="git push"
-alias ga="git add ."
-alias gcl="git clone"
-alias gst="git status"
-alias gco="git checkout"
-alias gcm="git commit -m"
+alias gitl="git log"
+alias gitd="git diff"
+alias gitp="git push"
+alias gita="git add ."
+alias gitc="git clone"
+alias gits="git status"
+alias gitch="git checkout"
+alias gitcm="git commit -m"
 
 # Different Spicetify themes
-alias sndt="spicetify config color_scheme Nord current_theme Sleek && spicetify apply"
+alias sslt="spicetify config color_scheme Nord current_theme Sleek && spicetify apply"
+alias sndt="spicetify config color_scheme Nord current_theme Nord && spicetify apply"
 alias sgbt="spicetify config color_scheme Dark current_theme Gruvbox && spicetify apply"
 alias sdct="spicetify config color_scheme Dark current_theme Dracula && spicetify apply"
 alias sodt="spicetify config color_scheme Dark current_theme OneDark && spicetify apply"
