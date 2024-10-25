@@ -1,4 +1,4 @@
-# Dotfile for Fedora 40
+# Dotfiles for Fedora 40
 
 ## XFCE + i3
 ![Screenshot](./Screenshots/i3.png)
