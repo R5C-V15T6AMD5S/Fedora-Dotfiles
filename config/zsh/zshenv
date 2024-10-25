@@ -5,10 +5,11 @@
 # | |__| | | \ V /| | | | (_) | | | | | | | | |  __/ | | | |_  \ \_/ / (_| | |  | | (_| | |_) | |  __/
 # \____/_| |_|\_/ |_|_|  \___/|_| |_|_| |_| |_|\___|_| |_|\__|  \___/ \__,_|_|  |_|\__,_|_.__/|_|\___|
 
-export XDG_CACHE_HOME=${XDG_CACHE_HOME:="$HOME/.cache"}
-export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:="$HOME/.config"}
-export XDG_DATA_HOME=${XDG_DATA_HOME:="$HOME/.local/share"}
-export XDG_STATE_HOME=${XDG_STATE_HOME:="$HOME/.local/state"}
+export XDG_CACHE_HOME=$HOME/.cache
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_DATA_HOME=$HOME/.local/share
+export XDG_STATE_HOME=$HOME/.local/state
+export XDG_DATA_DIRS="/usr/local/share:/usr/share"
 
 export IMAGE="feh"
 export VIDEO="mpv"
@@ -30,9 +31,11 @@ export CM_SELECTIONS="clipboard"
 export HISTSIZE=1000
 export SAVEHIST=1000
 export HIST_EXPIRE=20
+export HISTFILE=$ZDOTDIR/.history
 export HIST_EXPIRE_DUPS_FIRST=true
+export _JAVA_AWT_WM_NONREPARENTING=1
+export MESA_SHADER_CACHE_DISABLE=true
 
-export LESSHISTFILE=-
 export ZDOTDIR="$HOME/.config/zsh"
 export WINEPREFIX="$XDG_DATA_HOME/wine"
 export GNUPGHOME="$XDG_DATA_HOME/gnupg"
@@ -45,6 +48,7 @@ export XINITRC="$XDG_CONFIG_HOME/X11/xinitrc"
 export HISTFILE="$XDG_CONFIG_HOME/zsh/.history"
 export OMNISHARPHOME="$XDG_CONFIG_HOME/omnisharp"
 export ICEAUTHORITY="$XDG_CACHE_HOME/ICEauthority"
+export LESSHISTFILE="$XDG_CONFIG_HOME/less/history"
 export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME/jupyter"
 export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
