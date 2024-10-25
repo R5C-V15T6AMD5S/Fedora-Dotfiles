@@ -3,41 +3,41 @@ hc unrule -F
 
 # MENUS #
 #-------#
-hc rule class~'(Spotify|Pragha|Clementine|Deadbeef|Audacious)' tag=2 switchtag=on focus=on
-hc rule class~'(spotify|pragha|clementine|deadbeef|audacious)' tag=2 switchtag=on focus=on
-hc rule class~'(Vlc|Mpv)' tag=4 switchtag=on focus=on
-hc rule class~'(vlc|mpv)' tag=4 switchtag=on focus=on
-hc rule class~'(Deluge-Gtk)' tag=4 switchtag=on focus=on
-hc rule class~'(Discord|ViberPC|Hexchat|ZapZap)' tag=3 focus=off
-hc rule class~'(discord|viberpc|hexchat|whatsapp-desktop-linux)' tag=3 focus=off
-hc rule class~'(wizardlauncher.exe)' tag=8 switchtag=on focus=on floating=on
-hc rule class~'(Atom|Subl|Geany|Brackets|Code-oss|Code|Xed|Steam)' tag=5 switchtag=on focus=on
-hc rule class~'(atom|subl|geany|brackets|code-oss|code|xed)|steam' tag=5 switchtag=on focus=on
-hc rule class~'(Navigator|Firefox|Vivaldi-stable|Vivaldi-snapshot|Chromium|Google-chrome|Brave|Brave-browser)' tag=6 switchtag=on focus=on
-hc rule class~'(navigator|org.mozilla.firefox|vivaldi-stable|vivaldi-snapshot|chromium|google-chrome|brave|brave-browser)' tag=6 switchtag=on focus=on
-hc rule class~'(Protonvpn|Tor Browser)' tag=9 switchtag=on focus=on
-hc rule class~'(Evolution|Geary|Mail|Thunderbird)' tag=8 switchtag=on focus=on
-hc rule class~'(evolution|geary|mail|thunderbird)' tag=8 switchtag=on focus=on
-hc rule class~'(VirtualBox Machine|VirtualBox Manager)' tag=9 switchtag=on focus=on
-hc rule class~'(Nemo-preview-start)' focus=on floating=on floatplacement=center
-hc rule class~'(floating)' focus=on floating=on floatplacement=center floating_geometry=1350x850
+hc_r class~'(Spotify|Pragha|Clementine|Deadbeef|Audacious)' tag=2 switchtag=on focus=on
+hc_r class~'(spotify|pragha|clementine|deadbeef|audacious)' tag=2 switchtag=on focus=on
+hc_r class~'(Vlc|Mpv)' tag=4 switchtag=on focus=on
+hc_r class~'(vlc|mpv)' tag=4 switchtag=on focus=on
+hc_r class~'(Deluge-Gtk)' tag=4 switchtag=on focus=on
+hc_r class~'(Discord|ViberPC|Hexchat|ZapZap)' tag=3 focus=off
+hc_r class~'(discord|viberpc|hexchat|whatsapp-desktop-linux)' tag=3 focus=off
+hc_r class~'(wizardlauncher.exe)' tag=8 switchtag=on focus=on floating=on
+hc_r class~'(Atom|Subl|Geany|Brackets|Code-oss|Code|Xed|Steam)' tag=5 switchtag=on focus=on
+hc_r class~'(atom|subl|geany|brackets|code-oss|code|xed)|steam' tag=5 switchtag=on focus=on
+hc_r class~'(Navigator|Firefox|Vivaldi-stable|Vivaldi-snapshot|Chromium|Google-chrome|Brave|Brave-browser)' tag=6 switchtag=on focus=on
+hc_r class~'(navigator|org.mozilla.firefox|vivaldi-stable|vivaldi-snapshot|chromium|google-chrome|brave|brave-browser)' tag=6 switchtag=on focus=on
+hc_r class~'(Protonvpn|Tor Browser)' tag=9 switchtag=on focus=on
+hc_r class~'(Evolution|Geary|Mail|Thunderbird)' tag=8 switchtag=on focus=on
+hc_r class~'(evolution|geary|mail|thunderbird)' tag=8 switchtag=on focus=on
+hc_r class~'(VirtualBox Machine|VirtualBox Manager)' tag=9 switchtag=on focus=on
+hc_r class~'(Nemo-preview-start)' focus=on floating=on floatplacement=center
+hc_r class~'(floating)' focus=on floating=on floatplacement=center floating_geometry=1350x850
 
 # SCRATCHPADS #
 #-------------#
-hc rule class~scpad floating=on floatplacement=center floating_geometry=1350x850
-hc rule class~KeePassXC floating=on floatplacement=center floating_geometry=1350x850
-hc rule class~Pavucontrol floating=on floatplacement=center floating_geometry=1350x850
-hc rule class~Simplenote floating=on floatplacement=center floating_geometry=1350x850
+hc_r class~scpad floating=on floatplacement=center floating_geometry=1350x850
+hc_r class~KeePassXC floating=on floatplacement=center floating_geometry=1350x850
+hc_r class~Pavucontrol floating=on floatplacement=center floating_geometry=1350x850
+hc_r class~Simplenote floating=on floatplacement=center floating_geometry=1350x850
 
 # BASIC RULES #
 #-------------#
-hc rule focus=on
-hc rule floatplacement=center
+hc_r focus=on
+hc_r floatplacement=center
 
-hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' floating=on floatplacement=smart
-hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on floatplacement=center
-hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK|DESKTOP)' manage=off
-hc set tree_style '╾│ ├└╼─┐'
+hc_r windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' floating=on floatplacement=smart
+hc_r windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on floatplacement=center
+hc_r windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK|DESKTOP)' manage=off
+hc_s  tree_style '╾│ ├└╼─┐'
 
 # UNLOCK #
 #--------#

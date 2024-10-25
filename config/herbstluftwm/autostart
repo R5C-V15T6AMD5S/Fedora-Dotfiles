@@ -1,13 +1,15 @@
 #!/usr/bin/bash
 
-hc() {
-    herbstclient "$@"
-}
+hc () { herbstclient "$@" ;}
+hc_r () { herbstclient rule "$@" ;}
+hc_s () { herbstclient set "$@" ;}
+hc_a () { herbstclient attr "$@" ;}
+hc_k () { herbstclient keybind "$@" ;}
 
 hc emit_hook reload
-hc set swap_monitors_to_get_tag 1
-hc set default_frame_layout horizontal
-hc set focus_crosses_monitor_boundaries 1
+hc_s swap_monitors_to_get_tag 1
+hc_s default_frame_layout horizontal
+hc_s focus_crosses_monitor_boundaries 1
 
 # THEME #
 #-------#
