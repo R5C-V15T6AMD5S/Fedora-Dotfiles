@@ -17,7 +17,7 @@ $tvLeft
 $tvLivingRoom" | rofi -dmenu\
                   -i\
                   -p "Monitors"\
-		  -theme "~/.config/rofi/themes/monitors.rasi"
+		          -theme "~/.config/rofi/themes/monitors.rasi"
     )
 # Do something based on selected option
 if [ "$selected_option" == "$laptop" ]

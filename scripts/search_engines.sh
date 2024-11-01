@@ -58,14 +58,14 @@ declare -a options=(
 
 # Picking a search engine.
 while [ -z "$engine" ]; do
-    enginelist=$(printf '%s\n' "${options[@]}" | rofi -dmenu -i 20 -p 'Choose search engine :') || exit
+    enginelist=$(printf '%s\n' "${options[@]}" | rofi -dmenu -i 20 -p 'Choose search engine: ') || exit
     engineurl=$(echo "$enginelist" | awk '{print $NF}')
     engine=$(echo "$enginelist" | awk '{print $1}')
 done
 
 # Searching the chosen engine.
 while [ -z "$query" ]; do
-    query=$(rofi -dmenu -p "Searching $engine :") || exit
+    query=$(rofi -dmenu -p "Searching $engine: ") || exit
 done
 
 # Picking a web browser.

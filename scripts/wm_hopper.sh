@@ -22,6 +22,6 @@ elif [ "$selected_option" == "$hlwm" ]; then
 elif [ "$selected_option" == "$bspwm" ]; then
     bspwm
 else
-    echo "No match"
+    echo "No match for that WM"
 fi
 

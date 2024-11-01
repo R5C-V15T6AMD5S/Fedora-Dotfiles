@@ -15,12 +15,14 @@ $reboot
 $shutdown" | rofi -dmenu\
                   -i\
                   -p "Power Menu"\
-		  -theme "~/.config/rofi/themes/powermenu.rasi"
+		          -theme "~/.config/rofi/themes/powermenu.rasi"
     )
 # Do something based on selected option
 if [ "$selected_option" == "$lock" ]
 then
-    dm-tool lock
+    amixer set Master mute
+    xdotool key XF86AudioPlay       
+    sleep 1; sh ~/.scripts/lockscreen.sh --nord
 elif [ "$selected_option" == "$logout" ]
 then
     loginctl terminate-user `whoami`
@@ -33,6 +35,7 @@ then
 elif [ "$selected_option" == "$suspend" ]
 then
     amixer set Master mute
+    xdotool key XF86AudioPlay
     systemctl suspend
 else
     echo "No match"
