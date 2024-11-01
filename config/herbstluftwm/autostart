@@ -1,8 +1,8 @@
 #!/usr/bin/bash
 
 hc () { herbstclient "$@" ;}
-hc_r () { herbstclient rule "$@" ;}
 hc_s () { herbstclient set "$@" ;}
+hc_r () { herbstclient rule "$@" ;}
 hc_a () { herbstclient attr "$@" ;}
 hc_k () { herbstclient keybind "$@" ;}
 
@@ -29,17 +29,8 @@ bash -c $HOME/.config/herbstluftwm/scripts/monitor_init.sh &
 
 # AUTOSTART #
 #-----------#
-xkbset q &
-nm-applet &
-#xfdesktop &
+xfdesktop &
 clipmenud &
-xset b off &
 numlockx on &
 xfce4-panel &
-unclutter -idle 20 &
-killall -q xfce4-notifyd &
-killall -q dunst | wait; dunst -config ~/.config/dunst/dunstrc &
-killall -q picom | wait; picom --config ~/.config/picom/picom.conf &
-i3-battery-popup -n -v 100 -L 20 -l 10 -s ~/.config/i3/audio/warning.wav &
-xinput set-prop "MSFT0001:00 04F3:31BE Touchpad" "libinput Tapping Enabled" 1 & 
 #killall -q xfce4-panel | wait; bash -c ~/.config/herbstluftwm/scripts/polybar.sh &

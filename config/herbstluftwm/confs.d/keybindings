@@ -12,7 +12,9 @@ Alt_File_Man=nemo
 Web_Browser=firefox
 Alt_Web_Browser=brave-browser
 ProcManager=xfce4-taskmanager
-ScreenShooter=~/.scripts/screenshot_tool
+Scripts=home/o5-14/.scripts
+ScreenShooter=/home/o5-14/.scripts/screenshot_tool
+HLWM_Scripts=home/o5-14/.config/herbstluftwm/scripts
 
 # REMOVE ALL EXISTING KEYBINDINGS #
 #---------------------------------#
@@ -38,7 +40,11 @@ hc_k $Super-comma  use_index -1 --skip-visible
 hc_k $Super-period use_index +1 --skip-visible
 
 tag_names=( {1..9} )
+#tag_names=("1" "2" "3" "4" "5" "6" "7" "8" "9" "10")
+#tag_names=("I" "II" "III" "IV" "V" "VI" "VII" "VIII" "IX" "X")
+
 tag_keys=( {1..9} 0 )
+#tag_keys=( "1" "2" "3" "4" "5" "6" "7" "8" "9" "0" )
 
 hc rename default "${tag_names[0]}" || true
 for i in "${!tag_names[@]}" ; do
@@ -55,7 +61,7 @@ done
 
 # MULTIMEDIA #
 #------------#
-hc_k XF86AudioMicMute     spawn ~/.config/herbstluftwm/scripts/mic.sh
+hc_k XF86AudioMicMute     spawn $HLWM_Scripts/mic.sh
 hc_k XF86AudioLowerVolume spawn pactl -- set-sink-volume @DEFAULT_SINK@ -5%
 hc_k XF86AudioRaiseVolume spawn pactl -- set-sink-volume @DEFAULT_SINK@ +5%
 hc_k XF86AudioMute        spawn pactl -- set-sink-mute @DEFAULT_SINK@ toggle 
@@ -65,8 +71,8 @@ hc_k XF86AudioStop spawn playerctl stop
 hc_k XF86AudioNext spawn playerctl next
 hc_k XF86AudioPrev spawm playerctl previous
 
-hc_k XF86MonBrightnessUp spawn brightnessctl s +5%
-hc_k XF86MonBrightnessDown spawn brightnessctl s 5%- 
+hc_k XF86MonBrightnessUp spawn light -A 5
+hc_k XF86MonBrightnessDown spawn light -U 5 
 
 # ESSENTIAL PROGRAMS #
 #--------------------#
@@ -79,7 +85,7 @@ hc_k $Super-Shift-b spawn "$Alt_Web_Browser" --incognito
 hc_k $Super-Shift-t spawn "$Text_Editor"
 hc_k $Super-Shift-f spawn "$File_Manager"
 hc_k $Super-Shift-n spawn "$Alt_File_Man"
-hc_k $Super+Shift+Escape spawn "$ProcManager"
+hc_k $Super+Shift+Escape spawn "$ProcManager" --class floating
 
 # RESIZING FRAMES AND FLOATING CLIENTS #
 #--------------------------------------#
@@ -93,8 +99,8 @@ hc_k $Super-Control-Right   resize right +$resizestep
 #-------------#
 hc_k $Super-d spawn rofi -show
 hc_k $Super-Control-c spawn clipmenu
-hc_k $Super-Control-b spawn ~/.scripts/search_engines.sh
-hc_k $Super-Control-n spawn ~/.scripts/rofi-network-manager.sh
+hc_k $Super-Control-b spawn $Scripts/search_engines.sh
+hc_k $Super-Control-n spawn $Scripts/rofi-network-manager.sh
 
 # CHANGE FOCUS #
 #--------------#
@@ -153,12 +159,12 @@ hc_k $Super-space                                                           \
 
 # CUSTOM SCRIPTS #
 #----------------#
-hc_k $Alt-F7 spawn ~/.scripts/monitors.sh
-hc_k $Alt-Shift-a spawn ~/.scripts/powermenu.sh
-hc_k $Alt-Control-s spawn ~/.scripts/rofi_scp.sh
-hc_k $Alt-Control-t spawn ~/.scripts/touchpad_control
-hc_k $Alt-Control-k spawn ~/.scripts/keybord_layout_control
-hc_k $Alt-Control-Shift-m spawn ~/.config/herbstluftwm/scripts/monitor_init.sh
+hc_k $Alt-F7 spawn $Scripts/monitors.sh
+hc_k $Alt-Shift-a spawn $Scripts/powermenu.sh
+hc_k $Alt-Control-s spawn $Scripts/rofi_scp.sh
+hc_k $Alt-Control-t spawn $Scripts/touchpad_control
+hc_k $Alt-Control-k spawn $Scripts/keybord_layout_control
+hc_k $Alt-Control-Shift-m spawn $HLWM_Scripts/monitor_init.sh
 
 # SCREENSHOTS #
 #-------------#

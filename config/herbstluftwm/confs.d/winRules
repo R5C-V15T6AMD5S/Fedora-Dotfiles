@@ -34,10 +34,10 @@ hc_r class~Simplenote floating=on floatplacement=center floating_geometry=1350x8
 hc_r focus=on
 hc_r floatplacement=center
 
-hc_r windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' floating=on floatplacement=smart
-hc_r windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on floatplacement=center
-hc_r windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK|DESKTOP)' manage=off
-hc_s  tree_style '╾│ ├└╼─┐'
+hc_r windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' floating=on floatplacement=center
+hc_r windowtype='_NET_WM_WINDOW_TYPE_DIALOG' floating=on focus=on floatplacement=smart
+hc_r windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK|DESKTOP)' floating=on manage=on
+hc_s tree_style '╾│ ├└╼─┐'
 
 # UNLOCK #
 #--------#

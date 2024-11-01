@@ -8,7 +8,7 @@ if [[ $extr = *\ connected* ]]; then
         bash -c ~/.scripts/monitors.sh &
 else
         herbstclient set_monitors 1920x1080+0+0 &
-        notify-send "HDMI-A-o DISCONNECTED" "Running the Laptop setup . . ." &
+        notify-send "HDMI-A-0 DISCONNECTED" "Running the Laptop setup . . ." &
         bash -c ~/.config/i3/monitors/SingleMon.sh  &
 fi
 
