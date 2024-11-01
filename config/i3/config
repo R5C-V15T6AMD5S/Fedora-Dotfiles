@@ -1,0 +1,26 @@
+##  Visit i3wm.org/docs for more information about User's guide'  ##
+#------------------------------------------------------------------#
+
+include $HOME/.config/i3/confs.d/*
+include $HOME/.config/i3/themes/nord.conf
+
+## Variables ##
+#-------------#
+set $Alt         Mod1
+set $Super       Mod4
+
+set $Primary	 eDP
+set $Secondary   HDMI-A-0
+
+set $Text_Editor      xed
+set $File_Manager     thunar
+set $Alt-File_Man     nemo
+set $Terminal         kitty
+set $Web_Browser      firefox
+set $ProcManager      xfce4-taskmanager
+set $Alt_Web_Browser  brave-browser --incognito
+
+set $Scripts          /home/o5-14/.scripts
+set $i3_Dir           /home/o5-14/.config/i3
+set $i3_Scripts       /home/o5-14/.config/i3/scripts
+set $i3_Monitors      /home/o5-14/.config/i3/monitors
