@@ -8,22 +8,10 @@ _ka () { killall -q "$@" ;}
  
 #### Autostart ####
 #-----------------#
-xkbset q &
-nm-applet &
 clipmenud &
-xset b off &
 numlockx on &
-unclutter -idle 20 &
-nitrogen --restore &
-xinput set-prop "MSFT0001:00 04F3:31BE Touchpad" "libinput Tapping Enabled" 1 &
-
-_ka xfce4-panel &
-_ka xfce4-notifyd &
-_ka xfce4-power-manager &
 
 _px sxhkd >/dev/null || sxhkd -c ~/.config/bspwm/sxhkdrc 2>&1 &
-_px dunst >/dev/null || dunst -config ~/.config/dunst/dunstrc 2>&1 &
-_px picom >/dev/null || picom --config ~/.config/picom/picom.conf 2>&1 &
 _px polybar >/dev/null || bash -c ~/.config/bspwm/scripts/polybar.sh 2>&1 &
 
 #### Monitors and workspaces init ####

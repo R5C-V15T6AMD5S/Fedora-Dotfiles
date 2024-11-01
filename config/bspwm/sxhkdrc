@@ -28,10 +28,10 @@ XF86AudioPrev
     playerctl previous
 
 XF86MonBrightnessUp    
-    brightnessctl s +5%
+    light -A 5
 
 XF86MonBrightnessDown 
-    brightnessctl s 5%-
+    light -U 5
 
 XF86AudioLowerVolume
     pactl -- set-sink-volume @DEFAULT_SINK@ -5%
