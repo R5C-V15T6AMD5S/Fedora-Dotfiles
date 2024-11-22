@@ -15,14 +15,16 @@ set selection-clipboard "clipboard"
 # Custom keybindings
 #
 
+unmap f
 map p print
 map r rotate
-map t recolor
 map L zoom in
 map H zoom out
 map u scroll half-up
 map d scroll half-down
 map D toggle_page_mode
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
 
 
 #
@@ -57,5 +59,4 @@ set recolor-darkcolor       "#d8dee9" # nord4
 set recolor-lightcolor      "#2e3440" # nord0
 set render-loading-bg       "#2e3440" # nord0
 set render-loading-fg       "#d8dee9" # nord4
-
 
