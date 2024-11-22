@@ -4,6 +4,7 @@
 laptop=""
 monRight=""
 monLeft=""
+monSqureLeft="󱡶 "
 tvRight=""
 tvLeft=""
 tvLivingRoom=""
@@ -12,6 +13,7 @@ tvLivingRoom=""
 selected_option=$(echo "$laptop
 $monRight
 $monLeft
+$monSqureLeft
 $tvRight
 $tvLeft
 $tvLivingRoom" | rofi -dmenu\
@@ -29,6 +31,9 @@ then
 elif [ "$selected_option" == "$monLeft" ]
 then
     bash -c /home/o5-14/.config/i3/monitors/DualMonL.sh
+elif [ "$selected_option" == "$monSqureLeft" ]
+then
+    bash -c /home/o5-14/.config/i3/monitors/WeirdMonL.sh
 elif [ "$selected_option" == "$tvRight" ]
 then
     bash -c /home/o5-14/.config/i3/monitors/TVMonR.sh
