@@ -63,8 +63,8 @@ super + {comma, period}
 super + {F4, Return, b, d}
     {xkill, kitty, firefox, rofi -show} 
 
-super + shift + {t, f, n, b, Escape}
-    {xed, thunar, nemo, brave-browser --incognito, xfce4-taskmanager}
+super + shift + {t, f, n, Escape}
+    {xed, thunar, nemo, xfce4-taskmanager}
 
 
 #### Screenshots ####
@@ -113,8 +113,8 @@ super + {_,shift + }{Left,Down,Up,Right}
 
 #### ROFI & friends ####
 #----------------------#
-super + {ctrl + b, ctrl + n, ctrl + c}
-    {~/.scripts/search_engines.sh, ~/.scripts/rofi-network-manager.sh, clipmenu}
+super + {ctrl + b, ctrl + c, ctrl + n}
+    {~/.scripts/search_engines.sh, clipmenu, ~/.scripts/rofi-network-manager.sh}
 
 
 #### Custom scripts ####

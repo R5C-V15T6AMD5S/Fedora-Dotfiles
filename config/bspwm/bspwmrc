@@ -10,7 +10,6 @@ _ka () { killall -q "$@" ;}
 #-----------------#
 clipmenud &
 numlockx on &
-
 _px sxhkd >/dev/null || sxhkd -c ~/.config/bspwm/sxhkdrc 2>&1 &
 _px polybar >/dev/null || bash -c ~/.config/bspwm/scripts/polybar.sh 2>&1 &
 
