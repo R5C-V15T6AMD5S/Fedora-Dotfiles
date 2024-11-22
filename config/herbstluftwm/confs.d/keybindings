@@ -12,7 +12,7 @@ Alt_File_Man=nemo
 Web_Browser=firefox
 Alt_Web_Browser=brave-browser
 ProcManager=xfce4-taskmanager
-Scripts=home/o5-14/.scripts
+Scripts=/home/o5-14/.scripts
 ScreenShooter=/home/o5-14/.scripts/screenshot_tool
 HLWM_Scripts=home/o5-14/.config/herbstluftwm/scripts
 
