@@ -12,11 +12,18 @@ function gogh() {
 	   bash -c  "$(wget -qO- https://git.io/vQgMr)"
 }
 
+# Start an app & disown it
+function nhd() {
+    nohup "$@" > /dev/null 2>&1 &
+    disown
+}
+
 # Create a new directory and enter it
 function mkd() {
    	mkdir -p "$@" && cd "$_";
 }
 
+# Extract different typess of files
 function extr() {
   if [[ $# != 2 ]]; then
     echo "Usage: extr <FILE_NAME> <FILE_TYPE>"
@@ -74,8 +81,7 @@ function extr() {
   esac
 }
 
-
-
+# Controling the home server
 function rsl() {
     case "$1" in
         status)
@@ -83,20 +89,23 @@ function rsl() {
             ;;
         scp-get)
             if [ -z "$2" ] || [ -z "$3" ]; then
-                echo "Usage: rsl scp <user> <remote_path>"
+                echo "Usage: rsl scp <user> <full_remote_path>"
                 return 1
             fi
             scp -P 4812 "$2@rsl-server.duckdns.org:$3" ~/Public/
             ;;
         scp-send)
             if [ -z "$2" ] || [ -z "$3" ]; then
-                echo "Usage: rsl scp-send <local_file> <remote_user>:<remote_path>"
+                echo "Usage: rsl scp-send <local_file> <remote_user>:<full_remote_path>"
                 return 1
             fi
             scp -P 4812 "$2" "$3@rsl-server.duckdns.org:$3"
             ;;
+        nas)
+            sudo mount -t cifs //192.168.0.93/Share-o5-13 /mnt/SummaModusOperandi -o rw,_netdev,credentials=/home/o5-14/.smbcreds,x-systemd.automount,uid=1000,gid=1000,port=4455
+            ;;
         smb)
-            sudo mount -t cifs //rsl-server.duckdns.org/Share-o5-13 /mnt/SummaModusOperandi -o rw,_netdev,credentials=/home/o5-14/.smbcreds,x-systemd.automount,port=4455
+            sudo mount -t cifs //rsl-server.duckdns.org/Share-o5-13 /mnt/SummaModusOperandi -o rw,_netdev,credentials=/home/o5-14/.smbcreds,x-systemd.automount,uid=1000,gid=1000,port=4455
             ;;
         ssh)
             if [ -z "$2" ]; then
@@ -109,12 +118,13 @@ function rsl() {
             irs -c rsl-server.duckdns.org -p 6667
             ;;
         *)
-            echo "Usage: rsl {status|scp-get|scp-send|smb|ssh|irc}"
+            echo "Usage: rsl {status|scp-get|scp-send|nas|smb|ssh|irc}"
             return 1
             ;;
     esac
 }
 
+# Simple QEMU shortcuts
 function qemu-run() {
     case "$1" in
         tos)
@@ -123,24 +133,48 @@ function qemu-run() {
         wxp)
             cd ~/VirtualBox/WXPP; ./run.sh ./WXPP.img
             ;;
+        kali)
+            cd ~/VirtualBox/KL; ./run.sh ./KL.qcow2
+            ;;
         *)
-            echo "Usage: qemu-run {tos|wxp}"
+            echo "Usage: qemu-run {tos|wxp|kali}"
             return 1
             ;;
     esac
 }
 
+# Simple common app aliases
+function cma() {
+    case "$1" in 
+        paint)
+            nhd pinta ~/Pictures/canvas.png
+            exit 0
+            ;;
+        tracker)
+            cd ~/Tools; nhd ./MilkyTracker.AppImage
+            exit 0
+            ;;
+        *)
+            echo "ERROR: Wrong entry"
+            echo "Usage: cma {paint|tracker}"
+            return 1
+            ;;
+    esac
+}
+
+
+
 function christmas-tree() {
     curl https://raw.githubusercontent.com/sergiolepore/ChristBASHTree/master/tree-EN.sh | bash
 }
 
-#function update-grub() {
+function update-grub() {
 #      sudo rm /boot/efi/EFI/fedora/grub.cfg
 # UEFI
-#      sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
+      sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
 # BIOS
       #sudo grub2-mkconfig -o /boot/grub2/grub.cfg
-#}
+}
 
 # Updates the spicetify 
 function update-spicetify(){

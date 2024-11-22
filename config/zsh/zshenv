@@ -9,7 +9,7 @@ export XDG_CACHE_HOME=$HOME/.cache
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_DATA_HOME=$HOME/.local/share
 export XDG_STATE_HOME=$HOME/.local/state
-export XDG_DATA_DIRS="/usr/local/share:/usr/share"
+export XDG_DATA_DIRS="/var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/exports/share:/usr/local/share:/usr/share:/home/o5-14/.var"
 
 export IMAGE="feh"
 export VIDEO="mpv"
@@ -19,8 +19,8 @@ export TERMINAL="kitty"
 export READER="zathura" 
 export BROWSER="firefox"
 export WINEARCH="win64"
-export QT_QPA_PLATFORMTHEME="qt5ct"
 export GTK_THEME="Nordic-darker"
+export QT_QPA_PLATFORMTHEME="qt5ct"
 
 export CM_DEBUG=0
 export CM_MAX_CLIPS=15
@@ -30,9 +30,7 @@ export CM_SELECTIONS="clipboard"
 
 export HISTSIZE=1000
 export SAVEHIST=1000
-export HIST_EXPIRE=20
 export HISTFILE=$ZDOTDIR/.history
-export HIST_EXPIRE_DUPS_FIRST=true
 export _JAVA_AWT_WM_NONREPARENTING=1
 export MESA_SHADER_CACHE_DISABLE=true
 
@@ -45,9 +43,9 @@ export IPYTHONDIR="$XDG_CONFIG_HOME/ipython"
 export ANDROID_HOME="$XDG_DATA_HOME/android"
 export XINITRC="$XDG_CONFIG_HOME/X11/xinitrc"
 #export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
-export HISTFILE="$XDG_CONFIG_HOME/zsh/.history"
 export OMNISHARPHOME="$XDG_CONFIG_HOME/omnisharp"
 export ICEAUTHORITY="$XDG_CACHE_HOME/ICEauthority"
+export ZSH_COMPDUMP="$XDG_CACHE_HOME/zsh/zcompdump"
 export LESSHISTFILE="$XDG_CONFIG_HOME/less/history"
 export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME/jupyter"
 export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
