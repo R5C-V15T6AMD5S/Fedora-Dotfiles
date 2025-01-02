@@ -12,10 +12,10 @@ set $Super       Mod4
 set $Primary	 eDP
 set $Secondary   HDMI-A-0
 
-set $Text_Editor      xed
+set $Text_Editor      geany
 set $PDF_Reader       zathura
 set $File_Manager     thunar
-set $Alt-File_Man     nemo
+#set $Alt-File_Man     nemo
 set $Terminal         kitty
 set $Web_Browser      firefox
 set $ProcManager      xfce4-taskmanager
