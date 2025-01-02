@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=0.9.4
+Type=Application
+Name=Touchpad Tap
+Comment=Enables the function to tap the touchpad
+Exec=xinput set-prop "MSFT0001:00 04F3:31BE Touchpad" "libinput Tapping Enabled" 1
+OnlyShowIn=XFCE;
+RunHook=0
+StartupNotify=false
+Terminal=false
+Hidden=false
+
