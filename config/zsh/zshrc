@@ -6,7 +6,7 @@
 #  (_)_____/\____/\_| |_/\_| \_| \____/
 
 # If you come from bash you might have to change your $PATH.
-export PATH="$HOME/bin:/usr/local/bin:$HOME/.config/.cargo/bin:$PATH:/home/o5-14/Tools/spicetify"
+export PATH="$HOME/bin:$HOME/.config/.cargo/bin:$HOME/Tools/spicetify:$HOME/.local/bin:/usr/local/bin:/usr/bin"
 export ZSH="$HOME/.config/zsh/.oh-my-zsh"
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes-xiong-chiamiov-plus

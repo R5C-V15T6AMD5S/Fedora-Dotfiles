@@ -107,6 +107,13 @@ function rsl() {
         smb)
             sudo mount -t cifs //rsl-server.duckdns.org/Share-o5-13 /mnt/SummaModusOperandi -o rw,_netdev,credentials=/home/o5-14/.smbcreds,x-systemd.automount,uid=1000,gid=1000,port=4455
             ;;
+        lan)
+            if [ -z "$2" ]; then
+                echo "Usage: rsl lan <remote_user>"
+                return 1
+            fi
+            ssh -p 4812 "$2"@192.168.0.93
+            ;;
         ssh)
             if [ -z "$2" ]; then
                 echo "Usage: rsl ssh <remote_user>"
@@ -118,7 +125,7 @@ function rsl() {
             irs -c rsl-server.duckdns.org -p 6667
             ;;
         *)
-            echo "Usage: rsl {status|scp-get|scp-send|nas|smb|ssh|irc}"
+            echo "Usage: rsl {status|scp-get|scp-send|nas|smb|lan|ssh|irc}"
             return 1
             ;;
     esac
@@ -151,7 +158,11 @@ function cma() {
             exit 0
             ;;
         tracker)
-            cd ~/Tools; nhd ./MilkyTracker.AppImage
+            cd ~/Tools/MilkyTracker; nhd ./MilkyTracker.AppImage
+            exit 0
+            ;;
+        factorio)
+            cd ~/Games/Factorio/bin/x64; nhd ./factorio
             exit 0
             ;;
         *)
@@ -161,8 +172,6 @@ function cma() {
             ;;
     esac
 }
-
-
 
 function christmas-tree() {
     curl https://raw.githubusercontent.com/sergiolepore/ChristBASHTree/master/tree-EN.sh | bash
