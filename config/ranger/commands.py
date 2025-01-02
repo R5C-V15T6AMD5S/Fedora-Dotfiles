@@ -48,7 +48,7 @@ class my_edit(Command):
             self.fm.notify("The given file does not exist!", bad=True)
             return
 
-        # This executes a function from ranger.core.acitons, a module with a
+        # This executes a function from ranger.core.actions, a module with a
         # variety of subroutines that can help you construct commands.
         # Check out the source, or run "pydoc ranger.core.actions" for a list.
         self.fm.edit_file(target_filename)
@@ -60,3 +60,8 @@ class my_edit(Command):
         # This is a generic tab-completion function that iterates through the
         # content of the current directory.
         return self._tab_directory_content()
+
+# Change the location to college folder
+class rtu(Command):
+    def execute(self):
+        self.fm.cd("~/Desktop/RiTeh UNIRI")
