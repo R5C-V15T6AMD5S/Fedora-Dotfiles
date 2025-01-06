@@ -4,20 +4,20 @@
 ![Screenshot](./Screenshots/i3.png)
 
 
-## XFCE + herbstluftwm
+<!-- ## XFCE + herbstluftwm
 ![Screenshot](./Screenshots/herbstluftwm.png)
 
 
 ## XFCE + bspwm
-![Screenshot](./Screenshots/bspwm.png)
+![Screenshot](./Screenshots/bspwm.png) -->
 
 
 ## Specifications
 
 - Shell: `zsh`
 - Terminal: `kitty`
-- Text editor: `nvim` [`vim`]
-- Browser: `firefox` [`brave-browser`]
+- Text editor: `nvim`
+- Browser: `firefox`
 - Compositor: `picom`
-- File manager: `ranger` [`thunar`, `nemo`]
+- File manager: `ranger`
 - PDF reader: `zathura`
